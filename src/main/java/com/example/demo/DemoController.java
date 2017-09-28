@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RestController
 public class DemoController {
 
-	@RequestMapping("/")
+	@RequestMapping("/welcome")
 	public String index() {
-		return "index";
+		return "welcome";
 	}
 
 }
