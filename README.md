@@ -1,8 +1,9 @@
 Run a full-stack app in java and angular: https://spring.io/blog/2015/01/12/spring-and-angular-js-a-secure-single-page-application
 Example front-end:https://github.com/creativetimofficial/material-dashboard-angular
 
-npm i 
+npm install -g @angular/cli
 
+live:
 mvn spring-boot:run
 
 or 

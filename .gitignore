@@ -22,3 +22,6 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+#custom for index.html frontend resources
+src/main/resources/static
