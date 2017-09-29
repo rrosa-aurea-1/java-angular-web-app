@@ -1,13 +1,14 @@
 ## Spring boot app with Angular 4 client embedded
 
-The frontend-app is gotten from :https://github.com/creativetimofficial/material-dashboard-angular
+The frontend-app is gotten from :https://github.com/creativetimofficial/material-dashboard-angular.
+The project produces **an only jar** using spring-boot, that is you can implement java backend services, together the angular client developed in typescript (angular-cli).
 
 ## Description
 
 The project is used to develop the client in the **frontend-app** folder with the __angular-cli__, and the **java backend** with the __maven spring boot project configured__.
 For this, import your client (frontend-app) in the angular/typescript IDE (i.e. __visual studio code__) and your java backend in __Eclipse__
 
-## functional informations
+## Functional informations
 
 The steps to build the jar are defined in the pom.xml file. The project builds the frontend with the output folder **frontend-app/dist** and copies it in the __src/main/resources/static__ folder in order to load the client in the spring boot home page together the java services.
 The port information is stored in **src/main/resources/application.properties** file in the __server.port__ property.
@@ -48,12 +49,12 @@ java -jar target/*.jar
 ```
 Open browser on localhost:8081
 
-### Electron (not work with electron-packager )
+### Electron (not work with electron-packager)
 
 Move __app.jar__ in electron-app folder and in this run **electron main** after **npm i electron -g**. 
 The port is specified in the __electrona-app/index.html__.
 
-IN DEVELOPMENT
+THIS IS A PILOT IN DEVELOPMENT BECAUSE THE ELECTRON LIVE WORK BAD IN RENDERING AND ELECTRON-PACKAGER INSTEAD BREAKS.
 
 ### Deploy jar on heroku 
 
