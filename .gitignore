@@ -23,5 +23,8 @@ dist/
 nbdist/
 .nb-gradle/
 
-#custom for index.html frontend resources
+#custom 
+#for index.html frontend resources
 src/main/resources/static
+#for jar in electron-app folder
+electron-app/*.jar

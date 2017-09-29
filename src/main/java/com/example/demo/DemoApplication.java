@@ -1,24 +1,16 @@
 package com.example.demo;
 
-import java.util.Arrays;
-
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class DemoApplication {
 
-	@Bean
-	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
-		return args -> {
-
-		};
-	}
+	// value inserted in your application.properties server.port
+	private static final String port = "8081";
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
+		System.out.println("OPEN BROWSER IN localhost:" + port);
 	}
 }
