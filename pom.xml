@@ -99,6 +99,7 @@
 								<argument>${project.basedir}/frontend-build-install.js</argument>
 								<argument>ng</argument>
 								<argument>build</argument>
+								<argument>--prod</argument>
 							</arguments>
 						</configuration>
 					</execution>
