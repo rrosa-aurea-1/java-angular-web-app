@@ -1,12 +1,12 @@
 ## Spring boot app with Angular 4 client embedded
 
 The frontend-app is gotten from :https://github.com/creativetimofficial/material-dashboard-angular.
-The project produces **an only jar** using maven spring-boot, that is you can implement java backend services, together the angular client developed in typescript (angular-cli).
+The project produces **an only jar** using maven spring-boot, that is you can implement java backend services, together the angular client developed in typescript (angular-cli). DOwnload the zip of this branch or clone the git repo.
 
 ## Description
 
 The project is used to develop the client in the **frontend-app** folder with the __angular-cli__, and the **java backend** with the __maven spring boot project configured__.
-For this, import your client (frontend-app) in the angular/typescript IDE (i.e. __visual studio code__) and your maven java backend in __Eclipse__
+For this, import your client (frontend-app) in the angular/typescript IDE (i.e. __visual studio code__) and your maven java backend in __Eclipse__.
 
 ### Functional informations
 
@@ -31,12 +31,16 @@ npm install -g @angular/cli
 
 ### Live
 
+Execute in the main folder of this repo:
+
 ```
 mvn clean spring-boot:run
 ```
 Open browser on localhost:8081
 
 ### Build and run
+
+Execute in the main folder of this repo:
 
 ```
 mvn clean package
@@ -75,7 +79,7 @@ heroku create spring-boot-angular-app2  --no-remote
 
 ```
 
-To deploy the jar file:
+To deploy the jar file, execute in the main folder of this repo:
 
 ```
 heroku deploy:jar target/app.jar --app spring-boot-angular-app2
