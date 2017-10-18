@@ -11,13 +11,6 @@
 	<name>spring-boot-angular</name>
 	<description>Demo project for Spring Boot Angular </description>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.7.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
-	</parent>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -31,26 +24,42 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+			<version>1.5.7.RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<version>1.5.7.RELEASE</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<version>1.5.7.RELEASE</version>
 			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 	</dependencies>
+
 
 	<build>
 		<finalName>app</finalName>
 		<resources>
 			<resource>
-				<directory>src/main/resources</directory>
+				<directory>${basedir}/src/main/resources</directory>
 				<filtering>true</filtering>
 			</resource>
 		</resources>
@@ -68,50 +77,11 @@
 			</plugin>
 
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<version>${exec-maven-plugin.project.version}</version>
-				<executions>
-					<execution>
-						<id>install frontend-app</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>exec</goal>
-						</goals>
-						<configuration>
-							<executable>node</executable>
-							<arguments>
-								<argument>${project.basedir}/frontend-build-install.js</argument>
-								<argument>npm</argument>
-								<argument>install</argument>
-							</arguments>
-						</configuration>
-					</execution>
-					<execution>
-						<id>build frontend-app</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>exec</goal>
-						</goals>
-						<configuration>
-							<executable>node</executable>
-							<arguments>
-								<argument>${project.basedir}/frontend-build-install.js</argument>
-								<argument>ng</argument>
-								<argument>build</argument>
-								<argument>--prod</argument>
-							</arguments>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<executions>
 					<execution>
 						<id>copy-resources</id>
-						<phase>generate-resources</phase>
+						<phase>process-classes</phase>
 						<goals>
 							<goal>copy-resources</goal>
 						</goals>
@@ -127,12 +97,71 @@
 					</execution>
 				</executions>
 			</plugin>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>build-info</goal>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>com.example.demo.DemoApplication</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
+	<profiles>
+		<profile>
+			<id>build-ui</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>${exec-maven-plugin.project.version}</version>
+						<executions>
+							<execution>
+								<id>install frontend-app</id>
+								<phase>compile</phase>
+								<goals>
+									<goal>exec</goal>
+								</goals>
+								<configuration>
+									<executable>node</executable>
+									<arguments>
+										<argument>${project.basedir}/frontend-build-install.js</argument>
+										<argument>npm</argument>
+										<argument>install</argument>
+									</arguments>
+								</configuration>
+							</execution>
+							<execution>
+								<id>build frontend-app</id>
+								<phase>compile</phase>
+								<goals>
+									<goal>exec</goal>
+								</goals>
+								<configuration>
+									<executable>node</executable>
+									<arguments>
+										<argument>${project.basedir}/frontend-build-install.js</argument>
+										<argument>ng</argument>
+										<argument>build</argument>
+										<argument>--prod</argument>
+									</arguments>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 </project>

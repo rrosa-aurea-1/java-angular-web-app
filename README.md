@@ -31,26 +31,39 @@ npm install -g @angular/cli
 
 ### Live
 
-Execute in the main folder of this repo:
+Execute in the main folder of this repo, if you have already built the frontend and there is the generated code in **frontend-app/dist** :
 
 ```
 mvn clean spring-boot:run
 ```
+else:
+
+```
+mvn clean spring-boot:run -Pbuild-ue
+```
+
 Open browser on localhost:8081
 
 ### Build and run
 
-Execute in the main folder of this repo:
+If you have already built the frontend (i. e. after develop on visual studio code) and you have the generated code of the _ng build_ in **frontend-app/dist**, execute in the main folder of this repo:
 
 ```
 mvn clean package
 ```
 
-After:
+If you want to build also the frontend, run:
+
+```
+mvn clean package -Pbuild-ue
+```
+
+After all cases run:
 
 ```
 java -jar target/*.jar
 ```
+
 Open browser on localhost:8081
 
 ### Electron (not work with electron-packager)
