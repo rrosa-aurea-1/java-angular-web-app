@@ -46,7 +46,7 @@ mvn clean spring-boot:run
 else:
 
 ```
-mvn clean spring-boot:run -Pbuild-ue
+mvn clean spring-boot:run -Pbuild-ui
 ```
 
 Open browser on localhost:8081
@@ -62,7 +62,7 @@ mvn clean package
 If you want to build also the frontend, run:
 
 ```
-mvn clean package -Pbuild-ue
+mvn clean package -Pbuild-ui
 ```
 
 After all cases run:
@@ -76,7 +76,7 @@ Open browser on localhost:8081
 ### Electron (not work with electron-packager)
 
 Move __app.jar__ in electron-app folder and in this run **electron main** after **npm i electron -g**. 
-The port is specified in the __electrona-app/index.html__.
+The port is specified in the __electron-app/index.html__.
 
 THIS IS A PILOT IN DEVELOPMENT BECAUSE THE ELECTRON LIVE WORKS BAD IN RENDERING AND ELECTRON-PACKAGER INSTEAD BREAKS.
 
