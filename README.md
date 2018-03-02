@@ -10,6 +10,14 @@
 The frontend-app is gotten from :https://github.com/creativetimofficial/material-dashboard-angular.
 The project produces **an only jar** using maven spring-boot, that is you can implement java backend services, together the angular client developed in typescript (angular-cli). Download the zip of this branch or clone the git repo.
 
+
+## NEWS
+
+* 02/03/2018 a feature that integrates an embedded spring-boot rest web service that uses mongodb with the front-end application (**in development** on feature/integration-mongodb branch)
+* 02/03/2018 added example on how implement a rest web service with spring-boot that uses mongodb (feature/webservice-mongodb branch)
+* 18/10/2017 added example on how implement a rest web service with spring-boot that uses h2 database embedded (feature/h2 branch)
+
+
 ## Description
 
 The project is used to develop the client in the **frontend-app** folder with the __angular-cli__, and the **java backend** with the __maven spring boot project configured__.
@@ -17,15 +25,36 @@ For this, import your client (frontend-app) in the angular/typescript IDE (i.e. 
 
 ### Functional informations
 
-The steps to build the jar are defined in the pom.xml file. The project builds the frontend with the output folder **frontend-app/dist** and copies it in the __src/main/resources/static__ folder in order to load the client in the spring boot home page together the java services.
+The steps to build the jar are defined in the pom.xml file. The project builds the frontend with the output folder **frontend-app/dist** and copies it in the __target/classes/static__ folder in order to load the client in the spring boot home page together the java services.
 The port information is stored in **src/main/resources/application.properties** file in the __server.port__ property.
 
 ### Prerequisites
 
-* Angular cli:
+* Add npm build.prod script in your **front-end package.json project** with @angular/cli devDependency as:
 
 ```
-npm install -g @angular/cli
+{
+  "name": "md-free-angular-cli",
+  "version": "1.4.1",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build.prod": "ng build --prod",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "private": true,
+  "dependencies": {
+    ....
+  },
+  "devDependencies": {
+    "@angular/cli": "1.4.2",
+	....
+  }
+}
 ```
 
 * JDK 8
