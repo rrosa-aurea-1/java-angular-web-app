@@ -1,6 +1,11 @@
 const args = process.argv;
 var exec = require('child_process').execSync;
-var cmd = "cd frontend-app && "+ args[2]+" " + args[3] +" "+args[4] ;
+var arg3='';
+if(args[4]!=undefined){
+	arg3=args[4];
+}
+
+var cmd = "cd frontend-app && "+ args[2]+" " + args[3] +" "+arg3 ;
 
 var options = {
   encoding: 'utf8'
