@@ -1,14 +1,15 @@
 package com.example.demo;
 
-import org.springframework.web.bind.annotation.RestController;
+
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RestController
+@Controller
 public class DemoController {
 
-	@RequestMapping("/welcome")
-	public String index() {
-		return "welcome";
+	@RequestMapping(value = "/{[path:[^\\.]*}")
+	public String redirect() {
+		return "forward:/";
 	}
 
 }

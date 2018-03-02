@@ -26,5 +26,7 @@ public class DemoApplication {
 	public void postConstruct() {
 		logger.info("-----OPEN BROWSER IN localhost:" + port);
 	}
+	
+	
 
 }
