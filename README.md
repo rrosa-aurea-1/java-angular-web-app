@@ -109,7 +109,9 @@ else:
 mvn clean spring-boot:run -Pbuild-ui
 ```
 
-Open browser on localhost:8081
+Open browser on localhost:8081:
+
+![Live-App](https://github.com/amanganiello90/java-angular-web-app/blob/branch-screen/live-app.jpg)
 
 ### Build and run
 
@@ -143,7 +145,15 @@ After built your front-end app with the **-Pbuild-ui** profile (or with *npm run
 * npm install
 * npm start
 
+App in electron:
+
+![Electron-App](https://github.com/amanganiello90/java-angular-web-app/blob/branch-screen/electron-app.jpg)
+
 In this way a express server child process is run in the electron container. You can read log in its window with **F1 keyword**.
+
+Express log in electron:
+
+![Electron-Log](https://github.com/amanganiello90/java-angular-web-app/blob/branch-screen/electron-log.jpg)
 
 
 #### Spring boot jar mode 
@@ -156,6 +166,10 @@ After generated your spring boot jar with **mvn clean package**, run in the elec
 * npm start
 
 In this way spring boot jar start as child process in the electron container. You can read log in its window with **F1 keyword**.
+
+Spring Boot log in electron:
+
+![Electron-Spring](https://github.com/amanganiello90/java-angular-web-app/blob/branch-screen/electron-spring.jpg)
 
 ## Deploy jar on heroku 
 
