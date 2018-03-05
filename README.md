@@ -13,7 +13,8 @@ The project produces **an only jar** using maven spring-boot, that is you can im
 
 ## NEWS
 
-* 05/03/2018 added express external process in electron app to live angular app built
+* 05/03/2018 added spring boot jar child process mode running in electron app
+* 05/03/2018 added express server external process in electron app to live angular app built
 * 02/03/2018 refer to resolved [Issue 1](https://github.com/amanganiello90/java-angular-web-app/issues/1) related the routing of single page app in spring boot tomcat server
 * 02/03/2018 a feature that integrates an embedded spring-boot rest web service that uses mongodb with the front-end application (**in development** on feature/integration-mongodb branch)
 * 02/03/2018 added example on how implement a rest web service with spring-boot that uses mongodb (feature/webservice-mongodb branch)
@@ -59,9 +60,9 @@ The port information is stored in **src/main/resources/application.properties** 
 }
 ```
 
-* JDK 8
+* JDK 8 (set JAVA_HOME environment variable)
 
-* The last Node.js version
+* The Node.js version compatible with your angular app
 
 * MAVEN (to use **mvn** command else use in windows ./mvnw.cmd or in linux ./mvnw instead)
 
@@ -106,14 +107,27 @@ Open browser on localhost:8081
 
 ### Electron 
 
-After built your front-end app with the *-Pbuild-ui* profile (or with *npm run build.prod* command under frontend-app folder), run in the electron-app folder:
+#### Express server mode 
+
+After built your front-end app with the *-Pbuild-ui* profile (or with *npm run build.prod* command under frontend-app folder), run in the electron-app folder these commands:
 
 
 * npm install
 * npm start
 
-In this way a express server child process is run in electron container. You can read log in its window with *F1* keyword.
+In this way a express server child process is run in the electron container. You can read log in its window with *F1* keyword.
 
+
+#### Spring boot jar mode 
+
+After generated your spring boot jar with **mvn clean package*, run in the electron-jar folder these steps:
+
+
+* npm install
+* copy the app.jar under target in electron-jar folder
+* npm start
+
+In this way spring boot jar start as child process in the electron container. You can read log in its window with *F1* keyword.
 
 ### Deploy jar on heroku 
 
