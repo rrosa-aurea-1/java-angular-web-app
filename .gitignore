@@ -25,10 +25,12 @@ nbdist/
 
 #custom 
 #for index.html frontend resources
-src/main/resources/static
+
 #for jar in electron-app folder
 electron-jar/*.jar
 electron-jar/package-lock.json
 electron-jar/node_modules
+electron-jar/distribution
 electron-app/package-lock.json
 electron-app/node_modules
+electron-app/distribution

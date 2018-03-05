@@ -21,6 +21,15 @@ The project produces **an only jar** using maven spring-boot, that is you can im
 * 18/10/2017 added example on how implement a rest web service with spring-boot that uses h2 database embedded (feature/h2 branch)
 
 
+### NEXT DEVELOPMENTS (checked in progress)
+
+- [ ] Integrate mongodb (and h2) and webservice in spring-boot
+- [ ] Integrate mongodb (and h2) and webservice in node express server
+- [ ] Use embedded node for express in electron: https://nodejs.org/dist/v9.4.0/win-x64/ 
+- [ ] Use embedded jre for jar in electron
+- [x] Use electron packager to produce an exe (windows: https://github.com/frankhale/electron-with-express#package-with-electron-packager)
+
+
 Table of contents
 =================
 
@@ -33,24 +42,27 @@ Table of contents
       * [Electron](#Electron)
 		* [Express server mode](#Express-server-mode)
 		* [Spring boot jar mode](#Spring-boot-jar-mode)
-	  * [Deploy jar on heroku](#Deploy-jar-on-heroku)
-	  * [Live demo heroku deployed jar](#Live-demo-heroku-deployed-jar)
+   * [Deploy jar on heroku](#Deploy-jar-on-heroku)
+   * [Live demo heroku deployed jar](#Live-demo-heroku-deployed-jar)
 
    
 <!--te-->
 
 
-## Description
+Description
+=================
 
 The project is used to develop the client in the **frontend-app** folder with the __angular-cli__, and the **java backend** with the __maven spring boot project configured__.
 For this, import your client (frontend-app) in the angular/typescript IDE (i.e. __visual studio code__) and your maven java backend in __Eclipse__.
 
-### Functional informations
+Functional informations
+--------
 
 The steps to build the jar are defined in the pom.xml file. The project builds the frontend with the output folder **frontend-app/dist** and copies it in the __target/classes/static__ folder in order to load the client in the spring boot home page together the java services.
 The port information is stored in **src/main/resources/application.properties** file in the __server.port__ property.
 
-### Prerequisites
+Prerequisites
+--------
 
 * Add npm build.prod script in your **front-end package.json project** with @angular/cli devDependency as:
 
@@ -87,7 +99,8 @@ The port information is stored in **src/main/resources/application.properties** 
 
 * IDE ( i.e. Eclipse for java and visual studio code for typescript/angular projects)
 
-### Live
+Live
+--------
 
 Execute in the main folder of this repo, if you have already built the frontend and there is the generated code in **frontend-app/dist** :
 
@@ -102,7 +115,8 @@ mvn clean spring-boot:run -Pbuild-ui
 
 Open browser on localhost:8081
 
-### Build and run
+Build and run
+--------
 
 If you have already built the frontend (i. e. after develop on visual studio code) and you have the generated code of the _ng build_ in **frontend-app/dist**, execute in the main folder of this repo:
 
@@ -124,9 +138,10 @@ java -jar target/*.jar
 
 Open browser on localhost:8081
 
-### Electron 
+Electron 
+--------
 
-#### Express server mode 
+### Express server mode 
 
 After built your front-end app with the **-Pbuild-ui** profile (or with *npm run build.prod* command under frontend-app folder), run in the electron-app folder these commands:
 
@@ -137,7 +152,7 @@ After built your front-end app with the **-Pbuild-ui** profile (or with *npm run
 In this way a express server child process is run in the electron container. You can read log in its window with **F1** keyword.
 
 
-#### Spring boot jar mode 
+### Spring boot jar mode 
 
 After generated your spring boot jar with **mvn clean package**, run in the electron-jar folder these steps:
 
@@ -148,7 +163,8 @@ After generated your spring boot jar with **mvn clean package**, run in the elec
 
 In this way spring boot jar start as child process in the electron container. You can read log in its window with **F1** keyword.
 
-### Deploy jar on heroku 
+Deploy jar on heroku 
+=================
 
 Create an account on keroku (https://www.heroku.com/)
 
@@ -175,6 +191,8 @@ heroku deploy:jar target/app.jar --app spring-boot-angular-app2
 
 View in : https://spring-boot-angular-app2.herokuapp.com/.
 
-### Live demo heroku deployed jar
+Live demo heroku deployed jar
+=================
 
 A demo is on https://spring-boot-angular-app.herokuapp.com/
+
