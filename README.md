@@ -21,6 +21,25 @@ The project produces **an only jar** using maven spring-boot, that is you can im
 * 18/10/2017 added example on how implement a rest web service with spring-boot that uses h2 database embedded (feature/h2 branch)
 
 
+Table of contents
+=================
+
+<!--ts-->
+   * [Description](#Description)
+      * [Functional informations](#Functional-informations)
+      * [Prerequisites](#Prerequisites)
+      * [Live](#Live)
+      * [Build and run](#Build-and-run)
+      * [Electron](#Electron)
+		* [Express server mode](#Express-server-mode)
+		* [Spring boot jar mode](#Spring-boot-jar-mode)
+	  * [Deploy jar on heroku](#Deploy-jar-on-heroku)
+	  * [Live demo heroku deployed jar](#Live-demo-heroku-deployed-jar)
+
+   
+<!--te-->
+
+
 ## Description
 
 The project is used to develop the client in the **frontend-app** folder with the __angular-cli__, and the **java backend** with the __maven spring boot project configured__.
@@ -109,25 +128,25 @@ Open browser on localhost:8081
 
 #### Express server mode 
 
-After built your front-end app with the *-Pbuild-ui* profile (or with *npm run build.prod* command under frontend-app folder), run in the electron-app folder these commands:
+After built your front-end app with the **-Pbuild-ui** profile (or with *npm run build.prod* command under frontend-app folder), run in the electron-app folder these commands:
 
 
 * npm install
 * npm start
 
-In this way a express server child process is run in the electron container. You can read log in its window with *F1* keyword.
+In this way a express server child process is run in the electron container. You can read log in its window with **F1** keyword.
 
 
 #### Spring boot jar mode 
 
-After generated your spring boot jar with **mvn clean package*, run in the electron-jar folder these steps:
+After generated your spring boot jar with **mvn clean package**, run in the electron-jar folder these steps:
 
 
 * npm install
 * copy the app.jar under target in electron-jar folder
 * npm start
 
-In this way spring boot jar start as child process in the electron container. You can read log in its window with *F1* keyword.
+In this way spring boot jar start as child process in the electron container. You can read log in its window with **F1** keyword.
 
 ### Deploy jar on heroku 
 
