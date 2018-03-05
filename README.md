@@ -13,6 +13,7 @@ The project produces **an only jar** using maven spring-boot, that is you can im
 
 ## NEWS
 
+* 05/03/2018 added express external process in electron app to live angular app built
 * 02/03/2018 refer to resolved [Issue 1](https://github.com/amanganiello90/java-angular-web-app/issues/1) related the routing of single page app in spring boot tomcat server
 * 02/03/2018 a feature that integrates an embedded spring-boot rest web service that uses mongodb with the front-end application (**in development** on feature/integration-mongodb branch)
 * 02/03/2018 added example on how implement a rest web service with spring-boot that uses mongodb (feature/webservice-mongodb branch)
@@ -103,12 +104,16 @@ java -jar target/*.jar
 
 Open browser on localhost:8081
 
-### Electron (not work with electron-packager)
+### Electron 
 
-Move __app.jar__ in electron-app folder and in this run **electron main** after **npm i electron -g**. 
-The port is specified in the __electron-app/index.html__.
+After built your front-end app with the *-Pbuild-ui* profile (or with *npm run build.prod* command under frontend-app folder), run in the electron-app folder:
 
-THIS IS A PILOT IN DEVELOPMENT BECAUSE THE ELECTRON LIVE WORKS BAD IN RENDERING AND ELECTRON-PACKAGER INSTEAD BREAKS.
+
+* npm install
+* npm start
+
+In this way a express server child process is run in electron container. You can read log in its window with *F1* keyword.
+
 
 ### Deploy jar on heroku 
 
