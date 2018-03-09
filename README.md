@@ -23,11 +23,11 @@ The project produces **an only jar** using maven spring-boot, that is you can im
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
-- [ ] Integrate mongodb (and h2) and webservice in spring-boot
+- [x] Integrate mongodb (and h2) and webservice in spring-boot
 - [ ] Integrate mongodb (and h2) and webservice in node express server
 - [ ] Use embedded node for express in electron: https://nodejs.org/dist/v9.4.0/win-x64/ 
 - [ ] Use embedded jre for jar in electron
-- [x] Use electron packager to produce an exe (windows: https://github.com/frankhale/electron-with-express#package-with-electron-packager)
+- [ ] Use electron packager to produce an exe (windows: https://github.com/frankhale/electron-with-express#package-with-electron-packager)
 
 
 ## Table of contents
