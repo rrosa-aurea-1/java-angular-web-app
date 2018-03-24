@@ -15,7 +15,7 @@ The project produces **an only jar** using maven spring-boot, that is you can im
 
 ## NEWS
 
-* 23/03/2018 added travis ci
+* 23/03/2018 added [travis ci](https://travis-ci.org/) and automatic deploy on [keroku](https://www.heroku.com/) with .travis-deploy-heroku.sh file [Issue 2](https://github.com/amanganiello90/java-angular-web-app/issues/2) 
 * 05/03/2018 added spring boot jar child process mode running in electron app
 * 05/03/2018 added express server external process in electron app to live angular app built
 * 02/03/2018 refer to resolved [Issue 1](https://github.com/amanganiello90/java-angular-web-app/issues/1) related the routing of single page app in spring boot tomcat server
@@ -26,12 +26,11 @@ The project produces **an only jar** using maven spring-boot, that is you can im
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
-- [ ] Configure credentials environment variables in .netrc file for heroku automatic deploy after travis build 
 - [x] Integrate mongodb (and h2) and webservice in spring-boot
 - [ ] Integrate mongodb (and h2) and webservice in node express server
-- [ ] Use embedded node for express in electron: https://nodejs.org/dist/v9.4.0/win-x64/ 
+- [ ] Use embedded [node](https://nodejs.org/dist/v9.4.0/win-x64/) for express in electron
 - [ ] Use embedded jre for jar in electron
-- [ ] Use electron packager to produce an exe (windows: https://github.com/frankhale/electron-with-express#package-with-electron-packager)
+- [ ] Use electron packager to produce an exe on [windows](https://github.com/frankhale/electron-with-express#package-with-electron-packager)
 
 
 ## Table of contents
@@ -45,7 +44,8 @@ The project produces **an only jar** using maven spring-boot, that is you can im
       * [Electron](#electron)
 		* [Express server mode](#express-server-mode)
 		* [Spring boot jar mode](#spring-boot-jar-mode)
-   * [Deploy jar on heroku](#deploy-jar-on-heroku)
+   * [Deploy jar on heroku from your machine](#deploy-jar-on-heroku-from-your-machine)
+   * [Automatic build and deploy with travis](#automatic-build-and-deploy-with-travis)
    * [Live demo heroku deployed jar](#live-demo-heroku-deployed-jar)
 
 
@@ -175,10 +175,10 @@ Spring Boot log in electron:
 
 ![Electron-Spring](https://github.com/amanganiello90/java-angular-web-app/blob/branch-screen/electron-spring.jpg)
 
-## Deploy jar on heroku 
+## Deploy jar on heroku from your machine
 
 
-Create an account on keroku (https://www.heroku.com/)
+Create an account on [keroku](https://www.heroku.com/) .
 
 After install the __heroku-cli__
 
@@ -201,9 +201,34 @@ To deploy the jar file, execute in the main folder of this repo:
 heroku deploy:jar target/app.jar --app spring-boot-angular-app2
 ```
 
-View in : https://spring-boot-angular-app2.herokuapp.com/.
+View [app](https://spring-boot-angular-app2.herokuapp.com/)
+
+## Automatic build and deploy with travis
+
+You can configure your git repo for continuous integration with [travis](https://travis-ci.org/) .
+
+For the configuration travis will use the **.travis.yml** and **.travis-deploy-heroku.sh** files.
+
+Then, for your repo you have to configure only two things:
+
+* Replace your heroku deploy app name in the **.travis-deploy-heroku.sh** (here *spring-boot-angular-app* with *spring-boot-angular-app2*) that before you have created on heroku with the command (or heroku dashboard):
+
+```
+heroku create spring-boot-angular-app2  --no-remote
+
+```
+
+* Set the HEROKU_API_KEY environment variable on travis. You can retrieve it after these commands on your machine:
+
+```
+heroku login
+heroku auth:token
+
+```
+The last display the token that you will set in the HEROKU_API_KEY variable. 
+It allows travis to have permission to deploy on heroku.
 
 ## Live demo heroku deployed jar
 
-A demo is on https://spring-boot-angular-app.herokuapp.com/
+A demo [app](https://spring-boot-angular-app.herokuapp.com/)
 
