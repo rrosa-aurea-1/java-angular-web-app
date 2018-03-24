@@ -1,4 +1,6 @@
-## Spring boot app with Angular 4 client embedded
+## Spring boot app with Angular 4 client embedded [![Build Status](https://travis-ci.org/amanganiello90/java-angular-web-app.svg)](https://travis-ci.org/amanganiello90/java-angular-web-app)
+
+![Technology-Stack](https://github.com/amanganiello90/java-angular-web-app/blob/branch-screen/stack.png)
 
 <img src="https://img.shields.io/github/forks/amanganiello90/java-angular-web-app.svg">&nbsp;
 <img src="https://img.shields.io/github/stars/amanganiello90/java-angular-web-app.svg">&nbsp;<a href="https://github.com/amanganiello90/java-angular-web-app/issues"><img src="https://img.shields.io/github/issues/amanganiello90/java-angular-web-app.svg">
@@ -7,14 +9,13 @@
 |Please donate whether you wish support us to give more time to app's growth | [![](https://www.paypal.com/en_US/IT/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XTC895QYD28TC) |
 |:------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-![Technology-Stack](https://github.com/amanganiello90/java-angular-web-app/blob/branch-screen/stack.png)
-
 The frontend-app is gotten from :https://github.com/creativetimofficial/material-dashboard-angular.
 The project produces **an only jar** using maven spring-boot, that is you can implement java backend services, together the angular client developed in typescript (angular-cli). Download the zip of this branch or clone the git repo.
 
 
 ## NEWS
 
+* 23/03/2018 added travis ci
 * 05/03/2018 added spring boot jar child process mode running in electron app
 * 05/03/2018 added express server external process in electron app to live angular app built
 * 02/03/2018 refer to resolved [Issue 1](https://github.com/amanganiello90/java-angular-web-app/issues/1) related the routing of single page app in spring boot tomcat server
@@ -25,6 +26,7 @@ The project produces **an only jar** using maven spring-boot, that is you can im
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
+- [ ] Configure credentials environment variables in .netrc file for heroku automatic deploy after travis build 
 - [x] Integrate mongodb (and h2) and webservice in spring-boot
 - [ ] Integrate mongodb (and h2) and webservice in node express server
 - [ ] Use embedded node for express in electron: https://nodejs.org/dist/v9.4.0/win-x64/ 
