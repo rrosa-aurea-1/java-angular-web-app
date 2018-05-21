@@ -28,7 +28,7 @@ The project produces **an only jar** using maven spring-boot, that is you can im
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
-- [x] Integrate mongodb (and h2) and webservice in spring-boot
+- [x] Create full stack call from UI to web service
 - [ ] Integrate mongodb (and h2) and webservice in node express server
 - [ ] Use embedded jre for jar in electron
 
