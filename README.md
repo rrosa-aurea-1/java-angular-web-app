@@ -15,15 +15,13 @@ The project produces **an only jar** using maven spring-boot, that is you can im
 
 ## NEWS
 
-* 21/05/2018 first integration with embedded h2/mongo db used by rest api and JUnit test (Product and time examples)
+* 21/05/2018 start development branch **feature/create-ui-call**
+* 21/05/2018 first integration with embedded h2/mongo db used by rest api and JUnit automatic api test (Product and time examples) [Issue 3](https://github.com/amanganiello90/java-angular-web-app/issues/3) 
 * 03/04/2018 added embedded [node](https://nodejs.org/dist/v9.4.0/win-x64/) for express in electron-app-exe folder using electron-packager
 * 23/03/2018 refer to resolved [Issue 2](https://github.com/amanganiello90/java-angular-web-app/issues/2) related to add [travis ci](https://travis-ci.org/) and automatic deploy on [keroku](https://www.heroku.com/) with .travis-deploy-heroku.sh file 
 * 05/03/2018 added spring boot jar child process mode running in electron app
 * 05/03/2018 added express server external process in electron app to live angular app built
 * 02/03/2018 refer to resolved [Issue 1](https://github.com/amanganiello90/java-angular-web-app/issues/1) related the routing of single page app in spring boot tomcat server
-* 02/03/2018 a feature that integrates an embedded spring-boot rest web service that uses mongodb with the front-end application (**in development** on feature/integration-mongodb branch)
-* 02/03/2018 added example on how implement a rest web service with spring-boot that uses mongodb (feature/webservice-mongodb branch)
-* 18/10/2017 added example on how implement a rest web service with spring-boot that uses h2 database embedded (feature/h2 branch)
 
 
 ## NEXT DEVELOPMENTS (checked in progress)
