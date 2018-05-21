@@ -10,9 +10,9 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
+import com.github.amanganiello90.javafullstack.app.models.SimpleTime;
+import com.github.amanganiello90.javafullstack.app.repositories.SimpleTimeRepository;
 import com.github.amanganiello90.javafullstack.db.h2.models.SimpleTimeJPA;
-import com.github.amanganiello90.javafullstack.models.SimpleTime;
-import com.github.amanganiello90.javafullstack.repositories.SimpleTimeRepository;
 
 /**
  *

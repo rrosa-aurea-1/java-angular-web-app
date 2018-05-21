@@ -1,4 +1,4 @@
-package com.github.amanganiello90.javafullstack;
+package com.github.amanganiello90.javafullstack.app;
 
 import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.annotation.Configuration;

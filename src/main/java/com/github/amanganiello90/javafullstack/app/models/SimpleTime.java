@@ -1,4 +1,4 @@
-package com.github.amanganiello90.javafullstack.models;
+package com.github.amanganiello90.javafullstack.app.models;
 
 /**
  *

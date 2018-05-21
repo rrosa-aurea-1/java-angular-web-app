@@ -1,8 +1,8 @@
-package com.github.amanganiello90.javafullstack.repositories;
+package com.github.amanganiello90.javafullstack.app.repositories;
 
 import java.util.List;
 
-import com.github.amanganiello90.javafullstack.models.Product;
+import com.github.amanganiello90.javafullstack.app.models.Product;
 
 public interface ProductRepository {
 	

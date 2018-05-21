@@ -1,4 +1,4 @@
-package com.github.amanganiello90;
+package com.github.amanganiello90.javafullstack.app;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
@@ -18,21 +18,27 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import com.github.amanganiello90.javafullstack.JavaFullStackRunner;
-import com.github.amanganiello90.javafullstack.models.Product;
-import com.github.amanganiello90.javafullstack.models.SimpleTime;
+import com.github.amanganiello90.javafullstack.app.JavaFullStackRunner;
+import com.github.amanganiello90.javafullstack.app.models.Product;
+import com.github.amanganiello90.javafullstack.app.models.SimpleTime;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
 
 import static com.jayway.restassured.RestAssured.given;
 
+/**
+*
+* @author amanganiello90
+* Api automatic integration tests with restAssured
+*/
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = JavaFullStackRunner.class)
 @WebAppConfiguration
 @IntegrationTest("server.port:0")
 @ActiveProfiles("h2")
-public class RestapiApplicationTests {
+public class JavaFullStackTest {
 
 	@Autowired
 	Product product;
@@ -65,7 +71,7 @@ public class RestapiApplicationTests {
 
 	@Test
 	public void runningAppWithRandomPortTest() {
-		given().when().get("/").then().statusCode(HttpStatus.SC_OK).body(Matchers.is("Hello World!"));
+		given().when().get("/welcome").then().statusCode(HttpStatus.SC_OK).body(Matchers.is("Hello World!"));
 
 	}
 

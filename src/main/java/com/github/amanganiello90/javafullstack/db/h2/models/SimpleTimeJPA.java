@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
-import com.github.amanganiello90.javafullstack.models.SimpleTime;
+import com.github.amanganiello90.javafullstack.app.models.SimpleTime;
 
 /**
  *

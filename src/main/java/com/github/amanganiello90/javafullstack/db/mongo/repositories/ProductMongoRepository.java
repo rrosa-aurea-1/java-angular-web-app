@@ -8,8 +8,8 @@ package com.github.amanganiello90.javafullstack.db.mongo.repositories;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.github.amanganiello90.javafullstack.models.Product;
-import com.github.amanganiello90.javafullstack.repositories.ProductRepository;
+import com.github.amanganiello90.javafullstack.app.models.Product;
+import com.github.amanganiello90.javafullstack.app.repositories.ProductRepository;
 
 
 

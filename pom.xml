@@ -69,6 +69,8 @@
 			<scope>test</scope>
 		</dependency>
 
+		
+
 
 	</dependencies>
 
@@ -128,7 +130,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<mainClass>com.github.amanganiello90.javafullstack.JavaFullStackRunner</mainClass>
+					<mainClass>com.github.amanganiello90.javafullstack.app.JavaFullStackRunner</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>

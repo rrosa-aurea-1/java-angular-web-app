@@ -9,13 +9,12 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
-import com.github.amanganiello90.javafullstack.models.Product;
+import com.github.amanganiello90.javafullstack.app.models.Product;
 
 /**
  *
  * @author amanganiello90
  */
-
 @Component
 @Entity
 @Table(name = "Product")

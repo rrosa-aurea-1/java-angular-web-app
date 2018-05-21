@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.amanganiello90.javafullstack.controllers;
+package com.github.amanganiello90.javafullstack.app.controllers;
 
-import com.github.amanganiello90.javafullstack.models.Product;
-import com.github.amanganiello90.javafullstack.services.ProductService;
+import com.github.amanganiello90.javafullstack.app.models.Product;
+import com.github.amanganiello90.javafullstack.app.services.ProductService;
 
 import java.util.List;
 

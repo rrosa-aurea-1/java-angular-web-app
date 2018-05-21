@@ -1,12 +1,12 @@
-package com.github.amanganiello90.javafullstack.services;
+package com.github.amanganiello90.javafullstack.app.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.github.amanganiello90.javafullstack.models.SimpleTime;
-import com.github.amanganiello90.javafullstack.repositories.SimpleTimeRepository;
+import com.github.amanganiello90.javafullstack.app.models.SimpleTime;
+import com.github.amanganiello90.javafullstack.app.repositories.SimpleTimeRepository;
 
 /**
  *

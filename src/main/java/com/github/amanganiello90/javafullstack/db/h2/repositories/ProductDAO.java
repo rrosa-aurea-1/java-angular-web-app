@@ -13,9 +13,9 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
+import com.github.amanganiello90.javafullstack.app.models.Product;
+import com.github.amanganiello90.javafullstack.app.repositories.ProductRepository;
 import com.github.amanganiello90.javafullstack.db.h2.models.ProductJPA;
-import com.github.amanganiello90.javafullstack.models.Product;
-import com.github.amanganiello90.javafullstack.repositories.ProductRepository;
 
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;

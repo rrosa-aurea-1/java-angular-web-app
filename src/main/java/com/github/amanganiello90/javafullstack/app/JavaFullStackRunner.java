@@ -1,4 +1,4 @@
-package com.github.amanganiello90.javafullstack;
+package com.github.amanganiello90.javafullstack.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
