@@ -15,6 +15,7 @@ The project produces **an only jar** using maven spring-boot, that is you can im
 
 ## NEWS
 
+* 21/05/2018 first integration with embedded h2/mongo db used by rest api and JUnit test (Product and time examples)
 * 03/04/2018 added embedded [node](https://nodejs.org/dist/v9.4.0/win-x64/) for express in electron-app-exe folder using electron-packager
 * 23/03/2018 refer to resolved [Issue 2](https://github.com/amanganiello90/java-angular-web-app/issues/2) related to add [travis ci](https://travis-ci.org/) and automatic deploy on [keroku](https://www.heroku.com/) with .travis-deploy-heroku.sh file 
 * 05/03/2018 added spring boot jar child process mode running in electron app
@@ -27,7 +28,7 @@ The project produces **an only jar** using maven spring-boot, that is you can im
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
-- [x] Integrate mongodb (and h2) and webservice in spring-boot
+- [x] Create full stack call from UI to web service
 - [ ] Integrate mongodb (and h2) and webservice in node express server
 - [ ] Use embedded jre for jar in electron
 
@@ -39,6 +40,9 @@ The project produces **an only jar** using maven spring-boot, that is you can im
       * [Prerequisites](#prerequisites)
       * [Live](#live)
       * [Build and run](#build-and-run)
+      * [Api integration with h2 and mongo db](#api-integration-with-h2-and-mongo-db)
+      	* [Using Dev Mode](#using-dev-mode)
+		* [Write automatic integration api tests with rest assured](#write-automatic-integration-api-tests-with-rest-assured)
       * [Electron](#electron) 
 		* [Express server mode](#express-server-mode)
 		* [Spring boot jar mode](#spring-boot-jar-mode)
@@ -135,6 +139,35 @@ java -jar target/*.jar
 ```
 
 Open browser on localhost:8081
+
+
+### Api integration with h2 and mongo db
+
+You can use, according various spring profiles, an h2 embedded db, an mongodb embedded or for production.
+The application exposes some rest api (**ProductControllor and TimeController**) that connects to db (default application properties, h2 and mongop).
+
+Run your application with:
+* _-Dspring.profiles.active=mongo_ to use embedded mongo db (it is activated for default).
+* _-Dspring.profiles.active=mongop_ to use mongo db for prod.
+* _-Dspring.profiles.active=h2_ to use h2 embedded. The console is enabled with _/h2_ endpoint.
+
+
+#### Using Dev Mode
+
+You can use the live reload for spring boot when you use the spring-boot-plugin.
+
+Run:
+
+```
+mvn clean spring-boot:run -Pdev
+```
+**N.B In this mode you can't pass spring profiles. So modify the _application.properties_ in spring.profiles.default property with your profile**
+
+#### Write automatic integration api tests with rest assured
+
+You can write integration api tests with rest assured. In the JUnit test spring-boot is automatically run and performed your @Test.
+See the **JavaFullStackTest.java** example in _src/test/java/**_ path.
+The test is a normal JUnit test run also by the surefire maven plugin and maven test phase.
 
 ### Electron 
 
