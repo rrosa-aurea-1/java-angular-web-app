@@ -1,16 +1,20 @@
-package com.example.demo;
+package com.github.amanganiello90.javafullstack.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+*
+* @author amanganiello90
+*/
 @Controller
-public class DemoController {
+public class AppController {
 
-	@RequestMapping(value = { "/welcome" })
+	@RequestMapping(value = { "/" })
 	@ResponseBody
 	public String redirect() {
-		return "hello!";
+		return "Hello World!";
 	}
 
 }
