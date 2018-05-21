@@ -69,8 +69,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		
-
 
 	</dependencies>
 
@@ -137,6 +135,18 @@
 	</build>
 
 	<profiles>
+		<profile>
+			<id>dev</id>
+			<dependencies>
+				<!-- ADD DEV TOOLS FOR LIVE RELOAD IN PLUGIN -->
+				<dependency>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-devtools</artifactId>
+					<version>${spring.boot.version}</version>
+					<optional>true</optional>
+				</dependency>
+			</dependencies>
+		</profile>
 		<profile>
 			<id>build-ui</id>
 			<build>
