@@ -19,7 +19,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.github.amanganiello90.javafullstack.app.JavaFullStackRunner;
-import com.github.amanganiello90.javafullstack.app.models.Product;
+import com.github.amanganiello90.javafullstack.app.models.User;
 import com.github.amanganiello90.javafullstack.app.models.SimpleTime;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.http.ContentType;
@@ -41,7 +41,7 @@ import static com.jayway.restassured.RestAssured.given;
 public class JavaFullStackTest {
 
 	@Autowired
-	Product product;
+	User user;
 
 	@Autowired
 	SimpleTime simpleTime;
@@ -49,8 +49,8 @@ public class JavaFullStackTest {
 	@Value("${local.server.port}")
 	int port;
 
-	// get product
-	private Product checkGetProduct(String endpoint) {
+	// get user
+	private User checkGetUser(String endpoint) {
 		Response find = given().when().get(endpoint);
 		find.then().statusCode(HttpStatus.SC_OK);
 
@@ -59,7 +59,7 @@ public class JavaFullStackTest {
 		}
 		
 
-		return find.as(product.getClass());
+		return find.as(user.getClass());
 
 	}
 
@@ -77,17 +77,19 @@ public class JavaFullStackTest {
 
 	@Test
 	public void runningAppWithManageTimeDb() {
+		
+		final String timesEndpoint="/api/times/";
 
-		given().when().get("/api/times").then().statusCode(HttpStatus.SC_OK);
+		given().when().get(timesEndpoint).then().statusCode(HttpStatus.SC_OK);
 		String id = "1";
 
-		Response resCreate = given().when().get("/api/times/" + id);
+		Response resCreate = given().when().get(timesEndpoint + id);
 
 		resCreate.then().statusCode(HttpStatus.SC_OK);
 
 		// System.out.println(resCreate.getBody().asString());
 
-		Response findCreate = given().when().get("/api/times/find/" + id);
+		Response findCreate = given().when().get(timesEndpoint+"find/" + id);
 		findCreate.then().statusCode(HttpStatus.SC_OK);
 
 		assertFalse(findCreate.getBody().asString().isEmpty());
@@ -98,43 +100,43 @@ public class JavaFullStackTest {
 	}
 
 	@Test
-	public void runningAppWithManageProductDb() {
+	public void runningAppWithManageUserDb() {
 
-		Product insertProd = product.factory();
+		User insertUser = user.factory();
 		String id = "1";
-		String prodDesc1 = "test1";
-		String prodDesc2 = "test2";
-		String createRequest = "/api/products";
+		String email1 = "amanganiello@github.it";
+		String email2 = "amanganiello90@github.it";
+		final String createRequest = "/api/users";
 		String otherRequest = createRequest + "/" + id;
 
-		insertProd.setId(id);
-		insertProd.setProdDesc(prodDesc1);
+		insertUser.setId(id);
+		insertUser.setEmail(email1);
 
 		// create
-		given().contentType(ContentType.JSON).body(insertProd).when().post(createRequest).then()
+		given().contentType(ContentType.JSON).body(insertUser).when().post(createRequest).then()
 				.statusCode(HttpStatus.SC_OK);
 
-		Product productRead = this.checkGetProduct(otherRequest);
-		assertNotNull(productRead);
+		User userRead = this.checkGetUser(otherRequest);
+		assertNotNull(userRead);
 
-		assertTrue(productRead.getProdDesc().equals(prodDesc1));
+		assertTrue(userRead.getEmail().equals(email1));
 
 		// put
-		insertProd.setProdDesc(prodDesc2);
-		given().contentType(ContentType.JSON).body(insertProd).when().put(otherRequest).then()
+		insertUser.setEmail(email2);
+		given().contentType(ContentType.JSON).body(insertUser).when().put(otherRequest).then()
 				.statusCode(HttpStatus.SC_OK);
 
-		productRead = this.checkGetProduct(otherRequest);
-		assertNotNull(productRead);
+		userRead = this.checkGetUser(otherRequest);
+		assertNotNull(userRead);
 
-		assertTrue(productRead.getProdDesc().equals(prodDesc2));
+		assertTrue(userRead.getEmail().equals(email2));
 
 		// delete
-		given().contentType(ContentType.JSON).body(insertProd).when().delete(otherRequest).then()
+		given().contentType(ContentType.JSON).body(insertUser).when().delete(otherRequest).then()
 				.statusCode(HttpStatus.SC_OK);
 
-		productRead = this.checkGetProduct(otherRequest);
-		assertNull(productRead);
+		userRead = this.checkGetUser(otherRequest);
+		assertNull(userRead);
 
 	}
 
