@@ -18,6 +18,8 @@ import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { UpgradeComponent } from './upgrade/upgrade.component';
 
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,7 @@ import { UpgradeComponent } from './upgrade/upgrade.component';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
-
+    PageNotFoundComponent 
   ],
   imports: [
     BrowserModule,

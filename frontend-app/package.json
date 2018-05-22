@@ -1,7 +1,8 @@
 {
-  "name": "md-free-angular-cli",
-  "version": "1.4.1",
+  "name": "angular-dashboard-full-stack",
+  "version": "1.0.0",
   "license": "MIT",
+  "author": "amanganiello90",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

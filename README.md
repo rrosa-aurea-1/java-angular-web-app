@@ -9,7 +9,8 @@
 |Please donate whether you wish support us to give more time to app's growth | [![](https://www.paypal.com/en_US/IT/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XTC895QYD28TC) |
 |:------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-The frontend-app is gotten from :https://github.com/creativetimofficial/material-dashboard-angular.
+The frontend-app is extended from the initial seed :https://github.com/creativetimofficial/material-dashboard-angular .
+The extension is related to create a user-profile from the UI to the integrated backend on a mongo/h2 embedded db, and a component error page ui for routing.
 The project produces **an only jar** using maven spring-boot, that is you can implement java backend services, together the angular client developed in typescript (angular-cli). Download the zip of this branch or clone the git repo.
 
 
@@ -159,7 +160,7 @@ Run:
 ```
 mvn clean spring-boot:run -Pdev
 ```
-**N.B In this mode you can't pass spring profiles. So modify the _application.properties_ in spring.profiles.default property with your profile**
+**N.B In this mode you can't pass spring profiles and all properties (i.e. server.port). So modify the _application.properties_ in spring.profiles.default property with your profile**
 
 #### Write automatic integration api tests with rest assured
 
