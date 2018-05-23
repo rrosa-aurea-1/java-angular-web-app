@@ -5,13 +5,15 @@ import { Observable } from 'rxjs/Rx';
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.css']
+  styleUrls: ['./user-profile.component.css'],
+  providers: [UserService]
 })
 export class UserProfileComponent implements OnInit {
 
   public users;
 
-  constructor(private _userService: UserService) { }
+  constructor(public _userService: UserService) { }
+
 
   ngOnInit() {
 
