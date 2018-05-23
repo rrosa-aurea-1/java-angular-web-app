@@ -2,7 +2,6 @@ package com.github.amanganiello90.javafullstack.db.h2.models;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -29,17 +28,15 @@ public class UserJPA implements User, Serializable {
 	//@GeneratedValue(strategy = GenerationType.AUTO)
 	private String id;
 
-	@Column(name = "username")
-	private String userName;
 
-	@Column(name = "email")
+	private String username;
+
 	private String email;
 
-	@Column(name = "firstname")
-	private Double firstName;
+	
+	private String firstname;
 
-	@Column(name = "lastname")
-	private String lastName;
+	private String lastname;
 
 	@Override
 	public User factory() {
@@ -59,12 +56,12 @@ public class UserJPA implements User, Serializable {
 
 	@Override
 	public String getUserName() {
-		return userName;
+		return username;
 	}
 
 	@Override
 	public void setUserName(String userName) {
-		this.userName = userName;
+		this.username = userName;
 	}
 
 	@Override
@@ -78,23 +75,23 @@ public class UserJPA implements User, Serializable {
 	}
 
 	@Override
-	public Double getFirstName() {
-		return firstName;
+	public String getFirstName() {
+		return firstname;
 	}
 
 	@Override
-	public void setFirstName(Double firstName) {
-		this.firstName = firstName;
+	public void setFirstName(String firstName) {
+		this.firstname = firstName;
 	}
 
 	@Override
 	public String getLastName() {
-		return lastName;
+		return lastname;
 	}
 
 	@Override
 	public void setLastName(String lastName) {
-		this.lastName = lastName;
+		this.lastname = lastName;
 	}
 
 }

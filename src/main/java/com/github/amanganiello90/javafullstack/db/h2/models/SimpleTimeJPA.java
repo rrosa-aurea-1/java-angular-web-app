@@ -2,7 +2,6 @@ package com.github.amanganiello90.javafullstack.db.h2.models;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -30,7 +29,6 @@ public class SimpleTimeJPA implements SimpleTime, Serializable {
 	@Id
 	private String id;
 
-	@Column(name = "value")
 	private String value;
 
 	@Override

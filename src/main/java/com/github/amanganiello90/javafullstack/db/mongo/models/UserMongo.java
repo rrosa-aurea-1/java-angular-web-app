@@ -23,10 +23,10 @@ public class UserMongo implements User {
 	@Id
 	private String id;
 
-	private String userName;
+	private String username;
 	private String email;
-	private Double firstName;
-	private String lastName;
+	private String firstname;
+	private String lastname;
 
 	@Override
 	public String getId() {
@@ -40,12 +40,12 @@ public class UserMongo implements User {
 
 	@Override
 	public String getUserName() {
-		return userName;
+		return username;
 	}
 
 	@Override
 	public void setUserName(String userName) {
-		this.userName = userName;
+		this.username = userName;
 	}
 
 	@Override
@@ -59,23 +59,23 @@ public class UserMongo implements User {
 	}
 
 	@Override
-	public Double getFirstName() {
-		return firstName;
+	public String getFirstName() {
+		return firstname;
 	}
 
 	@Override
-	public void setFirstName(Double firstName) {
-		this.firstName = firstName;
+	public void setFirstName(String firstName) {
+		this.firstname = firstName;
 	}
 
 	@Override
 	public String getLastName() {
-		return lastName;
+		return lastname;
 	}
 
 	@Override
 	public void setLastName(String lastName) {
-		this.lastName = lastName;
+		this.lastname = lastName;
 	}
 
 	@Override
