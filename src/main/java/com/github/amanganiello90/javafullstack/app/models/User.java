@@ -10,7 +10,7 @@ import com.github.amanganiello90.javafullstack.db.mongo.models.UserMongo;
  * @author amanganiello90
  */
 
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, defaultImpl=UserJPA.class)
+@JsonTypeInfo(use = JsonTypeInfo.Id.CLASS)
 @JsonSubTypes({ @JsonSubTypes.Type(UserJPA.class), @JsonSubTypes.Type(UserMongo.class) })
 public interface User {
 
