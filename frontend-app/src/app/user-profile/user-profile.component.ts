@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { UserService } from './user.service';
 import { Observable } from 'rxjs/Rx';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-user-profile',
@@ -12,7 +14,18 @@ export class UserProfileComponent implements OnInit {
 
   public users;
 
-  constructor(public _userService: UserService) { }
+  user: any = {
+    username: '',
+    email: '',
+    firstname: '',
+    lastname: ''
+  }
+
+  constructor(public _userService: UserService) {
+
+
+  }
+
 
 
   ngOnInit() {
@@ -29,15 +42,16 @@ export class UserProfileComponent implements OnInit {
   }
 
   createUser() {
-    let user = { id: '1' };
-    this._userService.createUser(user).subscribe(
+    this._userService.createUser(this.user).subscribe(
       data => {
         // refresh the list
         this.getUsers();
+        swal('Created!', 'User created!', 'success');
         return true;
       },
       error => {
         console.error("Error saving user!");
+        swal('Error!', 'User not created!', 'error');
         return Observable.throw(error);
       }
     );
