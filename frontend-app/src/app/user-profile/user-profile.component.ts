@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { UserService } from './user.service';
 import { Observable } from 'rxjs/Rx';
+import { Router } from '@angular/router';
 import swal from 'sweetalert2';
 
 @Component({
@@ -15,13 +16,14 @@ export class UserProfileComponent implements OnInit {
   public users;
 
   user: any = {
+    id:'',
     username: '',
     email: '',
     firstname: '',
     lastname: ''
   }
 
-  constructor(public _userService: UserService) {
+  constructor(public _userService: UserService, public router: Router) {
 
 
   }
@@ -47,6 +49,7 @@ export class UserProfileComponent implements OnInit {
         // refresh the list
         this.getUsers();
         swal('Created!', 'User created!', 'success');
+        this.router.navigate(['/user-list']);
         return true;
       },
       error => {

@@ -160,7 +160,11 @@ Run:
 ```
 mvn clean spring-boot:run -Pdev
 ```
-**N.B In this mode you can't pass spring profiles and all properties (i.e. server.port). So modify the _application.properties_ in spring.profiles.default property with your profile**
+
+<aside class="warning">
+In this mode you can't pass spring profiles and all properties (i.e. server.port). So modify the _application.properties_ in spring.profiles.default property with your profile.
+</aside>
+
 
 #### Write automatic integration api tests with rest assured
 

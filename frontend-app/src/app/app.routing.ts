@@ -17,7 +17,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 const routes: Routes =[
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'user-profile',   component: UserProfileComponent },
-    { path: 'table-list',     component: TableListComponent },
+    { path: 'user-list',     component: TableListComponent },
     { path: 'typography',     component: TypographyComponent },
     { path: 'icons',          component: IconsComponent },
     { path: 'maps',           component: MapsComponent },
