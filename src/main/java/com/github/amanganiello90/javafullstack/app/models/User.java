@@ -1,5 +1,6 @@
 package com.github.amanganiello90.javafullstack.app.models;
 
+
 /**
  *
  * @author amanganiello90
@@ -10,21 +11,21 @@ public interface User {
 
 	public void setId(String id);
 
-	public String getUserName();
+	public String getUsername();
 
-	public void setUserName(String userName);
+	public void setUsername(String username);
 
 	public String getEmail();
 
 	public void setEmail(String email);
 
-	public String getFirstName();
+	public String getFirstname();
 
-	public void setFirstName(String firstName);
+	public void setFirstname(String firstname);
 
-	public String getLastName();
+	public String getLastname();
 
-	public void setLastName(String lastName);
+	public void setLastname(String lastname);
 
 	public abstract User factory();
 

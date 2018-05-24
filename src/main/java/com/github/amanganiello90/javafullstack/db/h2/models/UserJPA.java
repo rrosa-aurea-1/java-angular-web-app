@@ -55,13 +55,13 @@ public class UserJPA implements User, Serializable {
 	}
 
 	@Override
-	public String getUserName() {
+	public String getUsername() {
 		return username;
 	}
 
 	@Override
-	public void setUserName(String userName) {
-		this.username = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	@Override
@@ -75,23 +75,23 @@ public class UserJPA implements User, Serializable {
 	}
 
 	@Override
-	public String getFirstName() {
+	public String getFirstname() {
 		return firstname;
 	}
 
 	@Override
-	public void setFirstName(String firstName) {
-		this.firstname = firstName;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
 	@Override
-	public String getLastName() {
+	public String getLastname() {
 		return lastname;
 	}
 
 	@Override
-	public void setLastName(String lastName) {
-		this.lastname = lastName;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
 }

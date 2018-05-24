@@ -39,13 +39,13 @@ public class UserMongo implements User {
 	}
 
 	@Override
-	public String getUserName() {
+	public String getUsername() {
 		return username;
 	}
 
 	@Override
-	public void setUserName(String userName) {
-		this.username = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	@Override
@@ -59,22 +59,22 @@ public class UserMongo implements User {
 	}
 
 	@Override
-	public String getFirstName() {
+	public String getFirstname() {
 		return firstname;
 	}
 
 	@Override
-	public void setFirstName(String firstName) {
+	public void setFirstname(String firstName) {
 		this.firstname = firstName;
 	}
 
 	@Override
-	public String getLastName() {
+	public String getLastname() {
 		return lastname;
 	}
 
 	@Override
-	public void setLastName(String lastName) {
+	public void setLastname(String lastName) {
 		this.lastname = lastName;
 	}
 
