@@ -13,7 +13,7 @@ import swal from 'sweetalert2';
 })
 export class UserProfileComponent implements OnInit {
 
-  public users;
+ 
 
   user: any = {
     id:'',
@@ -28,26 +28,15 @@ export class UserProfileComponent implements OnInit {
 
   }
 
-
-
   ngOnInit() {
 
-    this.getUsers();
   }
 
-  getUsers() {
-    this._userService.getUsers().subscribe(
-      data => { this.users = data },
-      err => console.error(err),
-      () => console.log('done loading users')
-    );
-  }
 
   createUser() {
     this._userService.createUser(this.user).subscribe(
       data => {
         // refresh the list
-        this.getUsers();
         swal('Created!', 'User created!', 'success');
         this.router.navigate(['/user-list']);
         return true;
@@ -64,8 +53,7 @@ export class UserProfileComponent implements OnInit {
     if (confirm("Are you sure you want to delete " + user.username + "?")) {
       this._userService.deleteUser(user).subscribe(
         data => {
-          // refresh the list
-          this.getUsers();
+          // refresh the list/*  */
           return true;
         },
         error => {
