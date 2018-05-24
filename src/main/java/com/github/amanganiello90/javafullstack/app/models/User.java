@@ -1,8 +1,6 @@
 package com.github.amanganiello90.javafullstack.app.models;
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.github.amanganiello90.javafullstack.db.h2.models.UserJPA;
 import com.github.amanganiello90.javafullstack.db.mongo.models.UserMongo;
 
 /**
@@ -10,8 +8,7 @@ import com.github.amanganiello90.javafullstack.db.mongo.models.UserMongo;
  * @author amanganiello90
  */
 
-@JsonTypeInfo(use = JsonTypeInfo.Id.CLASS)
-@JsonSubTypes({ @JsonSubTypes.Type(UserJPA.class), @JsonSubTypes.Type(UserMongo.class) })
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, defaultImpl=UserMongo.class)
 public interface User {
 
 	public String getId();
