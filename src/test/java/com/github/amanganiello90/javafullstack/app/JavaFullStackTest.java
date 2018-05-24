@@ -37,7 +37,7 @@ import static com.jayway.restassured.RestAssured.given;
 @SpringApplicationConfiguration(classes = JavaFullStackRunner.class)
 @WebAppConfiguration
 @IntegrationTest("server.port:0")
-@ActiveProfiles("mongo")
+@ActiveProfiles("h2")
 public class JavaFullStackTest {
 
 	@Autowired

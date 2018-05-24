@@ -1,7 +1,9 @@
 package com.github.amanganiello90.javafullstack.app;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
@@ -11,6 +13,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.EventListener;
 import org.springframework.http.HttpStatus;
+
+import com.fasterxml.jackson.core.Version;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.module.SimpleAbstractTypeResolver;
+import com.fasterxml.jackson.databind.module.SimpleModule;
+import com.github.amanganiello90.javafullstack.app.models.User;
+
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
@@ -28,6 +37,9 @@ public class Config {
 	// value inserted in your application.properties server.port
 	@Value("${server.port}")
 	private String port;
+	
+	@Autowired
+	User user;
 
 	@EventListener(ApplicationReadyEvent.class)
 	public void postConstruct() {
@@ -43,4 +55,26 @@ public class Config {
 			}
 		};
 	}
+	
+
+	@Bean
+	public ObjectMapper customJacksonObjectMapper() {
+
+		ObjectMapper mapper = new ObjectMapper();
+
+		SimpleModule module = new SimpleModule("CustomModel", Version.unknownVersion());
+
+		SimpleAbstractTypeResolver resolver = new SimpleAbstractTypeResolver();
+		
+		// add all model to deserialize and serialize for post request with jackson object
+		resolver.addMapping(User.class, user.factory().getClass());
+
+		module.setAbstractTypes(resolver);
+
+		mapper.registerModule(module);
+
+		return mapper;
+	}
+
+
 }
