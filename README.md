@@ -9,14 +9,15 @@
 |Please donate whether you wish support us to give more time to app's growth | [![](https://www.paypal.com/en_US/IT/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XTC895QYD28TC) |
 |:------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-The frontend-app is extended from the initial seed :https://github.com/creativetimofficial/material-dashboard-angular .
-The extension is related to create a user-profile from the UI to the integrated backend on a mongo/h2 embedded db, and a component error page ui for routing.
+The frontend-app is extended from the initial seed : https://github.com/creativetimofficial/material-dashboard-angular .
+
+> The extension is related to create a user-profile from the UI to the integrated backend on a mongo/h2 embedded db, and a component error page ui for routing.
 The project produces **an only jar** using maven spring-boot, that is you can implement java backend services, together the angular client developed in typescript (angular-cli). Download the zip of this branch or clone the git repo.
 
 
 ## NEWS
 
-* 21/05/2018 start development branch **feature/create-ui-call**
+* 25/05/2018 UI integration for create user and user list table view [Issue 4](https://github.com/amanganiello90/java-angular-web-app/issues/4) 
 * 21/05/2018 first integration with embedded h2/mongo db used by rest api and JUnit automatic api test (Product and time examples) [Issue 3](https://github.com/amanganiello90/java-angular-web-app/issues/3) 
 * 03/04/2018 added embedded [node](https://nodejs.org/dist/v9.4.0/win-x64/) for express in electron-app-exe folder using electron-packager
 * 23/03/2018 refer to resolved [Issue 2](https://github.com/amanganiello90/java-angular-web-app/issues/2) related to add [travis ci](https://travis-ci.org/) and automatic deploy on [keroku](https://www.heroku.com/) with .travis-deploy-heroku.sh file 
@@ -27,7 +28,7 @@ The project produces **an only jar** using maven spring-boot, that is you can im
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
-- [x] Create full stack call from UI to web service
+- [x] Implement user list ui delete and update row on click table
 - [ ] Integrate mongodb (and h2) and webservice in node express server
 - [ ] Use embedded jre for jar in electron
 
@@ -40,6 +41,8 @@ The project produces **an only jar** using maven spring-boot, that is you can im
       * [Live](#live)
       * [Build and run](#build-and-run)
       * [Api integration with h2 and mongo db](#api-integration-with-h2-and-mongo-db)
+		* [Api exposed](#api-exposed)
+		* [UI api call](#ui-api-call)
       	* [Using Dev Mode](#using-dev-mode)
 		* [Write automatic integration api tests with rest assured](#write-automatic-integration-api-tests-with-rest-assured)
       * [Electron](#electron) 
@@ -50,8 +53,7 @@ The project produces **an only jar** using maven spring-boot, that is you can im
    * [Automatic build and deploy with travis](#automatic-build-and-deploy-with-travis)
    * [Live demo heroku deployed jar](#live-demo-heroku-deployed-jar)
 
-
-
+  
 ## Description
 
 The project is used to develop the client in the **frontend-app** folder with the __angular-cli__, and the **java backend** with the __maven spring boot project configured__.
@@ -143,12 +145,66 @@ Open browser on localhost:8081
 ### Api integration with h2 and mongo db
 
 You can use, according various spring profiles, an h2 embedded db, an mongodb embedded or for production.
-The application exposes some rest api (**ProductControllor and TimeController**) that connects to db (default application properties, h2 and mongop).
+The application exposes some rest api (**UserControllor and TimeController**) that connects to db (default application properties, h2 and mongop).
 
 Run your application with:
 * _-Dspring.profiles.active=mongo_ to use embedded mongo db (it is activated for default).
 * _-Dspring.profiles.active=mongop_ to use mongo db for prod.
 * _-Dspring.profiles.active=h2_ to use h2 embedded. The console is enabled with _/h2_ endpoint.
+
+
+#### Api exposed
+
+There are some REST services exposed for two entities: **Time and User** that use a different db according your spring runtime profile (h2, mongo and mongop).
+
+Every entity is a interface that maps a specific typology db table.
+
+The fields of these entities are:
+
+```
+Time = {
+String id,
+String value
+}
+
+User= {
+String id,
+String username,
+String email,
+String firstname,
+String lastname
+}
+
+```
+
+For the _time entity_ you can call using these endpoints:
+
+* _api/times_ : **Get Request** that returns all time entities created (empty object if nothing exists)
+* _api/times/{id}_ : **Get Request** that creates a time entity with your specified id. The value field is set with the your current time. 
+* _api/times/find/{id}_ : **Get Request** that returns a time entity with the specified id (empty object if not exists)
+
+**:warning:**
+> If you create a time with an already existing id, it will be executed an update.
+
+Instead, for the _user entity_ you can call using these endpoints:
+
+* _api/users_ : **Get Request** that returns all users entities created (empty object if nothing exists)
+* _api/users_ : **Post Request** that creates a user with a request mapping its fields. On success it returns the id.
+* _api/users/{id}_ : **Get Request** that returns an user entity with the specified id (empty if not exists)
+* _api/users/{id}_ : **Delete Request** that deletes an user entity with the specified id. On success it returns the id .
+* _api/users/{id}_ : **Put Request** that updates the user with a specified id according your request fields. On success it returns the user object updated.
+
+**:warning:**
+> If you create an user with an already existing id, it will be executed an update.
+
+#### UI api call 
+
+You can create an user on the _user profile dashboard_. After successfull creation, you are redirected to the _user list dashboard_ where are listed all users created.
+
+So the api called from the UI are:
+
+* _api/users_ : **Post Request** that creates a user with a request mapping its fields. On success it returns the id.
+* _api/users_ : **Get Request** that returns all users entities created (empty object if nothing exists)
 
 
 #### Using Dev Mode
@@ -162,7 +218,6 @@ mvn clean spring-boot:run -Pdev
 ```
 
 **:warning:**
-
 > In this mode you can't pass spring profiles and all properties (i.e. server.port). So modify the _application.properties_ in spring.profiles.default property with your profile.
 
 
@@ -278,5 +333,5 @@ It allows travis to have permission to deploy on heroku.
 
 ## Live demo heroku deployed jar
 
-A demo [app](https://spring-boot-angular-app.herokuapp.com/)
+A demo with default mongo embedded db [app](https://spring-boot-angular-app.herokuapp.com/)
 
