@@ -11,32 +11,36 @@ import { Observable } from 'rxjs/Rx';
 export class TableListComponent implements OnInit {
 
   public users;
+  public fields;
 
   constructor(public _userService: UserService) { }
 
   ngOnInit() {
 
     this.getUsers();
-    console.log(JSON.stringify(this.users));
-   
+
   }
 
 
   getUsers() {
-    
-      this._userService.getUsers().subscribe(
-        data => {
-       
-          this.users = data;
-          console.log('done loading users '+ console.log(JSON.stringify(this.users)));
-          return true;
-        },
-        error => {
-          console.error("Error loading users!");
-          return Observable.throw(error);
+
+    this._userService.getUsers().subscribe(
+      data => {
+
+        this.users = data;
+        let firstUser=this.users[0];
+        if (firstUser != undefined) {
+          this.fields= Object.keys(firstUser);
         }
-      );
-    }
-  
+        console.log('done loading users '+ JSON.stringify(this.users));
+        return true;
+      },
+      error => {
+        console.error("Error loading users!");
+        return Observable.throw(error);
+      }
+    );
+  }
+
 
 }
