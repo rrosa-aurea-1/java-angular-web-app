@@ -8,8 +8,8 @@ package com.github.amanganiello90.javafullstack.db.mongo.repositories;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.github.amanganiello90.javafullstack.app.models.Product;
-import com.github.amanganiello90.javafullstack.app.repositories.ProductRepository;
+import com.github.amanganiello90.javafullstack.app.models.User;
+import com.github.amanganiello90.javafullstack.app.repositories.UserRepository;
 
 
 
@@ -17,7 +17,7 @@ import com.github.amanganiello90.javafullstack.app.repositories.ProductRepositor
  *
  * @author amanganiello90
  */
-public interface ProductMongoRepository extends MongoRepository<Product, String>, ProductRepository {
+public interface UserMongoRepository extends MongoRepository<User, String>, UserRepository {
 
 
 }
