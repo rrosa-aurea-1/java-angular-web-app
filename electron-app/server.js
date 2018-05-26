@@ -6,7 +6,7 @@ const args = process.argv;
 var port=args[2];
  
 app.set('port', port);
-app.use(express.static(__dirname+'/../frontend-app/dist'));
+app.use(express.static(__dirname+'/dist'));
  
 
 app.get('/', function (req, res) {

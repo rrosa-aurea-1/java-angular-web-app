@@ -8,8 +8,9 @@
   ],
   "license": "GPL-3.0",
   "scripts": {
-    "start": "electron .",
-    "package": "electron-packager . --overwrite --platform=win32 --arch=ia32 --prune=true --out=distribution --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron-jar-exe-With-Express\""
+	"preconfig": "copy  \"..\\target\\app.jar\"   \"app.jar\" /Y ", 
+    "start": "npm run preconfig && electron .",
+    "package": "npm run preconfig && electron-packager . --overwrite --platform=win32 --arch=ia32 --prune=true --out=distribution --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron-jar-exe-With-Express\""
   },
   "dependencies": {
     "electron": "1.8.2",

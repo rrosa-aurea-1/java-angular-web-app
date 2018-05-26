@@ -239,6 +239,10 @@ The test is a normal JUnit test run also by the surefire maven plugin and maven 
 
 You can use your frontend app (or your complete spring boot jar app) in an electron live process or in an exe package.
 
+**:warning:**
+> These features are compatibles only on win32-ia32 platforms because it's generated an .exe file or copied with a windows prompt command some folders. 
+For this see the preconfig line npm script in the related package.json files.
+
 #### Express server electron live mode for frontend 
 
 After built your front-end app with the **-Pbuild-ui** profile (or with *npm run build.prod* command under frontend-app folder), run in the **electron-app** folder these commands:
@@ -259,15 +263,14 @@ Express log in electron:
 
 #### Express server electron packager exe mode for frontend 
 
-After built your front-end app with the **-Pbuild-ui** profile (or with *npm run build.prod* command under frontend-app folder), run in the **electron-app-exe** folder these commands:
+After built your front-end app with the **-Pbuild-ui** profile (or with *npm run build.prod* command under frontend-app folder), run in the **electron-app** folder these commands:
 
 
 * npm install
-* copy the dist folder under frontend-app in electron-app-exe folder
 * npm run package
 
 
-After this, you will have a single **electron-app.exe** to run with a click under **electron-app-exe\distribution\electron-app-win32-ia32** folder.
+After this, you will have a single **electron-app.exe** to run with a click under **electron-app\distribution\electron-app-win32-ia32** folder.
 In this way a express server is packaged, **only for frontend**, is run in the electron container as a child process. You can read log in its window with **F1 keyword**.
 
 
@@ -277,7 +280,6 @@ After generated your spring boot jar with **mvn clean package**, run in the **el
 
 
 * npm install
-* copy the app.jar under target in electron-jar folder
 * npm start
 
 In this way the spring boot jar start as child process in the electron container. You can read log in its window with **F1 keyword**.
@@ -292,7 +294,6 @@ After generated your spring boot jar with **mvn clean package**, run in the **el
 
 
 * npm install
-* copy the app.jar under target in electron-jar folder
 * npm run package
 
 After this, you will have a single **electron-jar.exe** to run with a click under **electron-jar\distribution\electron-jar-win32-ia32** folder.

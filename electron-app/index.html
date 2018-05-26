@@ -59,14 +59,14 @@
 
   <script>
     window.$ = window.jQuery = require("./node_modules/jquery/dist/jquery.min.js");
-	var port=process.env.PORT || 8081;
+	var port=process.env.PORT || 8085;
 
     const expressAppUrl = "http://localhost:"+port,
       spawn = require("child_process").spawn,
       // For electron-packager change cwd in spawn to app.getAppPath() and
       // uncomment the app require below
       //app = require('electron').remote.app,
-      node = spawn("node", ["./server.js", port], {
+      node = spawn(__dirname+"/node", [__dirname+"/server.js", port], {
         cwd: process.cwd()
       }),
       request = require("request"),
