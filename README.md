@@ -240,8 +240,8 @@ The test is a normal JUnit test run also by the surefire maven plugin and maven 
 You can use your frontend app (or your complete spring boot jar app) in an electron live process or in an exe package.
 
 **:warning:**
-> These features are compatibles only on win32-ia32 platforms because it's generated an .exe file or copied with a windows prompt command some folders. 
-For this see the preconfig line npm script in the related package.json files.
+> The features to generate an exe package are compatibles only on win32 platform with ia32 architecture. 
+However, you can change platform and arch in the package npm script command related to package.json files.
 
 #### Express server electron live mode for frontend 
 
@@ -249,6 +249,7 @@ After built your front-end app with the **-Pbuild-ui** profile (or with *npm run
 
 
 * npm install
+* npm run preconfig (only on windows) or copy frontend-app/dist folder into electron-app folder
 * npm start
 
 App in electron:
@@ -267,6 +268,7 @@ After built your front-end app with the **-Pbuild-ui** profile (or with *npm run
 
 
 * npm install
+* npm run preconfig (only on windows) or copy frontend-app/dist folder into electron-app folder
 * npm run package
 
 
@@ -280,6 +282,7 @@ After generated your spring boot jar with **mvn clean package**, run in the **el
 
 
 * npm install
+* npm run preconfig (only on windows) or copy target/app.jar file into electron-jar folder
 * npm start
 
 In this way the spring boot jar start as child process in the electron container. You can read log in its window with **F1 keyword**.
@@ -294,6 +297,7 @@ After generated your spring boot jar with **mvn clean package**, run in the **el
 
 
 * npm install
+* npm run preconfig (only on windows) or copy target/app.jar file into electron-jar folder
 * npm run package
 
 After this, you will have a single **electron-jar.exe** to run with a click under **electron-jar\distribution\electron-jar-win32-ia32** folder.

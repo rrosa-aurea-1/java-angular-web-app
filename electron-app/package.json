@@ -9,8 +9,8 @@
   "license": "GPL-3.0",
   "scripts": {
 	"preconfig": "xcopy  \"../frontend-app/dist\"  \"dist\"  /s /Y /r /i /H /O ", 
-    "start": "npm run preconfig && electron .",
-    "package": "npm run preconfig && electron-packager . --overwrite --platform=win32 --arch=ia32 --prune=true --out=distribution --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron-exe-With-Express\""
+    "start": "electron .",
+    "package": "electron-packager . --overwrite --platform=win32 --arch=ia32 --prune=true --out=distribution --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron-exe-With-Express\""
   },
   "dependencies": {
     "electron": "1.8.2",
