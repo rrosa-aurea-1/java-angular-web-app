@@ -18,6 +18,8 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.amanganiello90.javafullstack.app.JavaFullStackRunner;
 import com.github.amanganiello90.javafullstack.app.models.User;
 import com.github.amanganiello90.javafullstack.app.models.SimpleTime;
@@ -100,7 +102,7 @@ public class JavaFullStackTest {
 	}
 
 	@Test
-	public void runningAppWithManageUserDb() {
+	public void runningAppWithManageUserDb() throws JsonProcessingException {
 
 		User insertUser = user.factory();
 		String id = "1";
@@ -111,11 +113,16 @@ public class JavaFullStackTest {
 
 		insertUser.setId(id);
 		insertUser.setEmail(email1);
-
+		
+		// convert object to json object
+		 ObjectMapper mapperObj = new ObjectMapper();
+	
+		
 		// create
-		given().contentType(ContentType.JSON).body(insertUser).when().post(createRequest).then()
+		given().contentType(ContentType.JSON).body(mapperObj.writeValueAsString(insertUser)).when().post(createRequest).then()
 				.statusCode(HttpStatus.SC_OK);
 
+		// get
 		User userRead = this.checkGetUser(otherRequest);
 		assertNotNull(userRead);
 
@@ -123,7 +130,7 @@ public class JavaFullStackTest {
 
 		// put
 		insertUser.setEmail(email2);
-		given().contentType(ContentType.JSON).body(insertUser).when().put(otherRequest).then()
+		given().contentType(ContentType.JSON).body(mapperObj.writeValueAsString(insertUser)).when().put(otherRequest).then()
 				.statusCode(HttpStatus.SC_OK);
 
 		userRead = this.checkGetUser(otherRequest);
