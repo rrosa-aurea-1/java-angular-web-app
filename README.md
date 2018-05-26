@@ -238,10 +238,12 @@ The test is a normal JUnit test run also by the surefire maven plugin and maven 
 ### Electron 
 
 You can use your frontend app (or your complete spring boot jar app) in an electron live process or in an exe package.
+In every modality, you can use shortcuts to inspect or reload the frontend application, due to integration with [electron-debug](https://github.com/sindresorhus/electron-debug).
+Find all explanations on its README.md file.
 
 **:warning:**
 > The features to generate an exe package are compatibles only on win32 platform with ia32 architecture. 
-However, you can change platform and arch in the package npm script command related to package.json files.
+However, you can change platform and arch in the package npm script command related to package.json files of **electron-app** and **electron-jar** folders.
 
 #### Express server electron live mode for frontend 
 

@@ -3,3 +3,4 @@
 /npm-debug.log
 /dist
 yarn.lock
+package-lock.json
