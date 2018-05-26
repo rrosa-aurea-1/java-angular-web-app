@@ -184,7 +184,7 @@ For the _time entity_ you can call using these endpoints:
 * _api/times/find/{id}_ : **Get Request** that returns a time entity with the specified id (empty object if not exists)
 
 **:warning:**
-> If you create a time with an already existing id, it will be executed an update.
+> If you create a time with an already existing id, it will be executed an update because the id is the mandatory primary key.
 
 Instead, for the _user entity_ you can call using these endpoints:
 
@@ -195,7 +195,7 @@ Instead, for the _user entity_ you can call using these endpoints:
 * _api/users/{id}_ : **Put Request** that updates the user with a specified id according your request fields. On success it returns the user object updated.
 
 **:warning:**
-> If you create an user with an already existing id, it will be executed an update.
+> If you create an user with an already existing id, it will be executed an update because the id is the mandatory primary key.
 
 #### UI api call 
 
