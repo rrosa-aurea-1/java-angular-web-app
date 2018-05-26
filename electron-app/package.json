@@ -1,6 +1,6 @@
 {
   "name": "electron-app",
-  "description": "Demonstrates spawning Express from Electron and using it to serve content",
+  "description": "Demonstrates spawning Express from Electron and using it to serve only angular content",
   "version": "1.0.0",
   "main": "main.js",
   "authors": [

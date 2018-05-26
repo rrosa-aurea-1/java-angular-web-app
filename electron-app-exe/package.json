@@ -1,6 +1,6 @@
 {
-  "name": "electron-app",
-  "description": "Demonstrates spawning Express from Electron and using it to serve content",
+  "name": "electron-app-exe",
+  "description": "Demonstrates spawning Express from Electron and using it to create an exe only for angular build",
   "version": "1.0.0",
   "main": "main.js",
   "authors": [
@@ -9,7 +9,7 @@
   "license": "GPL-3.0",
   "scripts": {
     "start": "electron .",
-    "package": "electron-packager . --overwrite --platform=win32 --arch=ia32 --prune=true --out=distribution --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron-With-Express\""
+    "package": "electron-packager . --overwrite --platform=win32 --arch=ia32 --prune=true --out=distribution --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron-exe-With-Express\""
   },
   "dependencies": {
     "electron": "1.8.2",

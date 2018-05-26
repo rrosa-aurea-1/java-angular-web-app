@@ -12,7 +12,11 @@
 The frontend-app is extended from the initial seed : https://github.com/creativetimofficial/material-dashboard-angular .
 
 > The extension is related to create a user-profile from the UI to the integrated backend on a mongo/h2 embedded db, and a component error page ui for routing.
-The project produces **an only jar** using maven spring-boot, that is you can implement java backend services, together the angular client developed in typescript (angular-cli). Download the zip of this branch or clone the git repo.
+The project produces **an only jar** using maven spring-boot, that is you can implement java backend services, together the angular client developed in typescript (angular-cli). 
+
+> This is a showcase project to integrate many features listed below, but you can use this as a seed to develop your app. 
+So download the zip of this branch or clone the git repo and replace **src** folder with your spring boot java code and **frontend-app** your angular 4 code.
+Moreover, to use the automatic Travis deploy integration, you have only replace the app name with your and define the HEROKU_API_KEY variable as explained in the related paragraph.
 
 
 ## NEWS
@@ -46,18 +50,21 @@ The project produces **an only jar** using maven spring-boot, that is you can im
       	* [Using Dev Mode](#using-dev-mode)
 		* [Write automatic integration api tests with rest assured](#write-automatic-integration-api-tests-with-rest-assured)
       * [Electron](#electron) 
-		* [Express server mode](#express-server-mode)
-		* [Spring boot jar mode](#spring-boot-jar-mode)
-		* [Express server electron packager exe mode](#express-server-electron-packager-exe-mode)
+		* [Express server electron live mode for frontend](#express-server-electron-live-mode-for-frontend)
+		* [Express server electron packager exe mode for frontend](#express-server-electron-packager-exe-mode-for-frontend)
+		* [Spring boot jar electron live mode](#spring-boot-jar-electron-live-mode)
+		* [Spring boot jar electron packager exe mode](#spring-boot-jar-electron-packager-exe-mode)
    * [Deploy jar on heroku from your machine](#deploy-jar-on-heroku-from-your-machine)
    * [Automatic build and deploy with travis](#automatic-build-and-deploy-with-travis)
    * [Live demo heroku deployed jar](#live-demo-heroku-deployed-jar)
-
+   
   
 ## Description
 
 The project is used to develop the client in the **frontend-app** folder with the __angular-cli__, and the **java backend** with the __maven spring boot project configured__.
 For this, import your client (frontend-app) in the angular/typescript IDE (i.e. __visual studio code__) and your maven java backend in __Eclipse__.
+There are also many integration features that you can read in every related paragraph (electron, automatic travis deploy, single full stack jar spring boot support, etc.)
+
 
 ### Functional informations
 
@@ -230,7 +237,9 @@ The test is a normal JUnit test run also by the surefire maven plugin and maven 
 
 ### Electron 
 
-#### Express server mode 
+You can use your frontend app (or your complete spring boot jar app) in an electron live process or in an exe package.
+
+#### Express server electron live mode for frontend 
 
 After built your front-end app with the **-Pbuild-ui** profile (or with *npm run build.prod* command under frontend-app folder), run in the **electron-app** folder these commands:
 
@@ -242,29 +251,13 @@ App in electron:
 
 ![Electron-App](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/electron-app.jpg)
 
-In this way a express server child process is run in the electron container. You can read log in its window with **F1 keyword**.
+In this way a express server child process, **only for frontend**,  is run in the electron container. You can read log in its window with **F1 keyword**.
 
 Express log in electron:
 
 ![Electron-Log](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/electron-log.jpg)
 
-
-#### Spring boot jar mode 
-
-After generated your spring boot jar with **mvn clean package**, run in the **electron-jar** folder these steps:
-
-
-* npm install
-* copy the app.jar under target in electron-jar folder
-* npm start
-
-In this way spring boot jar start as child process in the electron container. You can read log in its window with **F1 keyword**.
-
-Spring Boot log in electron:
-
-![Electron-Spring](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/electron-spring.jpg)
-
-#### Express server electron packager exe mode 
+#### Express server electron packager exe mode for frontend 
 
 After built your front-end app with the **-Pbuild-ui** profile (or with *npm run build.prod* command under frontend-app folder), run in the **electron-app-exe** folder these commands:
 
@@ -274,8 +267,36 @@ After built your front-end app with the **-Pbuild-ui** profile (or with *npm run
 * npm run package
 
 
-After this, you will have an **electron-app.exe** to run under **electron-app-exe\distribution\electron-app-win32-ia32** folder.
-In this way a express server child process is run in the electron container. You can read log in its window with **F1 keyword**.
+After this, you will have a single **electron-app.exe** to run with a click under **electron-app-exe\distribution\electron-app-win32-ia32** folder.
+In this way a express server is packaged, **only for frontend**, is run in the electron container as a child process. You can read log in its window with **F1 keyword**.
+
+
+#### Spring boot jar electron live mode 
+
+After generated your spring boot jar with **mvn clean package**, run in the **electron-jar** folder these steps:
+
+
+* npm install
+* copy the app.jar under target in electron-jar folder
+* npm start
+
+In this way the spring boot jar start as child process in the electron container. You can read log in its window with **F1 keyword**.
+
+Spring Boot log in electron:
+
+![Electron-Spring](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/electron-spring.jpg)
+
+#### Spring boot jar electron packager exe mode 
+
+After generated your spring boot jar with **mvn clean package**, run in the **electron-jar** folder these steps:
+
+
+* npm install
+* copy the app.jar under target in electron-jar folder
+* npm run package
+
+After this, you will have a single **electron-jar.exe** to run with a click under **electron-jar\distribution\electron-jar-win32-ia32** folder.
+In this way the spring boot jar is packaged and it run in the electron container as a child process. You can read log in its window with **F1 keyword**.
 
 
 ## Deploy jar on heroku from your machine

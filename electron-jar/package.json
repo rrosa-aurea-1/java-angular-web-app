@@ -1,6 +1,6 @@
 {
-  "name": "electron-app",
-  "description": "Demonstrates spawning Express from Electron and using it to serve content",
+  "name": "electron-jar",
+  "description": "Demonstrates spawning jar in Electron and using it to serve content or create an exe",
   "version": "1.0.0",
   "main": "main.js",
   "authors": [
@@ -9,12 +9,11 @@
   "license": "GPL-3.0",
   "scripts": {
     "start": "electron .",
-	"package": "electron-packager . --overwrite --platform=win32 --arch=x64 --prune=true --out=distribution --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron-With-Express\" --asar"
+    "package": "electron-packager . --overwrite --platform=win32 --arch=ia32 --prune=true --out=distribution --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron-jar-exe-With-Express\""
   },
   "dependencies": {
     "electron": "1.8.2",
     "electron-packager": "11.1.0",
-    "express": "4.16.2",
     "jquery": "3.3.1",
     "keymaster": "1.6.2",
     "lodash": "4.17.4",
