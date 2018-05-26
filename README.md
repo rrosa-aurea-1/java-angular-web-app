@@ -16,7 +16,7 @@ The project produces **an only jar** using maven spring-boot, that is you can im
 
 > This is a showcase project to integrate many features listed below, but you can use this as a seed to develop your app. 
 So download the zip of this branch or clone the git repo and replace **src** folder with your spring boot java code and **frontend-app** your angular 4 code.
-Moreover, to use the automatic Travis deploy integration, you have only replace the app name with your and define the HEROKU_API_KEY variable as explained in the related paragraph.
+Moreover, to use the automatic Travis deploy integration, you have only to replace the app name with your and define the HEROKU_API_KEY variable as explained in the related paragraph.
 
 
 ## NEWS
