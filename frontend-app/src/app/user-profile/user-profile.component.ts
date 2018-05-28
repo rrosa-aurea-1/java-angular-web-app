@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { UserService } from './user.service';
+import { UserService } from './user-profile.service';
 import { Observable } from 'rxjs/Rx';
 import { Router } from '@angular/router';
 import swal from 'sweetalert2';
@@ -13,10 +13,10 @@ import swal from 'sweetalert2';
 })
 export class UserProfileComponent implements OnInit {
 
- 
+
 
   user: any = {
-    id:'',
+    id: '',
     username: '',
     email: '',
     firstname: '',

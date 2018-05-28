@@ -3,88 +3,77 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="card">
-                    <div
-                        class="card-header"
-                        data-background-color="red"
-                    >
-                        <h4 class="title">Create Profile</h4>
-                        <p class="category">Complete your profile</p>
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Create Profile</h4>
+                        <p class="card-category">Complete your profile</p>
                     </div>
-                    <div class="card-content">
+                    <div class="card-body">
                         <form
                             #f="ngForm"
                             (ngSubmit)="createUser()"
                         >
                             <div class="row">
                                 <div class="col-md-5">
-                                    <div class="form-group form-black label-floating is-empty">
-                                        <label class="control-label">Id*</label>
+                                    <mat-form-field class="example-full-width">
                                         <input
-                                            type="text"
-                                            class="form-control"
+                                            matInput
+                                            placeholder="Id"
                                             required
                                             name="id"
                                             [(ngModel)]="user.id"
                                         >
-                                    </div>
+                                    </mat-form-field>
                                 </div>
                                 <div class="col-md-3">
-                                    <div class="form-group form-black label-floating is-empty">
-                                        <label class="control-label">Username*</label>
+                                    <mat-form-field class="example-full-width">
                                         <input
-                                            type="text"
-                                            class="form-control"
+                                            matInput
+                                            placeholder="Username"
                                             required
                                             name="username"
                                             [(ngModel)]="user.username"
                                         >
-
-                                    </div>
+                                    </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="form-group form-black label-floating is-empty">
-                                        <label class="control-label">Email address*</label>
+                                    <mat-form-field class="example-full-width">
                                         <input
+                                            matInput
+                                            placeholder="Email address"
                                             type="email"
-                                            class="form-control"
                                             required
                                             name="email"
                                             [(ngModel)]="user.email"
                                         >
-
-                                    </div>
+                                    </mat-form-field>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="form-group form-black label-floating is-empty">
-                                        <label class="control-label">First Name*</label>
+                                    <mat-form-field class="example-full-width">
                                         <input
+                                            matInput
+                                            placeholder="First Name"
                                             type="text"
-                                            class="form-control"
                                             required
                                             name="firstname"
                                             [(ngModel)]="user.firstname"
                                         >
-
-                                    </div>
+                                    </mat-form-field>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group form-black label-floating is-empty">
-                                        <label class="control-label">Last Name*</label>
+                                    <mat-form-field class="example-full-width">
                                         <input
+                                            matInput
+                                            placeholder="Last Name"
                                             type="text"
-                                            class="form-control"
                                             required
                                             name="lastname"
                                             [(ngModel)]="user.lastname"
                                         >
-
-                                    </div>
+                                    </mat-form-field>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group form-black label-floating is-empty">
@@ -99,6 +88,7 @@
                             </div>
 
                             <button
+                                mat-raised-button
                                 type="submit"
                                 class="btn btn-danger pull-right"
                                 [disabled]="!f.valid"
@@ -107,12 +97,7 @@
                             </button>
                             <div class="clearfix"></div>
                             <p>
-                                <small
-                                    class="text-muted"
-                                    style="color:red"
-                                >
-                                    * Campi obbligatori
-                                </small>
+                                <small style="color:red">* Mandatory fields</small>
                             </p>
                         </form>
                     </div>
@@ -129,7 +114,7 @@
                         </a>
                     </div>
 
-                    <div class="content">
+                    <div class="card-body">
                         <h6 class="category text-gray">Full Stack Software Engineer</h6>
                         <h4 class="card-title">Angelo Manganiello</h4>
                         <p class="card-content">

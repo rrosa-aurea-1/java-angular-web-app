@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user-profile/user.service';
+import { UserService } from '../user-profile/user-profile.service';
 import { Observable } from 'rxjs/Rx';
 import swal from 'sweetalert2';
 
