@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user-profile/user-profile.service';
 import { Observable } from 'rxjs/Rx';
 import swal from 'sweetalert2';
+import {IUser} from '../user-profile/user.interface';
 
 @Component({
   selector: 'app-table-list',
@@ -11,8 +12,8 @@ import swal from 'sweetalert2';
 })
 export class TableListComponent implements OnInit {
 
-  public users;
-  public fields;
+  public users: IUser[];
+  public fields: string[];
   public load = false;
 
   constructor(public _userService: UserService) { }

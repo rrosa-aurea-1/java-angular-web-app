@@ -4,6 +4,7 @@ import { UserService } from './user-profile.service';
 import { Observable } from 'rxjs/Rx';
 import { Router } from '@angular/router';
 import swal from 'sweetalert2';
+import {IUser} from './user.interface';
 
 @Component({
   selector: 'app-user-profile',
@@ -15,8 +16,8 @@ export class UserProfileComponent implements OnInit {
 
 
 
-  user: any = {
-    id: '',
+  user: IUser = {
+    id : '',
     username: '',
     email: '',
     firstname: '',
@@ -42,7 +43,7 @@ export class UserProfileComponent implements OnInit {
         return true;
       },
       error => {
-        console.error("Error saving user!");
+        console.error(error);
         swal('Error!', 'User not created!', 'error');
         return Observable.throw(error);
       }
