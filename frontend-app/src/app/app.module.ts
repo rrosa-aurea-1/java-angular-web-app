@@ -1,8 +1,7 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { BrowserModule }    from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
@@ -22,7 +21,6 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   imports: [
     BrowserAnimationsModule,
     FormsModule,
-    HttpModule,
     BrowserModule,
     HttpClientModule, // (Required) for share counts
     ComponentsModule,

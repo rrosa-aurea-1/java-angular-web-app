@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user-profile/user-profile.service';
 import { Observable } from 'rxjs/Rx';
 import swal from 'sweetalert2';
-import {IUser} from '../user-profile/user.interface';
 
 @Component({
   selector: 'app-table-list',
@@ -12,7 +11,7 @@ import {IUser} from '../user-profile/user.interface';
 })
 export class TableListComponent implements OnInit {
 
-  public users: IUser[];
+  public users: any[];
   public fields: string[];
   public load = false;
 
@@ -46,9 +45,17 @@ export class TableListComponent implements OnInit {
             return true;
           },
           error => {
-            console.error("Error deleting user!");
-            swal('Error!', 'User not deleted!', 'error');
-            return Observable.throw(error);
+            let status = error.status;
+            if (status === 200) {
+              swal('Deleted!', 'User deleted!', 'success');
+              this.getUsers();
+              return true;
+            }
+            else {
+              console.error("Error deleting user!");
+              swal('Error!', 'User not deleted!', 'error');
+              return Observable.throw(error);
+            }
           }
         );
       }
@@ -64,7 +71,7 @@ export class TableListComponent implements OnInit {
 
         this.users = data;
         let firstUser = this.users[0];
-        this.fields=[];
+        this.fields = [];
         this.load = false;
         if (firstUser != undefined) {
           this.fields = Object.keys(firstUser);
