@@ -1,4 +1,4 @@
-## Spring boot app with Angular 4 client embedded [![Build Status](https://travis-ci.org/amanganiello90/java-angular-web-app.svg)](https://travis-ci.org/amanganiello90/java-angular-web-app)
+## Spring boot app with Angular 5 client embedded [![Build Status](https://travis-ci.org/amanganiello90/java-angular-web-app.svg)](https://travis-ci.org/amanganiello90/java-angular-web-app)
 
 ![Technology-Stack](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/stack.png)
 
@@ -15,12 +15,13 @@ The frontend-app is extended from the initial seed : https://github.com/creative
 The project produces **an only jar** using maven spring-boot, that is you can implement java backend services, together the angular client developed in typescript (angular-cli). 
 
 > This is a showcase project to integrate many features listed below, but you can use this as a seed to develop your app. 
-So download the zip of this branch or clone the git repo and replace **src** folder with your spring boot java code and **frontend-app** your angular 4 code.
+So download the zip of this branch or clone the git repo and replace **src** folder with your spring boot java code and **frontend-app** your angular 5 code.
 Moreover, to use the automatic Travis deploy integration, you have only to replace the app name with your and define the HEROKU_API_KEY variable as explained in the related paragraph.
 
 
 ## NEWS
 
+* 28/05/2018 UI upgrade from **angular 4 to angular 5** [Issue 6](https://github.com/amanganiello90/java-angular-web-app/issues/6) 
 * 25/05/2018 UI integration for create user and user list table view [Issue 4](https://github.com/amanganiello90/java-angular-web-app/issues/4) 
 * 21/05/2018 first integration with embedded h2/mongo db used by rest api and JUnit automatic api test (Product and time examples) [Issue 3](https://github.com/amanganiello90/java-angular-web-app/issues/3) 
 * 03/04/2018 added embedded [node](https://nodejs.org/dist/v9.4.0/win-x64/) for express in electron-app-exe folder using electron-packager
@@ -73,14 +74,27 @@ The port information is stored in **src/main/resources/application.properties** 
 
 ### Prerequisites
 
+* Install the angular-cli with command :
 
-* Add npm build.prod script in your **front-end package.json project** with @angular/cli devDependency as:
+```
+npm install -g @angular/cli@1.7.4
+```
+
+And generate an angular project with :
+
+```
+ng new <frontend-folder-name>
+```
+
+
+* Add npm build.prod script in your **<frontend-folder-name> package.json project** with @angular/cli devDependency as:
 
 ```
 {
-  "name": "md-free-angular-cli",
-  "version": "1.4.1",
+  "name": "angular-dashboard-full-stack",
+  "version": "1.1.0",
   "license": "MIT",
+  "author": "amanganiello90",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -94,9 +108,8 @@ The port information is stored in **src/main/resources/application.properties** 
   "dependencies": {
     ....
   },
-  "devDependencies": {
-    "@angular/cli": "1.4.2",
-	....
+  "devDependencies"{
+    "@angular/cli": "1.7.4"
   }
 }
 ```
