@@ -49,19 +49,5 @@ export class UserProfileComponent implements OnInit {
     );
   }
 
-  deleteUser(user: any) {
-    if (confirm("Are you sure you want to delete " + user.username + "?")) {
-      this._userService.deleteUser(user).subscribe(
-        data => {
-          // refresh the list/*  */
-          return true;
-        },
-        error => {
-          console.error("Error deleting user!");
-          return Observable.throw(error);
-        }
-      );
-    }
-  }
 
 }
