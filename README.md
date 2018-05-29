@@ -11,7 +11,7 @@
 
 The frontend-app is extended from the initial seed : https://github.com/creativetimofficial/material-dashboard-angular .
 
-> The extension is related to create a user-profile from the UI to the integrated backend on a mongo/h2 embedded db, and a component error page ui for routing, [click on changelog](https://github.com/amanganiello90/java-angular-web-app/blob/master/frontend-app/CHANGELOG.md).
+> The extension is related to create a user-profile from the UI to the integrated backend on a mongo/h2 embedded db, and a component error page ui for routing, [click on frontend changelog](https://github.com/amanganiello90/java-angular-web-app/blob/master/frontend-app/CHANGELOG.md).
 The project produces **an only jar** using maven spring-boot, that is you can implement java backend services, together the angular client developed in typescript (angular-cli). 
 
 > This is a showcase project to integrate many features listed below, but you can use this as a seed to develop your app. 
@@ -21,6 +21,7 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
 
 ## NEWS
 
+* 29/05/2018 UI integration for update and get user with adding CHANGELOG frontend-app file [last commit] ()
 * 28/05/2018 UI upgrade from **angular 4 to angular 5** [Issue 6](https://github.com/amanganiello90/java-angular-web-app/issues/6) 
 * 25/05/2018 UI integration for create user and user list table view [Issue 4](https://github.com/amanganiello90/java-angular-web-app/issues/4) 
 * 21/05/2018 first integration with embedded h2/mongo db used by rest api and JUnit automatic api test (Product and time examples) [Issue 3](https://github.com/amanganiello90/java-angular-web-app/issues/3) 
@@ -33,7 +34,6 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
-- [x] Implement user list ui delete and update row on click table
 - [ ] Update api tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create mongodb (and h2) and webservice node express server app using [generator node](https://github.com/amimaro/generator-angular-api)
 - [ ] Create api/ui tests in node app with [typescript cucumber](https://github.com/igniteram/protractor-cucumber-typescript)
@@ -219,13 +219,9 @@ Instead, for the _user entity_ you can call using these endpoints:
 
 #### UI api call 
 
-You can create an user on the _user profile dashboard_. After successfull creation, you are redirected to the _user list dashboard_ where are listed all users created.
+You can create and update an user on the _user profile dashboard_. After successfull creation or update, you are redirected to the _user list dashboard_ where are listed all users.
 
-So the api called from the UI are:
-
-* _api/users_ : **Post Request** that creates a user with a request mapping its fields. On success it returns the id.
-* _api/users_ : **Get Request** that returns all users entities created (empty object if nothing exists)
-* _api/users/{id}_ : **Delete Request** that deletes an user entity with the specified id. On success it returns the id .
+So the api called from the UI are **all of the previous for the user entity** .
 
 
 #### Using Dev Mode

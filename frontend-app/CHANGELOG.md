@@ -1,4 +1,6 @@
-## [1.1.0] - 27-05-2018
+# angular-dashboard-full-stack
+
+## [1.1.0] - 29-05-2018
 ### Update
 - update angular 4 to 5 from site and add custom api integration components
 
@@ -6,6 +8,8 @@
 - rename package.json, documentation and angular-cli.json with my app name
 - user-profile
 - table-list (change also routing in user-list)
+- used in table-list.component.ts this.router.navigate(['/user-profile', id]); and in user-profile.component.ts  the let id = this.root.snapshot.paramMap.get('id'); to retrieve passing data. For this root: ActivatedRoute of import { Router, ActivatedRoute } from '@angular/router'; in constructor
+- add { path: 'user-profile/:id', component: UserProfileComponent }, in layouts/admin-layout/admin-layout.routing.ts to allows passing id
 - sweetalert2 dependency
 - import { HttpClientModule } from '@angular/common/http';  and HttpComponent instead HttpModule from @http in app/app.module.ts
 - providers: [UserService] in app/app.module.ts

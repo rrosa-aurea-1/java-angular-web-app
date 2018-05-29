@@ -27,7 +27,7 @@
                                     <tr *ngFor="let user of users">
                                         <td *ngFor="let field of fields">{{user[field]}}</td>
                                         <td>
-                                            <button mat-raised-button class="btn btn-sm btn-primary" type="button" (click)="editUser(user.id)">
+                                            <button mat-raised-button class="btn btn-sm btn-primary" type="button" (click)="sendUser(user.id)">
                                                 <em class="fa fa-pencil"></em>
                                             </button>
                                         </td>

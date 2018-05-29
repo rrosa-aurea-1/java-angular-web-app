@@ -4,72 +4,37 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-title">Create Profile</h4>
+                        <h4 class="card-title">{{type}} Profile</h4>
                         <p class="card-category">Complete your profile</p>
                     </div>
                     <div class="card-body">
-                        <form
-                            #f="ngForm"
-                            (ngSubmit)="createUser()"
-                        >
+                        <form #f="ngForm" (ngSubmit)="manageUser()">
                             <div class="row">
                                 <div class="col-md-5">
                                     <mat-form-field class="example-full-width">
-                                        <input
-                                            matInput
-                                            placeholder="Id"
-                                            required
-                                            name="id"
-                                            [(ngModel)]="user.id"
-                                        >
+                                        <input matInput placeholder="Id" required [disabled]="disableId" name="id" [(ngModel)]="user.id">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-3">
                                     <mat-form-field class="example-full-width">
-                                        <input
-                                            matInput
-                                            placeholder="Username"
-                                            required
-                                            name="username"
-                                            [(ngModel)]="user.username"
-                                        >
+                                        <input matInput placeholder="Username" required name="username" [(ngModel)]="user.username">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
-                                        <input
-                                            matInput
-                                            placeholder="Email address"
-                                            type="email"
-                                            name="email"
-                                            [(ngModel)]="user.email"
-                                        >
+                                        <input matInput placeholder="Email address" type="email" name="email" [(ngModel)]="user.email">
                                     </mat-form-field>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
-                                        <input
-                                            matInput
-                                            placeholder="First Name"
-                                            type="text"
-                                            required
-                                            name="firstname"
-                                            [(ngModel)]="user.firstname"
-                                        >
+                                        <input matInput placeholder="First Name" type="text" required name="firstname" [(ngModel)]="user.firstname">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
-                                        <input
-                                            matInput
-                                            placeholder="Last Name"
-                                            type="text"
-                                            required
-                                            name="lastname"
-                                            [(ngModel)]="user.lastname"
-                                        >
+                                        <input matInput placeholder="Last Name" type="text" required name="lastname" [(ngModel)]="user.lastname">
                                     </mat-form-field>
                                 </div>
                             </div>
@@ -77,22 +42,13 @@
                                 <div class="col-md-12">
                                     <div class="form-group form-black label-floating is-empty">
                                         <label class="control-label">Adress (disabled)</label>
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            disabled
-                                        >
+                                        <input type="text" class="form-control" disabled>
                                     </div>
                                 </div>
                             </div>
 
-                            <button
-                                mat-raised-button
-                                type="submit"
-                                class="btn btn-danger pull-right"
-                                [disabled]="!f.valid"
-                            >
-                                Create User
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right" [disabled]="!f.valid">
+                                {{type}} User
                             </button>
                             <div class="clearfix"></div>
                             <p>
@@ -106,10 +62,7 @@
                 <div class="card card-profile">
                     <div class="card-avatar">
                         <a href="https://github.com/amanganiello90">
-                            <img
-                                class="img"
-                                src="../assets/img/faces/marc.jpg"
-                            >
+                            <img class="img" src="../assets/img/faces/marc.jpg">
                         </a>
                     </div>
 
@@ -117,12 +70,10 @@
                         <h6 class="category text-gray">Full Stack Software Engineer</h6>
                         <h4 class="card-title">Angelo Manganiello</h4>
                         <p class="card-content">
-                            Java Software Engineering. Full stack, mobile developer and designer. DevOps and software lifecycle tools expert (Maven plugin, spring, npm, yarn, node) .
+                            Java Software Engineering. Full stack, mobile developer and designer. DevOps and software lifecycle tools expert (Maven plugin,
+                            spring, npm, yarn, node) .
                         </p>
-                        <a
-                            href="https://github.com/amanganiello90"
-                            class="btn btn-danger btn-round"
-                        >
+                        <a href="https://github.com/amanganiello90" class="btn btn-danger btn-round">
                             Follow
                         </a>
                     </div>

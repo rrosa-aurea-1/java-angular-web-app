@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user-profile/user-profile.service';
 import { Observable } from 'rxjs/Rx';
+import { Router } from '@angular/router';
 import swal from 'sweetalert2';
 
 @Component({
@@ -15,7 +16,7 @@ export class TableListComponent implements OnInit {
   public fields: string[];
   public load = false;
 
-  constructor(public _userService: UserService) { }
+  constructor(public _userService: UserService, public router: Router) { }
 
   ngOnInit() {
 
@@ -23,7 +24,9 @@ export class TableListComponent implements OnInit {
 
   }
 
-  editUser(id: string) {
+  sendUser(id: string) {
+    this.router.navigate(['/user-profile', id]);
+
   }
 
   deleteUser(id: string) {

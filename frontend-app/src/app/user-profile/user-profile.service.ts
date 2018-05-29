@@ -29,7 +29,7 @@ export class UserService {
 
     updateUser(user: any): Observable<any> {
         let body = JSON.stringify(user);
-        return this.http.put<any>('/api/users/', body, httpOptions);
+        return this.http.put<any>('/api/users/' + user.id, body, httpOptions);
     }
 
 
