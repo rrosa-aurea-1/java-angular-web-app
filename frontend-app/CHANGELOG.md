@@ -11,7 +11,7 @@
 - used in table-list.component.ts this.router.navigate(['/user-profile', id]); and in user-profile.component.ts  the let id = this.root.snapshot.paramMap.get('id'); to retrieve passing data. For this root: ActivatedRoute of import { Router, ActivatedRoute } from '@angular/router'; in constructor
 - add { path: 'user-profile/:id', component: UserProfileComponent }, in layouts/admin-layout/admin-layout.routing.ts to allows passing id
 - sweetalert2 dependency
-- import { HttpClientModule } from '@angular/common/http';  and HttpComponent instead HttpModule from @http in app/app.module.ts
+- import { HttpClientModule } from '@angular/common/http'; and HttpComponent instead HttpModule from '@http' in app/app.module.ts
 - providers: [UserService] in app/app.module.ts
 - BrowserModule, HttpClientModule imports in app/app.module.ts
 - page-not-found with { path: '**',  component: PageNotFoundComponent } in layouts/admin-layout/admin-layout.routing.ts 
