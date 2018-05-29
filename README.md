@@ -11,7 +11,7 @@
 
 The frontend-app is extended from the initial seed : https://github.com/creativetimofficial/material-dashboard-angular .
 
-> The extension is related to create a user-profile from the UI to the integrated backend on a mongo/h2 embedded db, and a component error page ui for routing.
+> The extension is related to create a user-profile from the UI to the integrated backend on a mongo/h2 embedded db, and a component error page ui for routing, [click on changelog](https://github.com/amanganiello90/java-angular-web-app/blob/master/frontend-app/CHANGELOG.md).
 The project produces **an only jar** using maven spring-boot, that is you can implement java backend services, together the angular client developed in typescript (angular-cli). 
 
 > This is a showcase project to integrate many features listed below, but you can use this as a seed to develop your app. 
