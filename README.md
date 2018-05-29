@@ -34,9 +34,9 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
 ## NEXT DEVELOPMENTS (checked in progress)
 
 - [x] Implement user list ui delete and update row on click table
-- [ ] Integrate mongodb (and h2) and webservice in node express server
-- [ ] Use embedded jre for jar in electron
-
+- [ ] Update api tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
+- [ ] Create mongodb (and h2) and webservice node express server app using [generator node](https://github.com/amimaro/generator-angular-api)
+- [ ] Create api/ui tests in node app with [typescript cucumber](https://github.com/igniteram/protractor-cucumber-typescript)
 
 ## Table of contents
 
@@ -225,6 +225,7 @@ So the api called from the UI are:
 
 * _api/users_ : **Post Request** that creates a user with a request mapping its fields. On success it returns the id.
 * _api/users_ : **Get Request** that returns all users entities created (empty object if nothing exists)
+* _api/users/{id}_ : **Delete Request** that deletes an user entity with the specified id. On success it returns the id .
 
 
 #### Using Dev Mode
@@ -239,7 +240,6 @@ mvn clean spring-boot:run -Pdev
 
 **:warning:**
 > In this mode you can't pass spring profiles and all properties (i.e. server.port). So modify the _application.properties_ in spring.profiles.default property with your profile.
-
 
 
 #### Write automatic integration api tests with rest assured
@@ -288,6 +288,7 @@ After built your front-end app with the **-Pbuild-ui** profile (or with *npm run
 
 
 After this, you will have a single **electron-app.exe** to run with a click under **electron-app\distribution\electron-app-win32-ia32** folder.
+**The exe created is a standalone distributable desktop app that not require Node ore JRE on your machine to be executed.**
 In this way a express server is packaged, **only for frontend**, is run in the electron container as a child process. You can read log in its window with **F1 keyword**.
 
 
@@ -316,6 +317,7 @@ After generated your spring boot jar with **mvn clean package**, run in the **el
 * npm run package
 
 After this, you will have a single **electron-jar.exe** to run with a click under **electron-jar\distribution\electron-jar-win32-ia32** folder.
+**The exe created is a standalone distributable desktop app that not require Node but the JRE is mandatory on your machine to be executed.**
 In this way the spring boot jar is packaged and it run in the electron container as a child process. You can read log in its window with **F1 keyword**.
 
 
