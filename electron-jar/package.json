@@ -1,5 +1,5 @@
 {
-	"name": "electron-app",
+	"name": "electron-jar",
 	"description": "Demonstrates spawning jar app from Electron and using it to serve content or create a standalone package",
 	"version": "1.0.0",
 	"main": "main.js",
@@ -9,12 +9,14 @@
 	},
 	"license": "GPL-3.0",
 	"scripts": {
-		"preconfig": "cpx  \"../frontend-app/dist/**/*.*\"  dist -C -p  && cd dist && cd .. ",
+		"delete": "del \"app.jar\"",
+		"copy": "cpx  \"../target/app.jar\"  . ",
+		"preconfig": "npm run copy && npm run delete && npm run copy  ",
 		"start": "npm run preconfig && electron .",
 		"package": "npm run preconfig && build"
 	},
 	"build": {
-		"productName": "electron-app",
+		"productName": "electron-jar",
 		"asar": false,
 		"directories": {
 			"output": "distribution"
@@ -40,6 +42,7 @@
 	},
 	"devDependencies": {
 		"cpx": "1.5.0",
+		"del-cli": "1.1.0",
 		"electron": "1.8.2",
 		"electron-builder": "20.15.1"
 	},

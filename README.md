@@ -208,6 +208,14 @@ For the _time entity_ you can call using these endpoints:
 **:warning:**
 > If you create a time with an already existing id, it will be executed an update because the id is the mandatory primary key.
 
+For example if you want to create a time entity with _id equal to 1_, on browser:
+
+![Create-Time](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/create-time.jpg)
+
+And after to view all times created:
+
+![List-Times](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/list-times.jpg)
+
 Instead, for the _user entity_ you can call using these endpoints:
 
 * _api/users_ : **Get Request** that returns all users entities created (empty object if nothing exists)
@@ -224,6 +232,22 @@ Instead, for the _user entity_ you can call using these endpoints:
 You can create and update an user on the _user profile dashboard_. After successfull creation or update, you are redirected to the _user list dashboard_ where are listed all users. On this you can delete and view a user.
 
 So **all user entity api** are called by the UI .
+
+So as example.
+
+Insert all data for required fields (email not mandatory) to enable **CREATE USER** button and click on:
+
+![List-Times](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/create-ui.jpg)
+
+After creation you will be redirect on the page where are **listed all created users**:
+
+![List-User-Ui](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/list-user-ui.jpg)
+
+You can delete or update an user. If you click on edit button (pencil icon), you will be send on the **User Profile page to update**:
+
+![Update-User-Ui](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/update-user-ui.jpg)
+
+Now the id is blocked, and you can modify all fields. After click on the **UPDATE USER** button in order to perform action, and you will review the changing on the **User List page**.
 
 
 #### Using Dev Mode
@@ -268,7 +292,7 @@ App in electron:
 
 ![Electron-App](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/electron-app.jpg)
 
-In this way **only your frontend**,  is running in the electron container and you can use the electron-debug utility.
+In this way **only your frontend**,  is running in the electron container and you can use the **electron-debug utility**.
 
 
 #### Electron package mode for frontend 
