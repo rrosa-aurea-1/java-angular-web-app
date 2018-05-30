@@ -1,6 +1,6 @@
 {
 	"name": "electron-app",
-	"description": "Demonstrates spawning Express from Electron and using it to serve content or create an exe only for angular build",
+	"description": "Demonstrates spawning Express from Electron and using it to serve content or create a standalone package",
 	"version": "1.0.0",
 	"main": "main.js",
 	"author": {
@@ -9,9 +9,9 @@
 	},
 	"license": "GPL-3.0",
 	"scripts": {
-		"preconfig": "xcopy  \"../frontend-app/dist\"  \"dist\"  /s /Y /r /i /H /O ",
-		"start": "electron .",
-		"package": "build"
+		"preconfig": "cpx  \"../frontend-app/dist/**/*.*\"  dist -C -p  && cd dist && cd .. ",
+		"start": "npm run preconfig && electron .",
+		"package": "npm run preconfig && build"
 	},
 	"build": {
 		"productName": "electron-app",
@@ -38,6 +38,7 @@
 		}
 	},
 	"devDependencies": {
+		"cpx": "1.5.0",
 		"electron": "1.8.2",
 		"electron-builder": "20.15.1"
 	},

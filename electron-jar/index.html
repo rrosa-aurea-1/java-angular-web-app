@@ -31,13 +31,13 @@
       display: none;
       overflow: auto;
     }
-    .expressApp {
+    .jarApp {
       display: flex !important;
       position: absolute;
       width: 100%;
       height: 100%;
     }
-    .expressAppHide {
+    .jarAppHide {
       flex: 0 1;
       width: 0px;
       height: 0px;
@@ -50,14 +50,14 @@
     <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
   </div>
   <div id="serverLog"></div>
-  <webview id="expressApp" class="expressApp"></webview>
+  <webview id="jarApp" class="jarApp"></webview>
 
   <script>
     window.$ = window.jQuery = require("./node_modules/jquery/dist/jquery.min.js");
 	var appConfig= require(__dirname+'/electron.app.config.json');
-	var port=appConfig.port;
+	const port = process.env.PORT || appConfig.port;;
 
-    const expressAppUrl = "http://localhost:"+port;
+    const jarAppUrl = "http://localhost:"+port;
 	
       spawn = require("child_process").spawn,
       // For electron-packager change cwd in spawn to app.getAppPath() and
@@ -70,14 +70,14 @@
       _ = require("lodash"),
       key = require("keymaster"),
       $serverLog = $("#serverLog"),
-      $expressApp = $("#expressApp"),
+      $jarApp = $("#jarApp"),
       $loading = $("#loading");
     key("f1", () => {
       if ($serverLog.css("display") === "none") {
         $serverLog.css("display", "block");
-        $expressApp.addClass("expressAppHide");
+        $jarApp.addClass("jarAppHide");
       } else {
-        $expressApp.removeClass("expressAppHide");
+        $jarApp.removeClass("jarAppHide");
         $serverLog.css("display", "none");
       }
     });
@@ -101,11 +101,11 @@
     redirectOutput(node.stdout);
     redirectOutput(node.stderr);
     let checkServerRunning = setInterval(() => {
-      request(expressAppUrl, (error, response, body) => {
+      request(jarAppUrl, (error, response, body) => {
         if (!error && response.statusCode == 200) {
-          $expressApp.attr("src", expressAppUrl);
+          $jarApp.attr("src", jarAppUrl);
           $loading.css("display", "none");
-          $expressApp.css("display", "block");
+          $jarApp.css("display", "block");
           clearInterval(checkServerRunning);
         }
       });

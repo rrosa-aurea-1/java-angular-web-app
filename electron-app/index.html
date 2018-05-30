@@ -62,7 +62,7 @@
 	
 	var appConfig= require(__dirname+'/electron.app.config.json')
 
-	var port=appConfig.port;
+	const port = process.env.PORT || appConfig.port;
 
     const expressAppUrl = "http://localhost:"+port,
      

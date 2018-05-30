@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var appConfig= require(__dirname+'/electron.app.config.json')
 
-const port = appConfig.port;
+const port = process.env.PORT || appConfig.port;
  
 app.set('port', port);
 app.use(express.static(__dirname+'/dist'));
