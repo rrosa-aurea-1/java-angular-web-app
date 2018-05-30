@@ -15,18 +15,15 @@
       margin: 0;
       padding: 0;
     }
-
     * {
       font-family: 'VT323', sans-serif;
     }
-
     #loading {
       position: absolute;
       width: 100%;
       top: 45%;
       text-align: center;
     }
-
     #serverLog {
       position: absolute;
       width: 100%;
@@ -34,14 +31,12 @@
       display: none;
       overflow: auto;
     }
-
     .expressApp {
       display: flex !important;
       position: absolute;
       width: 100%;
       height: 100%;
     }
-
     .expressAppHide {
       flex: 0 1;
       width: 0px;
@@ -59,9 +54,11 @@
 
   <script>
     window.$ = window.jQuery = require("./node_modules/jquery/dist/jquery.min.js");
-	var port=process.env.PORT || 8081;
+	var appConfig= require(__dirname+'/electron.app.config.json');
+	var port=appConfig.port;
 
-    const expressAppUrl = "http://localhost:"+port,
+    const expressAppUrl = "http://localhost:"+port;
+	
       spawn = require("child_process").spawn,
       // For electron-packager change cwd in spawn to app.getAppPath() and
       // uncomment the app require below
@@ -75,7 +72,6 @@
       $serverLog = $("#serverLog"),
       $expressApp = $("#expressApp"),
       $loading = $("#loading");
-
     key("f1", () => {
       if ($serverLog.css("display") === "none") {
         $serverLog.css("display", "block");
@@ -85,32 +81,25 @@
         $serverLog.css("display", "none");
       }
     });
-
     function strip(s) {
       // regex from: http://stackoverflow.com/a/29497680/170217
       return s.replace(/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, '');
     }
-
     function redirectOutput(x) {
       let lineBuffer = "";
-
       x.on('data', function (data) {
         lineBuffer += data.toString();
         let lines = lineBuffer.split("\n");
-
         _.forEach(lines, (l) => {
           if (l !== "") {
             $serverLog.append(strip(l) + "<br/>");
           }
         });
-
         lineBuffer = lines[lines.length - 1];
       });
     }
-
     redirectOutput(node.stdout);
     redirectOutput(node.stderr);
-
     let checkServerRunning = setInterval(() => {
       request(expressAppUrl, (error, response, body) => {
         if (!error && response.statusCode == 200) {
