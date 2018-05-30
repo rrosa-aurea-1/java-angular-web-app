@@ -1,0 +1,23 @@
+{
+  "name": "electron-app-client",
+  "description": "angular client build and live with electron",
+  "version": "1.0.0",
+  "main": "main.js",
+  "authors": [
+    "Angelo Manganiello <angelo.mang@libero.it>"
+  ],
+  "license": "GPL-3.0",
+  "scripts": {
+    "preconfig": "xcopy  \"../frontend-app/dist\"  \"dist\"  /s /Y /r /i /H /O ",
+    "start": "electron .",
+    "package:win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --prune=true --out=distribution --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron-exe-With-Express\"",
+    "package:linux": "electron-packager . --overwrite --platform=linux --arch=all --prune=true --out=distribution  --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron-linux-With-Express\"",
+    "package:osx": "electron-packager . --overwrite --platform=darwin --arch=all --prune=true --out=distribution --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron-mac-With-Express\"",
+    "package:all": "electron-packager . --overwrite --all --arch=all --prune=true --out=distribution --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron-all-With-Express\""
+  },
+  "dependencies": {
+    "electron": "1.8.2",
+    "electron-debug": "1.5.0",
+    "electron-packager": "11.1.0"
+  }
+}

@@ -34,6 +34,9 @@ electron-jar/distribution
 electron-app/package-lock.json
 electron-app/node_modules
 electron-app/distribution
+electron-client/package-lock.json
+electron-client/node_modules
+electron-client/distribution
 
 
 
