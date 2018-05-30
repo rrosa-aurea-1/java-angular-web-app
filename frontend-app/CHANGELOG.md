@@ -18,6 +18,10 @@
 - assets/img/my-logo.png for src/app/components/sidebar/sidebar.component.html and assets/img/faces/marc.jpg that is my photo 
 - change Creative Tim with Creative Plus in all html
 
+#### fix for electron-builder
+- modify in src/index.html with <base href='./'>
+- change all ../assets/ in ./assets/
+
 
 ## [1.0.0] - 28-09-2017
 ### Added

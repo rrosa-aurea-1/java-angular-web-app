@@ -21,11 +21,12 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
 
 ## NEWS
 
+* 30/05/2018 updating electron-client project with [electron-builder](https://github.com/electron-userland/electron-builder) instead [electron-packager](https://github.com/electron-userland/electron-packager)
 * 29/05/2018 UI integration for update, delete and get user with adding CHANGELOG frontend-app file [last commit](https://github.com/amanganiello90/java-angular-web-app/commit/9870b4df0fc5ae1db299df458c2fa78dc15dbbb8)
 * 28/05/2018 UI upgrade from **angular 4 to angular 5** [Issue 6](https://github.com/amanganiello90/java-angular-web-app/issues/6) 
 * 25/05/2018 UI integration for create user and user list table view [Issue 4](https://github.com/amanganiello90/java-angular-web-app/issues/4) 
 * 21/05/2018 first integration with embedded h2/mongo db used by rest api and JUnit automatic api test (Product and time examples) [Issue 3](https://github.com/amanganiello90/java-angular-web-app/issues/3) 
-* 03/04/2018 added embedded [node](https://nodejs.org/dist/v9.4.0/win-x64/) for express in electron-app-exe folder using electron-packager
+* 03/04/2018 added embedded [node](https://nodejs.org/dist/v9.4.0/win-x64/) for express in electron-app folder using electron-packager
 * 23/03/2018 refer to resolved [Issue 2](https://github.com/amanganiello90/java-angular-web-app/issues/2) related to add [travis ci](https://travis-ci.org/) and automatic deploy on [keroku](https://www.heroku.com/) with .travis-deploy-heroku.sh file 
 * 05/03/2018 added spring boot jar child process mode running in electron app
 * 05/03/2018 added express server external process in electron app to live angular app built
@@ -51,15 +52,15 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
       	* [Using Dev Mode](#using-dev-mode)
 		* [Write automatic integration api tests with rest assured](#write-automatic-integration-api-tests-with-rest-assured)
       * [Electron](#electron) 
-		* [Express server electron live mode for frontend](#express-server-electron-live-mode-for-frontend)
-		* [Express server electron packager exe mode for frontend](#express-server-electron-packager-exe-mode-for-frontend)
+		* [Electron live mode for frontend](#electron-live-mode-for-frontend)
+		* [Electron builder exe mode for frontend ](#electron-builder-exe-mode-for-frontend)
 		* [Spring boot jar electron live mode](#spring-boot-jar-electron-live-mode)
 		* [Spring boot jar electron packager exe mode](#spring-boot-jar-electron-packager-exe-mode)
    * [Deploy jar on heroku from your machine](#deploy-jar-on-heroku-from-your-machine)
    * [Automatic build and deploy with travis](#automatic-build-and-deploy-with-travis)
    * [Live demo heroku deployed jar](#live-demo-heroku-deployed-jar)
    
-  
+   
 ## Description
 
 The project is used to develop the client in the **frontend-app** folder with the __angular-cli__, and the **java backend** with the __maven spring boot project configured__.
@@ -250,43 +251,43 @@ You can use your frontend app (or your complete spring boot jar app) in an elect
 In every modality, you can use shortcuts to inspect or reload the frontend application, due to integration with [electron-debug](https://github.com/sindresorhus/electron-debug).
 Find all explanations on its README.md file.
 
-**:warning:**
-> The features to generate an exe package are compatibles only on win32 platform with ia32 architecture. 
-However, you can change platform and arch in the package npm script command related to package.json files of **electron-app** and **electron-jar** folders.
 
-#### Express server electron live mode for frontend 
+#### Electron live mode for frontend 
 
-After built your front-end app with the **-Pbuild-ui** profile (or with *npm run build.prod* command under frontend-app folder), run in the **electron-app** folder these commands:
+After built your front-end app with the **-Pbuild-ui** profile (or with *npm run build.prod* command under frontend-app folder), run in the **electron-client** folder these commands:
 
 
 * npm install
-* npm run preconfig (only on windows) or copy frontend-app/dist folder into electron-app folder
+* npm run preconfig (only on windows as admin) or copy frontend-app/dist folder into electron-client folder
 * npm start
 
 App in electron:
 
 ![Electron-App](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/electron-app.jpg)
 
-In this way a express server child process, **only for frontend**,  is run in the electron container. You can read log in its window with **F1 keyword**.
+In this way **only your frontend**,  is run in the electron container.
+
+
+#### Electron builder exe mode for frontend 
+
+After built your front-end app with the **-Pbuild-ui** profile (or with *npm run build.prod* command under frontend-app folder), run in the **electron-client** folder these commands:
+
+
+* npm install
+* npm run preconfig (only on windows as admin) or copy frontend-app/dist folder into electron-client folder
+* npm run package
+
+
+After this, you will have a single **electron-app-client 1.0.0.exe** (for windows) to run with a click under **electron-client\distribution** folder.
+**The exe created is a standalone distributable desktop app that not require Node ore JRE on your machine to be executed.**
+In this way, **only your frontend**, is run in the electron container as a package. You can read log in its window with **F1 keyword**.
+
+> The _npm run package_ command use **electron-builder** that generates a package for the platform typology performing this command.
+In the distribution folder there is also the unpacked app (as electron-packager does).
 
 Express log in electron:
 
 ![Electron-Log](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/electron-log.jpg)
-
-#### Express server electron packager exe mode for frontend 
-
-After built your front-end app with the **-Pbuild-ui** profile (or with *npm run build.prod* command under frontend-app folder), run in the **electron-app** folder these commands:
-
-
-* npm install
-* npm run preconfig (only on windows) or copy frontend-app/dist folder into electron-app folder
-* npm run package
-
-
-After this, you will have a single **electron-app.exe** to run with a click under **electron-app\distribution\electron-app-win32-ia32** folder.
-**The exe created is a standalone distributable desktop app that not require Node ore JRE on your machine to be executed.**
-In this way a express server is packaged, **only for frontend**, is run in the electron container as a child process. You can read log in its window with **F1 keyword**.
-
 
 #### Spring boot jar electron live mode 
 
@@ -294,7 +295,7 @@ After generated your spring boot jar with **mvn clean package**, run in the **el
 
 
 * npm install
-* npm run preconfig (only on windows) or copy target/app.jar file into electron-jar folder
+* npm run preconfig (only on windows as admin) or copy target/app.jar file into electron-jar folder
 * npm start
 
 In this way the spring boot jar start as child process in the electron container. You can read log in its window with **F1 keyword**.
@@ -309,7 +310,7 @@ After generated your spring boot jar with **mvn clean package**, run in the **el
 
 
 * npm install
-* npm run preconfig (only on windows) or copy target/app.jar file into electron-jar folder
+* npm run preconfig (only on windows as admin) or copy target/app.jar file into electron-jar folder
 * npm run package
 
 After this, you will have a single **electron-jar.exe** to run with a click under **electron-jar\distribution\electron-jar-win32-ia32** folder.

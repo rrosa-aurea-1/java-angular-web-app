@@ -9,7 +9,9 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     autoHideMenuBar: true,
     width: 640,
-    height: 480
+    height: 480,
+	webPreferences: {
+	nodeIntegration: false   }
   });
   mainWindow.loadURL(`file://${__dirname}/dist/index.html`);
   //mainWindow.webContents.openDevTools();
