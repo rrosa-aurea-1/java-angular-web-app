@@ -45,8 +45,8 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
       * [Prerequisites](#prerequisites)
       * [Live](#live)
       * [Build and run](#build-and-run)
-      * [Api integration with h2 and mongo db](#api-integration-with-h2-and-mongo-db)
-		* [Api exposed](#api-exposed)
+      * [Rest Api integration with h2 and mongo db](#rest-api-integration-with-h2-and-mongo-db)
+		* [Rest Api JSON request exposed](#rest-api-json-request-exposed)
 		* [UI api call](#ui-api-call)
       	* [Using Dev Mode](#using-dev-mode)
 		* [Write automatic integration api tests with rest assured](#write-automatic-integration-api-tests-with-rest-assured)
@@ -164,7 +164,7 @@ java -jar target/*.jar
 Open browser on localhost:8081
 
 
-### Api integration with h2 and mongo db
+### Rest Api integration with h2 and mongo db
 
 You can use, according various spring profiles, an h2 embedded db, an mongodb embedded or for production.
 The application exposes some rest api (**UserControllor and TimeController**) that connects to db (default application properties, h2 and mongop).
@@ -175,7 +175,7 @@ Run your application with:
 * _-Dspring.profiles.active=h2_ to use h2 embedded. The console is enabled with _/h2_ endpoint.
 
 
-#### Api exposed
+#### Rest Api JSON request exposed
 
 There are some REST services exposed for two entities: **Time and User** that use a different db according your spring runtime profile (h2, mongo and mongop).
 
@@ -374,6 +374,9 @@ After generated your spring boot jar with **mvn clean package**, run in the **el
 After this, you will have a single **electron-jar 1.0.0** (for windows will be an .exe) to run with a click under **electron-jar\distribution** folder.
 **The file created is a standalone distributable desktop app that not require Node but the JRE is mandatory on your machine to be executed.**
 In this way the spring boot jar is packaged and it run in the electron container as a child process. You can read log in its window with **F1 keyword**.
+
+![Electron-Dist](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/electron-dist.jpg)
+
 
 > The jar is a child spawn localhost process that is in listening in the port declared in the _process.env.PORT_ variable, else it uses the port declared in the **electron-app/electron.app.config.json** file.
 So you can also open the browser on _localhost:8081_ (default port) to inspect page. 
