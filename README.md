@@ -19,17 +19,17 @@ So download the zip of this branch or clone the git repo and replace **src** fol
 Moreover, to use the automatic Travis deploy integration, you have only to replace the app name with your and define the HEROKU_API_KEY variable as explained in the related paragraph.
 
 
+
 ## NEWS
 
-* 30/05/2018 updating electron projects with [electron-builder](https://github.com/electron-userland/electron-builder) instead [electron-packager](https://github.com/electron-userland/electron-packager)
-* 29/05/2018 UI integration for update, delete and get user with adding CHANGELOG frontend-app file [last commit](https://github.com/amanganiello90/java-angular-web-app/commit/9870b4df0fc5ae1db299df458c2fa78dc15dbbb8)
-* 28/05/2018 UI upgrade from **angular 4 to angular 5** [Issue 6](https://github.com/amanganiello90/java-angular-web-app/issues/6) 
-* 25/05/2018 UI integration for create user and user list table view [Issue 4](https://github.com/amanganiello90/java-angular-web-app/issues/4) 
-* 21/05/2018 first integration with embedded h2/mongo db used by rest api and JUnit automatic api test (Product and time examples) [Issue 3](https://github.com/amanganiello90/java-angular-web-app/issues/3) 
-* 23/03/2018 refer to resolved [Issue 2](https://github.com/amanganiello90/java-angular-web-app/issues/2) related to add [travis ci](https://travis-ci.org/) and automatic deploy on [keroku](https://www.heroku.com/) with .travis-deploy-heroku.sh file 
-* 05/03/2018 added spring boot jar child process mode running in electron app
-* 05/03/2018 added express server external process in electron app to live angular app built
-* 02/03/2018 refer to resolved [Issue 1](https://github.com/amanganiello90/java-angular-web-app/issues/1) related the routing of single page app in spring boot tomcat server
+* First Release 1.0
+
+May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/amanganiello90/java-angular-web-app/tree/0ecd73e637f93c20de81a3913bdf8f506312b86e)  |
+---- | ---- | ---- |
+
+* 30/05/2018 Added description for the first release the features listed in [CHANGELOG](https://github.com/amanganiello90/java-angular-web-app/blob/master/CHANGELOG.md)
+
+* 28/09/2017 initial project with spring boot and [material angular 4 dashboard](https://github.com/creativetimofficial/material-dashboard-angular) 
 
 
 ## NEXT DEVELOPMENTS (checked in progress)
@@ -306,7 +306,7 @@ After built your front-end app with the **-Pbuild-ui** profile (or with *npm run
 
 After this, you will have a single **electron-app-client 1.0.0** (for windows will be an .exe) to run with a click under **electron-client\distribution** folder.
 **The file created is a standalone distributable desktop app that not require Node or JRE on your machine to be executed.**
-In this way, **only your frontend**, is run in the electron container as a package.
+In this way, **only your frontend**, is run in the electron container as a package and you can use the **electron-debug utility**.
 
 
 #### Electron with express server live mode
@@ -329,7 +329,7 @@ Express log in electron:
 ![Electron-Log](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/electron-log.jpg)
 
 
-#### [Electron with express server package mode
+#### Electron with express server package mode
 
 After built your front-end app with the **-Pbuild-ui** profile (or with *npm run build.prod* command under frontend-app folder), run in the **electron-app** folder these commands:
 

@@ -6,10 +6,10 @@
 
 #### My customization
 - rename package.json, documentation and angular-cli.json with my app name
-- user-profile
+- user-profile with user.service.ts (CRUD http call api services)
 - table-list (change also routing in user-list)
 - used in table-list.component.ts this.router.navigate(['/user-profile', id]); and in user-profile.component.ts  the let id = this.root.snapshot.paramMap.get('id'); to retrieve passing data. For this root: ActivatedRoute of import { Router, ActivatedRoute } from '@angular/router'; in constructor
-- add { path: 'user-profile/:id', component: UserProfileComponent }, in layouts/admin-layout/admin-layout.routing.ts to allows passing id
+- add { path: 'user-profile/:id', component: UserProfileComponent }, in layouts/admin-layout/admin-layout.routing.ts to allow passing id
 - sweetalert2 dependency
 - import { HttpClientModule } from '@angular/common/http'; and HttpComponent instead HttpModule from '@http' in app/app.module.ts
 - providers: [UserService] in app/app.module.ts
@@ -25,4 +25,4 @@
 
 ## [1.0.0] - 28-09-2017
 ### Added
-- added angular 4 material dashboard from site
+- added angular 4 creativetimofficial/material-dashboard-angular from site
