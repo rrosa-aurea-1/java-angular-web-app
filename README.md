@@ -34,7 +34,7 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
-- [x] Create mongodb (and h2) and webservice node express server app using [generator node](https://github.com/amimaro/generator-angular-api)
+- [x] Create mongodb (and h2) and webservice node express server app using [generator angular with api](https://github.com/amimaro/generator-angular-api). The generator is an extension of the [generator api](https://github.com/ndelvalle/generator-api) that I should improve with the full.
 - [ ] Update api tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api/ui tests in node app with [typescript cucumber](https://github.com/igniteram/protractor-cucumber-typescript)
 
