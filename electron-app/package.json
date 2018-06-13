@@ -15,6 +15,7 @@
 	},
 	"build": {
 		"productName": "electron-app",
+		"nodeGypRebuild": "false",
 		"directories": {
 			"output": "distribution"
 		},
@@ -45,10 +46,8 @@
 	"dependencies": {
 		"bluebird": "3.4.6",
 		"body-parser": "1.15.2",
-		"concurrently": "3.5.1",
 		"dotenv": "4.0.0",
 		"express": "4.16.2",
-		"helmet": "3.1.0",
 		"jquery": "3.3.1",
 		"keymaster": "1.6.2",
 		"lodash": "4.17.4",

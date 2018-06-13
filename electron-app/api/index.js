@@ -8,7 +8,6 @@ if (process.env.MONGO_EMBEDDED === 'true'){
 	require('tungus');
 }
 const morgan = require('morgan');
-const helmet = require('helmet');
 const bluebird = require('bluebird');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -17,7 +16,6 @@ const routes = require('./routes');
 mongoose.Promise = bluebird;
 mongoose.connect(configDB.mongo.url);
 
-app.use(helmet());
 app.use(bodyParser.urlencoded({
 		extended: true
 	}));
