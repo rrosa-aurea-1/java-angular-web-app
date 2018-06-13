@@ -5,7 +5,7 @@
 
 	<groupId>com.github.amanganiello90</groupId>
 	<artifactId>java-full-stack</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 	<packaging>jar</packaging>
 
 	<name>java-angular-web-app</name>
