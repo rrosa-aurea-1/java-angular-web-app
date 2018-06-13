@@ -22,6 +22,8 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
 
 ## NEWS
 
+* 13/06/2018 Created mongodb webservice node express server app using my fork [generator-full-stack-api](https://github.com/fullStackApp/generator-full-stack-api/releases/tag/v2.0.0) in **electron-app** project.
+
 * First Release 1.0
 
 May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/amanganiello90/java-angular-web-app/archive/1.0.zip)  |
@@ -34,7 +36,8 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
-- [x] Create mongodb (and h2) and webservice node express server app using my fork [generator full stack api](https://github.com/fullStackApp/generator-full-stack-api). The generator is an extension of the [generator api](https://github.com/ndelvalle/generator-api) that I should improve with the full.
+- [ ] Update README with api doc in node server app and modify user table list with only necessary fields
+- [ ] Create h2 webservice node express server app to choose in electron-app
 - [ ] Update api tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api/ui tests in node app with [typescript cucumber](https://github.com/igniteram/protractor-cucumber-typescript)
 
