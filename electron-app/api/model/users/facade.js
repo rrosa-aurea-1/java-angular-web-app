@@ -1,5 +1,5 @@
-const Facade = require('../../lib/facade');
-const userSchema = require('./schema');
+const Facade = require(__dirname+'/../../lib/facade');
+const userSchema = require(__dirname+'/schema');
 
 class UserFacade extends Facade {}
 

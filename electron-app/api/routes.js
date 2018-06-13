@@ -5,8 +5,8 @@ const router = new Router();
 
 // Loads dynamically all endpoints within models directory
 const dirs = p => fs.readdirSync(p).filter(f => fs.statSync(path.join(p, f)).isDirectory())
-dirs('./api/model').map((endpoint) => {
-  router.use(`/api/${endpoint}`, require(`./model/${endpoint}/router`));
+dirs(__dirname+'/model').map((endpoint) => {
+  router.use(`/api/${endpoint}`, require(__dirname+`/model/${endpoint}/router`));
 })
 
 /*

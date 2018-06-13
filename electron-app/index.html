@@ -58,10 +58,11 @@
   <webview id="expressApp" class="expressApp"></webview>
 
   <script>
-    window.$ = window.jQuery = require("./node_modules/jquery/dist/jquery.min.js");
+    window.$ = window.jQuery = require(__dirname+"/node_modules/jquery/dist/jquery.min.js");
 	
 	require('dotenv').config();
-	const port = process.env.PORT || 8000;
+	var appConfig= require(__dirname+'/electron.app.config.json');
+	const port = appConfig.PORT || 8000;
 
     const expressAppUrl = "http://localhost:"+port,
      

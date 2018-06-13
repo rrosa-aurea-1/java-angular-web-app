@@ -1,17 +1,18 @@
 const express = require('express');
 const app = express();
 require('dotenv').config();
-const port = process.env.PORT || 8000;
+let appConfig= require(__dirname+'/../electron.app.config.json');
+const port = appConfig.PORT || 8000;
 const environment = process.env.NODE_ENV || 'dev';
-const configDB = require('./config/database');
-if (process.env.MONGO_EMBEDDED === 'true'){
+const configDB = require(__dirname+'/config/database');
+if (appConfig.MONGO_EMBEDDED === 'true'){
 	require('tungus');
 }
 const morgan = require('morgan');
 const bluebird = require('bluebird');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const routes = require('./routes');
+const routes = require(__dirname+'/routes');
 
 mongoose.Promise = bluebird;
 mongoose.connect(configDB.mongo.url);

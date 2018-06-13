@@ -15,7 +15,8 @@
 	},
 	"build": {
 		"productName": "electron-app",
-		"nodeGypRebuild": "false",
+		"npmRebuild": "false",
+		"asar": false,
 		"directories": {
 			"output": "distribution"
 		},
