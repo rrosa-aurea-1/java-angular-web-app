@@ -22,7 +22,7 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
 
 ## NEWS
 
-* 13/06/2018 Created mongodb webservice node express server app using my fork [generator-full-stack-api](https://github.com/fullStackApp/generator-full-stack-api/releases/tag/v2.0.0) in **electron-app** project.
+* 13/06/2018 Created mongodb webservice node express server app using my fork [generator-full-stack-api](https://github.com/fullStackApp/generator-full-stack-api/releases/tag/v2.0.0) in **electron-app** project [Issue 7](https://github.com/amanganiello90/java-angular-web-app/issues/6).
 
 * First Release 1.0
 
@@ -36,7 +36,8 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
-- [ ] Create api/ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
+- [x] Create api tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
+- [ ] Create ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api/ui tests in node app with [typescript cucumber](https://github.com/igniteram/protractor-cucumber-typescript)
 
 ## Table of contents
