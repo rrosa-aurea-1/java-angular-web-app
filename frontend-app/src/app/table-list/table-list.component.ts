@@ -13,7 +13,7 @@ import swal from 'sweetalert2';
 export class TableListComponent implements OnInit {
 
   public users: any[];
-  public fields: string[];
+  public fields: string [];
   public load = false;
 
   constructor(public _userService: UserService, public router: Router) { }
@@ -48,14 +48,13 @@ export class TableListComponent implements OnInit {
             return true;
           },
           error => {
-            let status = error.status;
+            const status = error.status;
             if (status === 200) {
               swal('Deleted!', 'User deleted!', 'success');
               this.getUsers();
               return true;
-            }
-            else {
-              console.error("Error deleting user!");
+            } else {
+              console.error('Error deleting user!');
               swal('Error!', 'User not deleted!', 'error');
               return Observable.throw(error);
             }
@@ -73,18 +72,18 @@ export class TableListComponent implements OnInit {
       data => {
 
         this.users = data;
-        let firstUser = this.users[0];
+        const firstUser = this.users[0];
         this.fields = [];
         this.load = false;
-        if (firstUser != undefined) {
-          this.fields = Object.keys(firstUser);
+        if (firstUser !== undefined) {
+          this.fields = ['id', 'username', 'email', 'firstname', 'lastname'];
           this.load = true;
         }
         console.log('done loading users ' + JSON.stringify(this.users));
         return this.load;
       },
       error => {
-        console.error("Error loading users!");
+        console.error('Error loading users!');
         return Observable.throw(error);
       }
     );
