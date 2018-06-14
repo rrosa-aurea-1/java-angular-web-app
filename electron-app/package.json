@@ -15,6 +15,8 @@
 	},
 	"build": {
 		"productName": "electron-app",
+		"npmRebuild": "false",
+		"asar": false,
 		"directories": {
 			"output": "distribution"
 		},
@@ -43,10 +45,16 @@
 		"electron-builder": "20.15.1"
 	},
 	"dependencies": {
+		"bluebird": "3.4.6",
+		"body-parser": "1.15.2",
+		"dotenv": "4.0.0",
 		"express": "4.16.2",
 		"jquery": "3.3.1",
 		"keymaster": "1.6.2",
 		"lodash": "4.17.4",
-		"request": "2.83.0"
+		"mongoose": "3.6.20",
+		"morgan": "1.7.0",
+		"request": "2.83.0",
+		"tungus": "0.0.5"
 	}
 }

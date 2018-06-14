@@ -22,6 +22,8 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
 
 ## NEWS
 
+* 13/06/2018 Created mongodb webservice node express server app using my fork [generator-full-stack-api](https://github.com/fullStackApp/generator-full-stack-api/releases/tag/v2.0.0) in **electron-app** project.
+
 * First Release 1.0
 
 May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/amanganiello90/java-angular-web-app/archive/1.0.zip)  |
@@ -34,8 +36,7 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
-- [x] Create mongodb (and h2) and webservice node express server app using my fork [generator full stack api](https://github.com/fullStackApp/generator-full-stack-api). The generator is an extension of the [generator api](https://github.com/ndelvalle/generator-api) that I should improve with the full.
-- [ ] Update api tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
+- [ ] Create api/ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api/ui tests in node app with [typescript cucumber](https://github.com/igniteram/protractor-cucumber-typescript)
 
 ## Table of contents
@@ -53,8 +54,9 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
       * [Electron](#electron) 
 		* [Electron live mode for frontend](#electron-live-mode-for-frontend)
 		* [Electron package mode for frontend](#electron-package-mode-for-frontend)
-		* [Electron with express server live mode](#electron-with-express-server-live-mode)
-		* [Electron with express server package mode](#electron-with-express-server-package-mode)
+		* [Electron with express](#electron-with-express)
+			* [Electron with express server live mode](#electron-with-express-server-live-mode)
+			* [Electron with express server package mode](#electron-with-express-server-package-mode)
 		* [Spring boot jar electron live mode](#spring-boot-jar-electron-live-mode)
 		* [Spring boot jar electron package mode](#spring-boot-jar-electron-package-mode)
    * [Deploy jar on heroku from your machine](#deploy-jar-on-heroku-from-your-machine)
@@ -309,7 +311,21 @@ After this, you will have a single **electron-app-client 1.0.0** (for windows wi
 In this way, **only your frontend**, is run in the electron container as a package and you can use the **electron-debug utility**.
 
 
-#### Electron with express server live mode
+#### Electron with express
+
+You can use a node express app with the following api under the **electron-app** folder:
+
+* _api/users_ : **Get Request** that returns all users entities created (empty collection object if nothing exists)
+* _api/users_ : **Post Request** that creates a user with a request mapping its fields. On success it returns the user created.
+* _api/users/{id}_ : **Get Request** that returns an user entity with the specified id (else 404 status if not exists)
+* _api/users/{id}_ : **Delete Request** that deletes an user entity with the specified id. On success it returns the 204 status else 404 .
+* _api/users/{id}_ : **Put Request** that updates the user with a specified id according your request fields. On success it returns the 204 status else 404 .
+
+The server side api is generated and updated ad hoc (using electron.app.config.json instead of .env file) by [generator-full-stack-api](https://github.com/fullStackApp/generator-full-stack-api).
+
+> The express app is configurable only for mongodb. The embedded mode uses [tungus mongodb driver](https://github.com/sergeyksv/tungus).
+
+##### Electron with express server live mode
 
 After built your front-end app with the **-Pbuild-ui** profile (or with *npm run build.prod* command under frontend-app folder), run in the **electron-app** folder these commands:
 
@@ -318,7 +334,7 @@ After built your front-end app with the **-Pbuild-ui** profile (or with *npm run
 * npm start
 
 
-In this way **your frontend app with the express server side**,  is running in the electron container. You can read log in its window with **F1 keyword**.
+In this way **your frontend app with the express server side**, is running in the electron container. You can read log in its window with **F1 keyword**.
 
 > The express server is a child spawn localhost process that is in listening in the port declared in the _process.env.PORT_ variable, else it uses the port declared in the **electron-app/electron.app.config.json** file.
 So you can also open the browser on _localhost:8081_ (default port) to inspect page. 
@@ -329,7 +345,7 @@ Express log in electron:
 ![Electron-Log](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/electron-log.jpg)
 
 
-#### Electron with express server package mode
+##### Electron with express server package mode
 
 After built your front-end app with the **-Pbuild-ui** profile (or with *npm run build.prod* command under frontend-app folder), run in the **electron-app** folder these commands:
 

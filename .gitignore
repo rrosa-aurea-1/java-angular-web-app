@@ -35,6 +35,8 @@ electron-app/package-lock.json
 electron-app/node_modules
 electron-app/distribution
 electron-app/dist
+electron-app/api/config
+!electron-app/api/config/*.js
 electron-client/package-lock.json
 electron-client/node_modules
 electron-client/distribution
