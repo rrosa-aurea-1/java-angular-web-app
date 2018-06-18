@@ -15,7 +15,7 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.amanganiello90.javafullstack.app.JavaFullStackRunner;
-import com.github.amanganiello90.javafullstack.app.configTest;
+import com.github.amanganiello90.javafullstack.app.ConfigTest;
 import com.github.amanganiello90.javafullstack.app.models.User;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
@@ -27,7 +27,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 @SpringApplicationConfiguration(classes = JavaFullStackRunner.class)
-public class UserSteps extends configTest {
+public class UserSteps extends ConfigTest {
 
 	private List<User> users;
 	private User readUser;
