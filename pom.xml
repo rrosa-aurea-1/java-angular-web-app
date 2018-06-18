@@ -21,6 +21,7 @@
 		<embed.mongo.version>1.50.5</embed.mongo.version>
 		<rest.assured.version>2.9.0</rest.assured.version>
 		<h2.version>1.4.192</h2.version>
+		<cucumber.version>1.2.5</cucumber.version>
 	</properties>
 
 	<dependencies>
@@ -68,6 +69,27 @@
 			<version>${rest.assured.version}</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-spring</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
 
 
 	</dependencies>
