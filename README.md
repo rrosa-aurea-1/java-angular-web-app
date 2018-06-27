@@ -22,6 +22,8 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
 
 ## NEWS
 
+* 27/06/2018 Updated JUnit tests with **java cucumber** with [Issue 8](https://github.com/amanganiello90/java-angular-web-app/issues/8).
+
 * 13/06/2018 Created mongodb webservice node express server app using my fork [generator-full-stack-api](https://github.com/fullStackApp/generator-full-stack-api/releases/tag/v2.0.0) in **electron-app** project [Issue 7](https://github.com/amanganiello90/java-angular-web-app/issues/6).
 
 * First Release 1.0
@@ -36,7 +38,6 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
-- [x] Create api tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api/ui tests in node app with [typescript cucumber](https://github.com/igniteram/protractor-cucumber-typescript)
 
@@ -51,7 +52,7 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 		* [Rest Api JSON request exposed](#rest-api-json-request-exposed)
 		* [UI api call](#ui-api-call)
       	* [Using Dev Mode](#using-dev-mode)
-		* [Write automatic integration api tests with rest assured](#write-automatic-integration-api-tests-with-rest-assured)
+		* [Write automatic integration api tests with rest assured and cucumber](#write-automatic-integration-api-tests-with-rest-assured-and-cucumber)
       * [Electron](#electron) 
 		* [Electron live mode for frontend](#electron-live-mode-for-frontend)
 		* [Electron package mode for frontend](#electron-package-mode-for-frontend)
@@ -267,10 +268,10 @@ mvn clean spring-boot:run -Pdev
 > In this mode you can't pass spring profiles and all properties (i.e. server.port). So modify the _application.properties_ in spring.profiles.default property with your profile.
 
 
-#### Write automatic integration api tests with rest assured
+#### Write automatic integration api tests with rest assured and cucumber
 
-You can write integration api tests with rest assured. In the JUnit test spring-boot is automatically run and performed your @Test.
-See the **JavaFullStackTest.java** example in _src/test/java/**_ path.
+You can write integration api tests with rest assured in [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/). In the JUnit test spring-boot is automatically run and performed your @Test.
+See the **Test.java** and **Steps.java** examples in _src/test/java/**_ path.
 The test is a normal JUnit test run also by the surefire maven plugin and maven test phase.
 
 ### Electron 
