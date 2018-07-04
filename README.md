@@ -22,6 +22,9 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
 
 ## NEWS
 
+
+* 04/07/2018 Added spring boot **swagger-ui** enabled on _/swagger-ui.html_ endpoint
+
 * 27/06/2018 Updated JUnit api tests with **java cucumber** with [Issue 8](https://github.com/amanganiello90/java-angular-web-app/issues/8).
 
 * 13/06/2018 Created mongodb webservice node express server app using my fork [generator-full-stack-api](https://github.com/fullStackApp/generator-full-stack-api/releases/tag/v2.0.0) in **electron-app** project [Issue 7](https://github.com/amanganiello90/java-angular-web-app/issues/6).
@@ -38,7 +41,6 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
-- [ ] Integrate spring boot starter for [swagger-ui](https://github.com/amanganiello90/spring-boot-starter-swagger-registry)
 - [ ] Create ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api/ui tests in node app with [typescript cucumber](https://github.com/igniteram/protractor-cucumber-typescript)
 

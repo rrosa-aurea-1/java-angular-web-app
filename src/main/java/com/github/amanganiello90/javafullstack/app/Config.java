@@ -1,5 +1,6 @@
 package com.github.amanganiello90.javafullstack.app;
 
+import java.util.Collections;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +21,14 @@ import com.fasterxml.jackson.databind.module.SimpleAbstractTypeResolver;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.github.amanganiello90.javafullstack.app.models.User;
 
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
@@ -28,6 +37,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
  * @author amanganiello90 General configuration. It enables embedded mongo db
  */
 @Configuration
+@EnableSwagger2
 @ComponentScan(basePackages = { "${db.package}" })
 @EnableMongoRepositories(basePackages = { "${db.package}" })
 public class Config {
@@ -37,7 +47,7 @@ public class Config {
 	// value inserted in your application.properties server.port
 	@Value("${server.port}")
 	private String port;
-	
+
 	@Autowired
 	User user;
 
@@ -55,7 +65,6 @@ public class Config {
 			}
 		};
 	}
-	
 
 	@Bean
 	public ObjectMapper customJacksonObjectMapper() {
@@ -65,8 +74,9 @@ public class Config {
 		SimpleModule module = new SimpleModule("CustomModel", Version.unknownVersion());
 
 		SimpleAbstractTypeResolver resolver = new SimpleAbstractTypeResolver();
-		
-		// add all model to deserialize and serialize for post request with jackson object
+
+		// add all model to deserialize and serialize for post request with
+		// jackson object
 		resolver.addMapping(User.class, user.factory().getClass());
 
 		module.setAbstractTypes(resolver);
@@ -76,5 +86,16 @@ public class Config {
 		return mapper;
 	}
 
+	@Bean
+	public Docket api() {
+		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.any())
+				.paths(PathSelectors.ant("/api/**")).build().apiInfo(apiInfo());
+	}
+
+	private ApiInfo apiInfo() {
+		return new ApiInfo("Full Stack API App", "Api enabled from app.", "2.0", "Terms of service",
+				new Contact("Angelo Manganiello", "https://github.com/amanganiello90", "angelo.mang@libero.it"), "Apache License 2.0",
+				"https://raw.githubusercontent.com/amanganiello90/java-angular-web-app/master/LICENSE", Collections.emptyList());
+	}
 
 }

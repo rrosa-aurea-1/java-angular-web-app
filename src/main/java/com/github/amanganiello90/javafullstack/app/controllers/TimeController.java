@@ -18,25 +18,25 @@ import com.github.amanganiello90.javafullstack.app.services.SimpleTimeService;
  */
 
 @RestController
-@RequestMapping(path="/api")
+@RequestMapping(path = "/api")
 public class TimeController {
 
 	@Autowired
 	SimpleTimeService simpleTimeService;
 
 	@RequestMapping(path = "/times", method = RequestMethod.GET)
-	public List<SimpleTime> findTimes() throws IOException {
+	public List<SimpleTime> times() throws IOException {
 		return simpleTimeService.findAll();
 	}
 
 	@RequestMapping(value = "/times/{id}", method = RequestMethod.GET)
-	public SimpleTime saveTime(@PathVariable String id) {
+	public SimpleTime save(@PathVariable String id) {
 		return simpleTimeService.save(id);
 
 	}
-	
+
 	@RequestMapping(value = "/times/find/{id}", method = RequestMethod.GET)
-	public SimpleTime findTimeById(@PathVariable String id) {
+	public SimpleTime read(@PathVariable String id) {
 		return simpleTimeService.findById(id);
 
 	}

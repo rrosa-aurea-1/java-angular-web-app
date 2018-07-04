@@ -42,7 +42,7 @@ public class UserController {
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/users/{id}")
-	public User getProductById(@PathVariable String id) {
+	public User read(@PathVariable String id) {
 		return userService.findById(id);
 	}
 
