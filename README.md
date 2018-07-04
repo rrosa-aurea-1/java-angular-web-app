@@ -53,6 +53,7 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
       * [Build and run](#build-and-run)
       * [Rest Api integration with h2 and mongo db](#rest-api-integration-with-h2-and-mongo-db)
 		* [Rest Api JSON request exposed](#rest-api-json-request-exposed)
+		* [Call Rest Api JSON request with spring boot swagger ui](#call-rest-api-json-request-with-spring-boot-swagger-ui)
 		* [UI api call](#ui-api-call)
       	* [Using Dev Mode](#using-dev-mode)
 		* [Write automatic integration api tests with rest assured and cucumber](#write-automatic-integration-api-tests-with-rest-assured-and-cucumber)
@@ -233,6 +234,14 @@ Instead, for the _user entity_ you can call using these endpoints:
 
 **:warning:**
 > If you create an user with an already existing id, it will be executed an update because the id is the mandatory primary key.
+
+
+
+#### Call Rest Api JSON request with spring boot swagger ui
+
+You can use _Swagger UI_ app to call your REST API accessing to **/swagger-ui.html endpoint**:
+
+![Swagger-UI](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/swagger-ui.jpg)
 
 #### UI api call 
 
