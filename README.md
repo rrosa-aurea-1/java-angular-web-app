@@ -43,7 +43,8 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 
 - [ ] Create api server in cordova with [cordova plugin webserver](https://github.com/bykof/cordova-plugin-webserver) and [lockijs db](https://github.com/techfort/LokiJS)
 - [ ] Create ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
-- [ ] Create api/ui tests in node app with [typescript cucumber](https://github.com/igniteram/protractor-cucumber-typescript)
+- [ ] Create api and ui tests in node app with a e2e framework
+- [ ] use automatic swagger-ui in node [swagger-ui-node](https://blog.cloudboost.io/adding-swagger-to-existing-node-js-project-92a6624b855b)
 
 ## Table of contents
 
