@@ -41,6 +41,7 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
+- [ ] Create api server in cordova with [cordova plugin webserver](https://github.com/bykof/cordova-plugin-webserver) and [lockijs db](https://github.com/techfort/LokiJS)
 - [ ] Create ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api/ui tests in node app with [typescript cucumber](https://github.com/igniteram/protractor-cucumber-typescript)
 
