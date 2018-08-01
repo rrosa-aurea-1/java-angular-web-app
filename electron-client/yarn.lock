@@ -7,19 +7,12 @@
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/7zip-bin/-/7zip-bin-4.0.2.tgz#6abbdc22f33cab742053777a26db2e25ca527179"
 
 "@types/node@^8.0.24":
-  version "8.10.23"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/@types/node/-/node-8.10.23.tgz#e5ccfdafff42af5397c29669b6d7d65f7d629a00"
+  version "8.10.22"
+  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/@types/node/-/node-8.10.22.tgz#c095d7c668908d48b95ae11fcc4a6d6b1c116a35"
 
 abbrev@1:
   version "1.1.1"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
-
-accepts@~1.3.4:
-  version "1.3.5"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/accepts/-/accepts-1.3.5.tgz#eb777df6011723a3b14e8a72c0805c8e86746bd2"
-  dependencies:
-    mime-types "~2.1.18"
-    negotiator "0.6.1"
 
 ajv-keywords@^3.2.0:
   version "3.2.0"
@@ -117,10 +110,6 @@ array-find-index@^1.0.1:
   version "1.0.2"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/array-find-index/-/array-find-index-1.0.2.tgz#df010aa1287e164bbda6f9723b0a96a1ec4187a1"
 
-array-flatten@1.1.1:
-  version "1.1.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/array-flatten/-/array-flatten-1.1.1.tgz#9a5f699051b1e7073328f2a008968b64ea2955d2"
-
 array-map@~0.0.0:
   version "0.0.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/array-map/-/array-map-0.0.0.tgz#88a2bab73d1cf7bcd5c1b118a003f66f665fa662"
@@ -180,10 +169,6 @@ base64-js@^1.2.3:
   version "1.3.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/base64-js/-/base64-js-1.3.0.tgz#cab1e6118f051095e58b5281aea8c1cd22bfc0e3"
 
-basic-auth@~1.0.3:
-  version "1.0.4"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/basic-auth/-/basic-auth-1.0.4.tgz#030935b01de7c9b94a824b29f3fccb750d3a5290"
-
 bcrypt-pbkdf@^1.0.0:
   version "1.0.2"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.2.tgz#a4301d389b6a43f9b67ff3ca11a3f6637e360e9e"
@@ -200,55 +185,9 @@ bluebird-lst@^1.0.5:
   dependencies:
     bluebird "^3.5.1"
 
-bluebird@3.4.6:
-  version "3.4.6"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/bluebird/-/bluebird-3.4.6.tgz#01da8d821d87813d158967e743d5fe6c62cf8c0f"
-
 bluebird@^3.5.0, bluebird@^3.5.1:
   version "3.5.1"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
-
-body-parser@1.15.2:
-  version "1.15.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/body-parser/-/body-parser-1.15.2.tgz#d7578cf4f1d11d5f6ea804cef35dc7a7ff6dae67"
-  dependencies:
-    bytes "2.4.0"
-    content-type "~1.0.2"
-    debug "~2.2.0"
-    depd "~1.1.0"
-    http-errors "~1.5.0"
-    iconv-lite "0.4.13"
-    on-finished "~2.3.0"
-    qs "6.2.0"
-    raw-body "~2.1.7"
-    type-is "~1.6.13"
-
-body-parser@1.18.2:
-  version "1.18.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/body-parser/-/body-parser-1.18.2.tgz#87678a19d84b47d859b83199bd59bce222b10454"
-  dependencies:
-    bytes "3.0.0"
-    content-type "~1.0.4"
-    debug "2.6.9"
-    depd "~1.1.1"
-    http-errors "~1.6.2"
-    iconv-lite "0.4.19"
-    on-finished "~2.3.0"
-    qs "6.5.1"
-    raw-body "2.3.2"
-    type-is "~1.6.15"
-
-boom@4.x.x:
-  version "4.3.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/boom/-/boom-4.3.1.tgz#4f8a3005cb4a7e3889f749030fd25b96e01d2e31"
-  dependencies:
-    hoek "4.x.x"
-
-boom@5.x.x:
-  version "5.2.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/boom/-/boom-5.2.0.tgz#5dd9da6ee3a5f302077436290cb717d3f4a54e02"
-  dependencies:
-    hoek "4.x.x"
 
 boxen@^1.2.1:
   version "1.3.0"
@@ -277,19 +216,9 @@ braces@^1.8.2:
     preserve "^0.2.0"
     repeat-element "^1.1.2"
 
-bson@0.2.2:
-  version "0.2.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/bson/-/bson-0.2.2.tgz#3dbf984acb9d33a6878b46e6fb7afbd611856a60"
-
-bson@0.2.x, bson@~0.2:
-  version "0.2.22"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/bson/-/bson-0.2.22.tgz#fcda103f26d0c074d5a52d50927db80fd02b4b39"
-  dependencies:
-    nan "~1.8"
-
 buffer-from@^1.0.0:
-  version "1.1.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
+  version "1.1.0"
+  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/buffer-from/-/buffer-from-1.1.0.tgz#87fcaa3a298358e0ade6e442cfce840740d1ad04"
 
 builder-util-runtime@4.2.1:
   version "4.2.1"
@@ -369,14 +298,6 @@ builder-util@^5.11.0, builder-util@^5.11.2:
 builtin-modules@^1.0.0:
   version "1.1.1"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
-
-bytes@2.4.0:
-  version "2.4.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/bytes/-/bytes-2.4.0.tgz#7d97196f9d5baf7f6935e25985549edd2a6c2339"
-
-bytes@3.0.0:
-  version "3.0.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
 
 camelcase-keys@^2.0.0:
   version "2.1.0"
@@ -508,22 +429,6 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
 
-content-disposition@0.5.2:
-  version "0.5.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/content-disposition/-/content-disposition-0.5.2.tgz#0cf68bb9ddf5f2be7961c3a85178cb85dba78cb4"
-
-content-type@~1.0.2, content-type@~1.0.4:
-  version "1.0.4"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
-
-cookie-signature@1.0.6:
-  version "1.0.6"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/cookie-signature/-/cookie-signature-1.0.6.tgz#e303a882b342cc3ee8ca513a79999734dab3ae2c"
-
-cookie@0.3.1:
-  version "0.3.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
-
 core-js@^2.4.0:
   version "2.5.7"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
@@ -562,12 +467,6 @@ cross-spawn@^5.0.1:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
-cryptiles@3.x.x:
-  version "3.1.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/cryptiles/-/cryptiles-3.1.2.tgz#a89fbb220f5ce25ec56e8c4aa8a4fd7b5b0d29fe"
-  dependencies:
-    boom "5.x.x"
-
 crypto-random-string@^1.0.0:
   version "1.0.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/crypto-random-string/-/crypto-random-string-1.0.0.tgz#a230f64f568310e1498009940790ec99545bca7e"
@@ -596,12 +495,6 @@ debug@^3.0.0, debug@^3.1.0:
   dependencies:
     ms "2.0.0"
 
-debug@~2.2.0:
-  version "2.2.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
-  dependencies:
-    ms "0.7.1"
-
 decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
@@ -617,18 +510,6 @@ delayed-stream@~1.0.0:
 delegates@^1.0.0:
   version "1.0.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
-
-depd@1.1.1:
-  version "1.1.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/depd/-/depd-1.1.1.tgz#5783b4e1c459f06fa5ca27f991f3d06e7a310359"
-
-depd@~1.1.0, depd@~1.1.1, depd@~1.1.2:
-  version "1.1.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
-
-destroy@~1.0.4:
-  version "1.0.4"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
 
 detect-libc@^1.0.2:
   version "1.0.3"
@@ -657,10 +538,6 @@ dotenv-expand@^4.2.0:
   version "4.2.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/dotenv-expand/-/dotenv-expand-4.2.0.tgz#def1f1ca5d6059d24a766e587942c21106ce1275"
 
-dotenv@4.0.0:
-  version "4.0.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/dotenv/-/dotenv-4.0.0.tgz#864ef1379aced55ce6f95debecdce179f7a0cd1d"
-
 dotenv@^5.0.1:
   version "5.0.1"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/dotenv/-/dotenv-5.0.1.tgz#a5317459bd3d79ab88cff6e44057a6a3fbb1fcef"
@@ -679,10 +556,6 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
-
-ee-first@1.1.1:
-  version "1.1.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
 ejs@^2.6.1:
   version "2.6.1"
@@ -767,6 +640,13 @@ electron-builder@20.15.1:
     update-notifier "^2.5.0"
     yargs "^11.0.0"
 
+electron-debug@1.5.0:
+  version "1.5.0"
+  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/electron-debug/-/electron-debug-1.5.0.tgz#d88c02146efb7fc5ae1b21eac56fbe4987eae50c"
+  dependencies:
+    electron-is-dev "^0.3.0"
+    electron-localshortcut "^3.0.0"
+
 electron-download-tf@4.3.4:
   version "4.3.4"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/electron-download-tf/-/electron-download-tf-4.3.4.tgz#b03740b2885aa2ad3f8784fae74df427f66d5165"
@@ -794,6 +674,23 @@ electron-download@^3.0.1:
     rc "^1.1.2"
     semver "^5.3.0"
     sumchecker "^1.2.0"
+
+electron-is-accelerator@^0.1.0:
+  version "0.1.2"
+  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/electron-is-accelerator/-/electron-is-accelerator-0.1.2.tgz#509e510c26a56b55e17f863a4b04e111846ab27b"
+
+electron-is-dev@^0.3.0:
+  version "0.3.0"
+  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/electron-is-dev/-/electron-is-dev-0.3.0.tgz#14e6fda5c68e9e4ecbeff9ccf037cbd7c05c5afe"
+
+electron-localshortcut@^3.0.0:
+  version "3.1.0"
+  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/electron-localshortcut/-/electron-localshortcut-3.1.0.tgz#10c1ffd537b8d39170aaf6e1551341f7780dd2ce"
+  dependencies:
+    debug "^2.6.8"
+    electron-is-accelerator "^0.1.0"
+    keyboardevent-from-electron-accelerator "^1.1.0"
+    keyboardevents-areequal "^0.2.1"
 
 electron-osx-sign@0.4.10:
   version "0.4.10"
@@ -838,10 +735,6 @@ electron@1.8.2:
     electron-download "^3.0.1"
     extract-zip "^1.0.3"
 
-encodeurl@~1.0.1:
-  version "1.0.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
-
 env-paths@^1.0.0:
   version "1.0.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/env-paths/-/env-paths-1.0.0.tgz#4168133b42bb05c38a35b1ae4397c8298ab369e0"
@@ -856,10 +749,6 @@ es6-promise@^4.0.5:
   version "4.2.4"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/es6-promise/-/es6-promise-4.2.4.tgz#dc4221c2b16518760bd8c39a52d8f356fc00ed29"
 
-escape-html@~1.0.3:
-  version "1.0.3"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
-
 escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
@@ -867,10 +756,6 @@ escape-string-regexp@^1.0.5:
 esprima@^4.0.0:
   version "4.0.1"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
-
-etag@~1.8.1:
-  version "1.8.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
 
 execa@^0.7.0:
   version "0.7.0"
@@ -895,41 +780,6 @@ expand-range@^1.8.1:
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/expand-range/-/expand-range-1.8.2.tgz#a299effd335fe2721ebae8e257ec79644fc85337"
   dependencies:
     fill-range "^2.1.0"
-
-express@4.16.2:
-  version "4.16.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/express/-/express-4.16.2.tgz#e35c6dfe2d64b7dca0a5cd4f21781be3299e076c"
-  dependencies:
-    accepts "~1.3.4"
-    array-flatten "1.1.1"
-    body-parser "1.18.2"
-    content-disposition "0.5.2"
-    content-type "~1.0.4"
-    cookie "0.3.1"
-    cookie-signature "1.0.6"
-    debug "2.6.9"
-    depd "~1.1.1"
-    encodeurl "~1.0.1"
-    escape-html "~1.0.3"
-    etag "~1.8.1"
-    finalhandler "1.1.0"
-    fresh "0.5.2"
-    merge-descriptors "1.0.1"
-    methods "~1.1.2"
-    on-finished "~2.3.0"
-    parseurl "~1.3.2"
-    path-to-regexp "0.1.7"
-    proxy-addr "~2.0.2"
-    qs "6.5.1"
-    range-parser "~1.2.0"
-    safe-buffer "5.1.1"
-    send "0.16.1"
-    serve-static "1.13.1"
-    setprototypeof "1.1.0"
-    statuses "~1.3.1"
-    type-is "~1.6.15"
-    utils-merge "1.0.1"
-    vary "~1.1.2"
 
 extend@~3.0.1:
   version "3.0.2"
@@ -990,18 +840,6 @@ fill-range@^2.1.0:
     repeat-element "^1.1.2"
     repeat-string "^1.5.2"
 
-finalhandler@1.1.0:
-  version "1.1.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/finalhandler/-/finalhandler-1.1.0.tgz#ce0b6855b45853e791b2fcc680046d88253dd7f5"
-  dependencies:
-    debug "2.6.9"
-    encodeurl "~1.0.1"
-    escape-html "~1.0.3"
-    on-finished "~2.3.0"
-    parseurl "~1.3.2"
-    statuses "~1.3.1"
-    unpipe "~1.0.0"
-
 find-index@^0.1.1:
   version "0.1.1"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/find-index/-/find-index-0.1.1.tgz#675d358b2ca3892d795a1ab47232f8b6e2e0dde4"
@@ -1040,14 +878,6 @@ form-data@~2.3.1:
     asynckit "^0.4.0"
     combined-stream "1.0.6"
     mime-types "^2.1.12"
-
-forwarded@~0.1.2:
-  version "0.1.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
-
-fresh@0.5.2:
-  version "0.5.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
 
 fs-extra-p@^4.6.0, fs-extra-p@^4.6.1:
   version "4.6.1"
@@ -1205,56 +1035,13 @@ has-unicode@^2.0.0:
   version "2.0.1"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/has-unicode/-/has-unicode-2.0.1.tgz#e0e6fe6a28cf51138855e086d1691e771de2a8b9"
 
-hawk@~6.0.2:
-  version "6.0.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/hawk/-/hawk-6.0.2.tgz#af4d914eb065f9b5ce4d9d11c1cb2126eecc3038"
-  dependencies:
-    boom "4.x.x"
-    cryptiles "3.x.x"
-    hoek "4.x.x"
-    sntp "2.x.x"
-
-hoek@4.x.x:
-  version "4.2.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/hoek/-/hoek-4.2.1.tgz#9634502aa12c445dd5a7c5734b572bb8738aacbb"
-
 home-path@^1.0.1:
   version "1.0.6"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/home-path/-/home-path-1.0.6.tgz#d549dc2465388a7f8667242c5b31588d29af29fc"
 
-hooks@0.2.1:
-  version "0.2.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/hooks/-/hooks-0.2.1.tgz#0f591b1b344bdcb3df59773f62fbbaf85bf4028b"
-
 hosted-git-info@^2.1.4, hosted-git-info@^2.6.0:
   version "2.7.1"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/hosted-git-info/-/hosted-git-info-2.7.1.tgz#97f236977bd6e125408930ff6de3eec6281ec047"
-
-http-errors@1.6.2:
-  version "1.6.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/http-errors/-/http-errors-1.6.2.tgz#0a002cc85707192a7e7946ceedc11155f60ec736"
-  dependencies:
-    depd "1.1.1"
-    inherits "2.0.3"
-    setprototypeof "1.0.3"
-    statuses ">= 1.3.1 < 2"
-
-http-errors@~1.5.0:
-  version "1.5.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/http-errors/-/http-errors-1.5.1.tgz#788c0d2c1de2c81b9e6e8c01843b6b97eb920750"
-  dependencies:
-    inherits "2.0.3"
-    setprototypeof "1.0.2"
-    statuses ">= 1.3.1 < 2"
-
-http-errors@~1.6.2:
-  version "1.6.3"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/http-errors/-/http-errors-1.6.3.tgz#8b55680bb4be283a0b5bf4ea2e38580be1d9320d"
-  dependencies:
-    depd "~1.1.2"
-    inherits "2.0.3"
-    setprototypeof "1.1.0"
-    statuses ">= 1.4.0 < 2"
 
 http-signature@~1.2.0:
   version "1.2.0"
@@ -1263,14 +1050,6 @@ http-signature@~1.2.0:
     assert-plus "^1.0.0"
     jsprim "^1.2.2"
     sshpk "^1.7.0"
-
-iconv-lite@0.4.13:
-  version "0.4.13"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/iconv-lite/-/iconv-lite-0.4.13.tgz#1f88aba4ab0b1508e8312acc39345f36e992e2f2"
-
-iconv-lite@0.4.19:
-  version "0.4.19"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
 iconv-lite@^0.4.23, iconv-lite@^0.4.4:
   version "0.4.23"
@@ -1305,7 +1084,7 @@ inflight@^1.0.4:
     once "^1.3.0"
     wrappy "1"
 
-inherits@2, inherits@2.0.3, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.1, inherits@~2.0.3:
+inherits@2, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.1, inherits@~2.0.3:
   version "2.0.3"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
@@ -1316,10 +1095,6 @@ ini@^1.3.4, ini@~1.3.0:
 invert-kv@^1.0.0:
   version "1.0.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
-
-ipaddr.js@1.8.0:
-  version "1.8.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/ipaddr.js/-/ipaddr.js-1.8.0.tgz#eaa33d6ddd7ace8f7f6fe0c9ca0440e706738b1e"
 
 is-arrayish@^0.2.1:
   version "0.2.1"
@@ -1472,10 +1247,6 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-jquery@3.3.1:
-  version "3.3.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
-
 js-yaml@^3.11.0, js-yaml@^3.12.0:
   version "3.12.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/js-yaml/-/js-yaml-3.12.0.tgz#eaed656ec8344f10f527c6bfa1b6e2244de167d1"
@@ -1534,19 +1305,13 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-kerberos@0.0.11:
-  version "0.0.11"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/kerberos/-/kerberos-0.0.11.tgz#cb29891c21c22ac195f3140b97dd12204fea7dc2"
-  dependencies:
-    nan "~1.8"
+keyboardevent-from-electron-accelerator@^1.1.0:
+  version "1.1.0"
+  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/keyboardevent-from-electron-accelerator/-/keyboardevent-from-electron-accelerator-1.1.0.tgz#324614f6e33490c37ffc5be5876b3e85fe223c84"
 
-kerberos@0.0.3:
-  version "0.0.3"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/kerberos/-/kerberos-0.0.3.tgz#4285d92a0748db2784062f5adcec9f5956cb818a"
-
-keymaster@1.6.2:
-  version "1.6.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/keymaster/-/keymaster-1.6.2.tgz#e1ae54d0ea9488f9f60b66b668f02e9a1946c6eb"
+keyboardevents-areequal@^0.2.1:
+  version "0.2.2"
+  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/keyboardevents-areequal/-/keyboardevents-areequal-0.2.2.tgz#88191ec738ce9f7591c25e9056de928b40277194"
 
 kind-of@^3.0.2:
   version "3.2.2"
@@ -1597,14 +1362,6 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
-lodash@4.17.4:
-  version "4.17.4"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
-
-lodash@~3.10.x:
-  version "3.10.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
-
 loud-rejection@^1.0.0:
   version "1.6.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/loud-rejection/-/loud-rejection-1.6.0.tgz#5b46f80147edee578870f086d04821cf998e551f"
@@ -1637,10 +1394,6 @@ math-random@^1.0.1:
   version "1.0.1"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/math-random/-/math-random-1.0.1.tgz#8b3aac588b8a66e4975e3cdea67f7bb329601fac"
 
-media-typer@0.3.0:
-  version "0.3.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
-
 mem@^1.1.0:
   version "1.1.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/mem/-/mem-1.1.0.tgz#5edd52b485ca1d900fe64895505399a0dfa45f76"
@@ -1661,14 +1414,6 @@ meow@^3.1.0:
     read-pkg-up "^1.0.1"
     redent "^1.0.0"
     trim-newlines "^1.0.0"
-
-merge-descriptors@1.0.1:
-  version "1.0.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/merge-descriptors/-/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
-
-methods@~1.1.2:
-  version "1.1.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
 
 micromatch@^2.1.5:
   version "2.3.11"
@@ -1692,15 +1437,11 @@ mime-db@~1.35.0:
   version "1.35.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/mime-db/-/mime-db-1.35.0.tgz#0569d657466491283709663ad379a99b90d9ab47"
 
-mime-types@^2.1.12, mime-types@~2.1.17, mime-types@~2.1.18:
+mime-types@^2.1.12, mime-types@~2.1.17:
   version "2.1.19"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/mime-types/-/mime-types-2.1.19.tgz#71e464537a7ef81c15f2db9d97e913fc0ff606f0"
   dependencies:
     mime-db "~1.35.0"
-
-mime@1.4.1:
-  version "1.4.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/mime/-/mime-1.4.1.tgz#121f9ebc49e3766f311a76e1fa1c8003c4b03aa6"
 
 mime@^2.3.1:
   version "2.3.1"
@@ -1737,85 +1478,19 @@ minizlib@^1.1.0:
   dependencies:
     minipass "^2.2.1"
 
-mkdirp@0.5.1, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
+mkdirp@0.5.1, mkdirp@^0.5.0, mkdirp@^0.5.1:
   version "0.5.1"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
 
-mongodb@1.3.19:
-  version "1.3.19"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/mongodb/-/mongodb-1.3.19.tgz#f229db24098f019d86d135aaf8a1ab5f2658b1d4"
-  dependencies:
-    bson "0.2.2"
-  optionalDependencies:
-    kerberos "0.0.3"
-
-mongodb@1.4.x:
-  version "1.4.40"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/mongodb/-/mongodb-1.4.40.tgz#cfd80b74fdf0fa053f2ccfb5f49c47ca32a38efb"
-  dependencies:
-    bson "~0.2"
-  optionalDependencies:
-    kerberos "0.0.11"
-    readable-stream latest
-
-mongoose@3.6.20:
-  version "3.6.20"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/mongoose/-/mongoose-3.6.20.tgz#47263843e6b812ea207eec104c40a36c8d215f53"
-  dependencies:
-    hooks "0.2.1"
-    mongodb "1.3.19"
-    mpath "0.1.1"
-    mpromise "0.2.1"
-    ms "0.1.0"
-    muri "0.3.1"
-    regexp-clone "0.0.1"
-    sliced "0.0.5"
-
-morgan@1.7.0:
-  version "1.7.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/morgan/-/morgan-1.7.0.tgz#eb10ca8e50d1abe0f8d3dad5c0201d052d981c62"
-  dependencies:
-    basic-auth "~1.0.3"
-    debug "~2.2.0"
-    depd "~1.1.0"
-    on-finished "~2.3.0"
-    on-headers "~1.0.1"
-
-mpath@0.1.1:
-  version "0.1.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/mpath/-/mpath-0.1.1.tgz#23da852b7c232ee097f4759d29c0ee9cd22d5e46"
-
-mpromise@0.2.1:
-  version "0.2.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/mpromise/-/mpromise-0.2.1.tgz#fbbdc28cb0207e49b8a4eb1a4c0cea6c2de794c8"
-  dependencies:
-    sliced "0.0.4"
-
-ms@0.1.0:
-  version "0.1.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/ms/-/ms-0.1.0.tgz#f21fac490daf1d7667fd180fe9077389cc9442b2"
-
-ms@0.7.1:
-  version "0.7.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/ms/-/ms-0.7.1.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
-
 ms@2.0.0:
   version "2.0.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
-muri@0.3.1:
-  version "0.3.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/muri/-/muri-0.3.1.tgz#861889c5c857f1a43700bee85d50731f61727c9a"
-
 nan@^2.9.2:
   version "2.10.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/nan/-/nan-2.10.0.tgz#96d0cd610ebd58d4b4de9cc0c6828cda99c7548f"
-
-nan@~1.8:
-  version "1.8.4"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/nan/-/nan-1.8.4.tgz#3c76b5382eab33e44b758d2813ca9d92e9342f34"
 
 needle@^2.2.1:
   version "2.2.1"
@@ -1824,10 +1499,6 @@ needle@^2.2.1:
     debug "^2.1.2"
     iconv-lite "^0.4.4"
     sax "^1.2.4"
-
-negotiator@0.6.1:
-  version "0.6.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
 node-pre-gyp@^0.10.0:
   version "0.10.3"
@@ -1927,16 +1598,6 @@ object.omit@^2.0.0:
     for-own "^0.1.4"
     is-extendable "^0.1.1"
 
-on-finished@~2.3.0:
-  version "2.3.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
-  dependencies:
-    ee-first "1.1.1"
-
-on-headers@~1.0.1:
-  version "1.0.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/on-headers/-/on-headers-1.0.1.tgz#928f5d0f470d49342651ea6794b0857c100693f7"
-
 once@^1.3.0:
   version "1.4.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
@@ -2020,10 +1681,6 @@ parser-toolkit@>=0.0.3:
   version "0.0.5"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/parser-toolkit/-/parser-toolkit-0.0.5.tgz#ec4b61729c86318b56ea971bfba6b3c672d62c01"
 
-parseurl@~1.3.2:
-  version "1.3.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/parseurl/-/parseurl-1.3.2.tgz#fc289d4ed8993119460c156253262cdc8de65bf3"
-
 path-exists@^2.0.0, path-exists@^2.1.0:
   version "2.1.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/path-exists/-/path-exists-2.1.0.tgz#0feb6c64f0fc518d9a754dd5efb62c7022761f4b"
@@ -2049,10 +1706,6 @@ path-key@^2.0.0:
 path-parse@^1.0.5:
   version "1.0.5"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/path-parse/-/path-parse-1.0.5.tgz#3c1adf871ea9cd6c9431b6ea2bd74a0ff055c4c1"
-
-path-to-regexp@0.1.7:
-  version "0.1.7"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
 
 path-type@^1.0.0:
   version "1.1.0"
@@ -2130,13 +1783,6 @@ progress-stream@^1.1.0:
     speedometer "~0.1.2"
     through2 "~0.2.3"
 
-proxy-addr@~2.0.2:
-  version "2.0.4"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/proxy-addr/-/proxy-addr-2.0.4.tgz#ecfc733bf22ff8c6f407fa275327b9ab67e48b93"
-  dependencies:
-    forwarded "~0.1.2"
-    ipaddr.js "1.8.0"
-
 pseudomap@^1.0.2:
   version "1.0.2"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
@@ -2149,14 +1795,6 @@ punycode@^2.1.0:
   version "2.1.1"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
 
-qs@6.2.0:
-  version "6.2.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/qs/-/qs-6.2.0.tgz#3b7848c03c2dece69a9522b0fae8c4126d745f3b"
-
-qs@6.5.1:
-  version "6.5.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/qs/-/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
-
 qs@~6.5.1:
   version "6.5.2"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
@@ -2168,27 +1806,6 @@ randomatic@^3.0.0:
     is-number "^4.0.0"
     kind-of "^6.0.0"
     math-random "^1.0.1"
-
-range-parser@~1.2.0:
-  version "1.2.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
-
-raw-body@2.3.2:
-  version "2.3.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/raw-body/-/raw-body-2.3.2.tgz#bcd60c77d3eb93cde0050295c3f379389bc88f89"
-  dependencies:
-    bytes "3.0.0"
-    http-errors "1.6.2"
-    iconv-lite "0.4.19"
-    unpipe "1.0.0"
-
-raw-body@~2.1.7:
-  version "2.1.7"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/raw-body/-/raw-body-2.1.7.tgz#adfeace2e4fb3098058014d08c072dcc59758774"
-  dependencies:
-    bytes "2.4.0"
-    iconv-lite "0.4.13"
-    unpipe "1.0.0"
 
 rc@^1.0.1, rc@^1.1.2, rc@^1.1.6, rc@^1.2.1, rc@^1.2.7:
   version "1.2.8"
@@ -2228,7 +1845,7 @@ read-pkg@^1.0.0:
     normalize-package-data "^2.3.2"
     path-type "^1.0.0"
 
-readable-stream@^2.0.2, readable-stream@^2.0.6, readable-stream@^2.2.2, readable-stream@latest:
+readable-stream@^2.0.2, readable-stream@^2.0.6, readable-stream@^2.2.2:
   version "2.3.6"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/readable-stream/-/readable-stream-2.3.6.tgz#b11c27d88b8ff1fbe070643cf94b0c79ae1b0aaf"
   dependencies:
@@ -2275,10 +1892,6 @@ regex-cache@^0.4.2:
   dependencies:
     is-equal-shallow "^0.1.3"
 
-regexp-clone@0.0.1:
-  version "0.0.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/regexp-clone/-/regexp-clone-0.0.1.tgz#a7c2e09891fdbf38fbb10d376fb73003e68ac589"
-
 registry-auth-token@^3.0.1:
   version "3.3.2"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/registry-auth-token/-/registry-auth-token-3.3.2.tgz#851fd49038eecb586911115af845260eec983f20"
@@ -2310,9 +1923,9 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
-request@2.83.0, request@^2.45.0:
-  version "2.83.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/request/-/request-2.83.0.tgz#ca0b65da02ed62935887808e6f510381034e3356"
+request@^2.45.0:
+  version "2.87.0"
+  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/request/-/request-2.87.0.tgz#32f00235cd08d482b4d0d68db93a829c0ed5756e"
   dependencies:
     aws-sign2 "~0.7.0"
     aws4 "^1.6.0"
@@ -2322,7 +1935,6 @@ request@2.83.0, request@^2.45.0:
     forever-agent "~0.6.1"
     form-data "~2.3.1"
     har-validator "~5.0.3"
-    hawk "~6.0.2"
     http-signature "~1.2.0"
     is-typedarray "~1.0.0"
     isstream "~0.1.2"
@@ -2332,7 +1944,6 @@ request@2.83.0, request@^2.45.0:
     performance-now "^2.1.0"
     qs "~6.5.1"
     safe-buffer "^5.1.1"
-    stringstream "~0.0.5"
     tough-cookie "~2.3.3"
     tunnel-agent "^0.6.0"
     uuid "^3.1.0"
@@ -2357,17 +1968,9 @@ rimraf@^2.2.8, rimraf@^2.6.1:
   dependencies:
     glob "^7.0.5"
 
-safe-buffer@5.1.1:
-  version "5.1.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
-
 safe-buffer@^5.0.1, safe-buffer@^5.1.1, safe-buffer@^5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
-
-safe@~0.3.0:
-  version "0.3.9"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/safe/-/safe-0.3.9.tgz#178159bee45791ac21628aee2dabb74a52d5d072"
 
 "safer-buffer@>= 2.1.2 < 3", safer-buffer@^2.0.2, safer-buffer@^2.1.0:
   version "2.1.2"
@@ -2393,33 +1996,6 @@ semver-diff@^2.0.0:
   version "5.5.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
 
-send@0.16.1:
-  version "0.16.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/send/-/send-0.16.1.tgz#a70e1ca21d1382c11d0d9f6231deb281080d7ab3"
-  dependencies:
-    debug "2.6.9"
-    depd "~1.1.1"
-    destroy "~1.0.4"
-    encodeurl "~1.0.1"
-    escape-html "~1.0.3"
-    etag "~1.8.1"
-    fresh "0.5.2"
-    http-errors "~1.6.2"
-    mime "1.4.1"
-    ms "2.0.0"
-    on-finished "~2.3.0"
-    range-parser "~1.2.0"
-    statuses "~1.3.1"
-
-serve-static@1.13.1:
-  version "1.13.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/serve-static/-/serve-static-1.13.1.tgz#4c57d53404a761d8f2e7c1e8a18a47dbf278a719"
-  dependencies:
-    encodeurl "~1.0.1"
-    escape-html "~1.0.3"
-    parseurl "~1.3.2"
-    send "0.16.1"
-
 set-blocking@^2.0.0, set-blocking@~2.0.0:
   version "2.0.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/set-blocking/-/set-blocking-2.0.0.tgz#045f9782d011ae9a6803ddd382b24392b3d890f7"
@@ -2427,18 +2003,6 @@ set-blocking@^2.0.0, set-blocking@~2.0.0:
 set-immediate-shim@^1.0.1:
   version "1.0.1"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/set-immediate-shim/-/set-immediate-shim-1.0.1.tgz#4b2b1b27eb808a9f8dcc481a58e5e56f599f3f61"
-
-setprototypeof@1.0.2:
-  version "1.0.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/setprototypeof/-/setprototypeof-1.0.2.tgz#81a552141ec104b88e89ce383103ad5c66564d08"
-
-setprototypeof@1.0.3:
-  version "1.0.3"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/setprototypeof/-/setprototypeof-1.0.3.tgz#66567e37043eeb4f04d91bd658c0cbefb55b8e04"
-
-setprototypeof@1.1.0:
-  version "1.1.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/setprototypeof/-/setprototypeof-1.1.0.tgz#d0bd85536887b6fe7c0d818cb962d9d91c54e656"
 
 shebang-command@^1.2.0:
   version "1.2.0"
@@ -2468,20 +2032,6 @@ single-line-log@^1.1.2:
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/single-line-log/-/single-line-log-1.1.2.tgz#c2f83f273a3e1a16edb0995661da0ed5ef033364"
   dependencies:
     string-width "^1.0.1"
-
-sliced@0.0.4:
-  version "0.0.4"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/sliced/-/sliced-0.0.4.tgz#34f89a6db1f31fa525f5a570f5bcf877cf0955ee"
-
-sliced@0.0.5:
-  version "0.0.5"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/sliced/-/sliced-0.0.5.tgz#5edc044ca4eb6f7816d50ba2fc63e25d8fe4707f"
-
-sntp@2.x.x:
-  version "2.1.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/sntp/-/sntp-2.1.0.tgz#2c6cec14fedc2222739caf9b5c3d85d1cc5a2cc8"
-  dependencies:
-    hoek "4.x.x"
 
 source-map-support@^0.5.6:
   version "0.5.6"
@@ -2543,14 +2093,6 @@ stat-mode@^0.2.2:
   version "0.2.2"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/stat-mode/-/stat-mode-0.2.2.tgz#e6c80b623123d7d80cf132ce538f346289072502"
 
-"statuses@>= 1.3.1 < 2", "statuses@>= 1.4.0 < 2":
-  version "1.5.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
-
-statuses@~1.3.1:
-  version "1.3.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/statuses/-/statuses-1.3.1.tgz#faf51b9eb74aaef3b3acf4ad5f61abf24cb7b93e"
-
 stream-json@^0.6.1:
   version "0.6.1"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/stream-json/-/stream-json-0.6.1.tgz#c9413e7f42ba8eac4883be712220455f64dcea67"
@@ -2581,10 +2123,6 @@ string_decoder@~1.1.1:
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/string_decoder/-/string_decoder-1.1.1.tgz#9cf1611ba62685d7030ae9e4ba34149c3af03fc8"
   dependencies:
     safe-buffer "~5.1.0"
-
-stringstream@~0.0.5:
-  version "0.0.6"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/stringstream/-/stringstream-0.0.6.tgz#7880225b0d4ad10e30927d167a1d6f2fd3b33a72"
 
 strip-ansi@^3.0.0, strip-ansi@^3.0.1:
   version "3.0.1"
@@ -2685,15 +2223,6 @@ timed-out@^4.0.0:
   version "4.0.1"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
 
-tingodb@~0.4.1:
-  version "0.4.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/tingodb/-/tingodb-0.4.2.tgz#ef9e4ad432e179891f83d6f9e79a0094399f5641"
-  dependencies:
-    lodash "~3.10.x"
-    safe "~0.3.0"
-  optionalDependencies:
-    bson "0.2.x"
-
 tough-cookie@~2.3.3:
   version "2.3.4"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/tough-cookie/-/tough-cookie-2.3.4.tgz#ec60cee38ac675063ffc97a5c18970578ee83655"
@@ -2710,16 +2239,6 @@ truncate-utf8-bytes@^1.0.0:
   dependencies:
     utf8-byte-length "^1.0.1"
 
-tungus@0.0.5:
-  version "0.0.5"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/tungus/-/tungus-0.0.5.tgz#3237d49a3a2a40312e0ce6fb834f655857f6d55b"
-  dependencies:
-    lodash "~3.10.x"
-    mkdirp "~0.5.0"
-    mongodb "1.4.x"
-    safe "~0.3.0"
-    tingodb "~0.4.1"
-
 tunnel-agent@^0.6.0:
   version "0.6.0"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/tunnel-agent/-/tunnel-agent-0.6.0.tgz#27a5dea06b36b04a0a9966774b290868f0fc40fd"
@@ -2729,13 +2248,6 @@ tunnel-agent@^0.6.0:
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
-
-type-is@~1.6.13, type-is@~1.6.15:
-  version "1.6.16"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/type-is/-/type-is-1.6.16.tgz#f89ce341541c672b25ee7ae3c73dee3b2be50194"
-  dependencies:
-    media-typer "0.3.0"
-    mime-types "~2.1.18"
 
 typedarray@^0.0.6:
   version "0.0.6"
@@ -2750,10 +2262,6 @@ unique-string@^1.0.0:
 universalify@^0.1.0:
   version "0.1.2"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
-
-unpipe@1.0.0, unpipe@~1.0.0:
-  version "1.0.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
 
 unzip-response@^2.0.1:
   version "2.0.1"
@@ -2794,10 +2302,6 @@ util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
 
-utils-merge@1.0.1:
-  version "1.0.1"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
-
 uuid@^3.1.0:
   version "3.3.2"
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
@@ -2808,10 +2312,6 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
-
-vary@~1.1.2:
-  version "1.1.2"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
 
 verror@1.10.0:
   version "1.10.0"
