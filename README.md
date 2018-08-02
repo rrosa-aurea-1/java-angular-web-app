@@ -22,6 +22,7 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
 
 ## NEWS
 
+* 02/08/2018 Fix bug on reload of electron-client project with [Issue 9](https://github.com/amanganiello90/java-angular-web-app/issues/9).
 
 * 04/07/2018 Added spring boot **swagger-ui** enabled on _/swagger-ui.html_ endpoint
 
