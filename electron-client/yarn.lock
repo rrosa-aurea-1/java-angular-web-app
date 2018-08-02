@@ -7,8 +7,8 @@
   resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/7zip-bin/-/7zip-bin-4.0.2.tgz#6abbdc22f33cab742053777a26db2e25ca527179"
 
 "@types/node@^8.0.24":
-  version "8.10.22"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/@types/node/-/node-8.10.22.tgz#c095d7c668908d48b95ae11fcc4a6d6b1c116a35"
+  version "8.10.23"
+  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/@types/node/-/node-8.10.23.tgz#e5ccfdafff42af5397c29669b6d7d65f7d629a00"
 
 abbrev@1:
   version "1.1.1"
@@ -217,8 +217,8 @@ braces@^1.8.2:
     repeat-element "^1.1.2"
 
 buffer-from@^1.0.0:
-  version "1.1.0"
-  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/buffer-from/-/buffer-from-1.1.0.tgz#87fcaa3a298358e0ade6e442cfce840740d1ad04"
+  version "1.1.1"
+  resolved "http://artifactory-pro.au-sdc.com:8081/artifactory/api/npm/oneleo-repo-npm-virtual/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
 
 builder-util-runtime@4.2.1:
   version "4.2.1"
