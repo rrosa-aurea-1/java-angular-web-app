@@ -1,1 +1,1 @@
-*.css linguist-language=Java
+frontend-app/**/*.css linguist-vendored
