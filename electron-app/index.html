@@ -62,7 +62,10 @@
 	
 	require('dotenv').config();
 	var appConfig= require(__dirname+'/electron.app.config.json');
-	const port = appConfig.PORT || 8000;
+	let port = appConfig.PORT || 8000;
+	if(process.env.PORT!==undefined){
+	port=process.env.PORT;
+	}
 
     const expressAppUrl = "http://localhost:"+port,
      

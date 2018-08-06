@@ -22,6 +22,8 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
 
 ## NEWS
 
+* 05/08/2018 Improve electron-app with priority on .env else on electron.app.config.json file
+
 * 02/08/2018 Fix bug on reload of electron-client project with [Issue 9](https://github.com/amanganiello90/java-angular-web-app/issues/9).
 
 * 04/07/2018 Added spring boot **swagger-ui** enabled on _/swagger-ui.html_ endpoint
@@ -42,7 +44,6 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
-- [ ] Need to manage better electron.app.config.json and .env variables for electron-app
 - [ ] Create api server in cordova with [cordova plugin webserver](https://github.com/bykof/cordova-plugin-webserver) and [lockijs db](https://github.com/techfort/LokiJS)
 - [ ] Create ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api and ui tests in node app with a e2e framework
@@ -355,7 +356,7 @@ After built your front-end app with the **-Pbuild-ui** profile (or with *npm run
 
 In this way **your frontend app with the express server side**, is running in the electron container. You can read log in its window with **F1 keyword**.
 
-> The express server is a child spawn localhost process that is in listening in the port declared in the _process.env.PORT_ variable, else it uses the port declared in the **electron-app/electron.app.config.json** file.
+> The express server is a child spawn localhost process that is in listening in the port declared in the _process.env.PORT_ variable, else it uses the port declared in the **electron-app/electron.app.config.json** file. Every variable of .env file overwrites the electron.app.config.json definitions.
 So you can also open the browser on _localhost:8081_ (default port) to inspect page. 
 
 
@@ -377,8 +378,8 @@ After this, you will have a single **electron-app 1.0.0** (for windows will be a
 **The file created is a standalone distributable desktop app that not require Node or JRE on your machine to be executed.**
 In this way **your frontend app with the express server side**,  is running in the electron container. You can read log in its window with **F1 keyword**.
 
-> The express server is a child spawn localhost process that is in listening in the port declared in the _process.env.PORT_ variable, else it uses the port declared in the **electron-app/electron.app.config.json** file.
-So you can also open the browser on _localhost:8081_ (default port) to inspect page. 
+> The express server is a child spawn localhost process that is in listening in the port declared in the _process.env.PORT_ variable, else it uses the port declared in the **electron-app/electron.app.config.json** file. Every variable of .env file overwrites the electron.app.config.json definitions.
+So you can also open the browser on _localhost:8081_ (default port) to inspect page.  
 
 
 #### Spring boot jar electron live mode 

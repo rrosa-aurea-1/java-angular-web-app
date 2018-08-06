@@ -2,10 +2,13 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 let appConfig= require(__dirname+'/../electron.app.config.json');
-const port = appConfig.PORT || 8000;
+let port = appConfig.PORT || 8000;
+if(process.env.PORT!==undefined){
+	port=process.env.PORT;
+}
 const environment = process.env.NODE_ENV || 'dev';
-const configDB = require(__dirname+'/config/database');
-if (appConfig.MONGO_EMBEDDED === 'true'){
+let configDB = require(__dirname+'/config/database');
+if (appConfig.MONGO_EMBEDDED === 'true' && process.env.MONGO_EMBEDDED !== 'false'){
 	require('tungus');
 }
 const morgan = require('morgan');
