@@ -41,5 +41,13 @@ electron-client/node_modules
 electron-client/distribution
 electron-client/dist
 
-
-
+# Cordova
+cordova-app/node_modules
+cordova-app/package-lock.json
+cordova/**/www/*
+!cordova/**/www/.gitkeep
+cordova/**/build
+cordova/platforms/*
+!cordova/platforms/*.json
+cordova/plugins/*
+!cordova/plugins/*.json

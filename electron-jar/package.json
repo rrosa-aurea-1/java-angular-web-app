@@ -7,7 +7,7 @@
 		"name": "Angelo Manganiello",
 		"email": "angelo.mang@libero.it"
 	},
-	"license": "GPL-3.0",
+	"license": "Apache-2.0",
 	"scripts": {
 		"delete": "del \"app.jar\"",
 		"copy": "cpx  \"../target/app.jar\"  . ",
