@@ -45,7 +45,7 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 ## NEXT DEVELOPMENTS (checked in progress)
 
 - [ ] Resolve api url for electron-client and in general for file protocol. Solution is in build time [adding angular env variables](https://alligator.io/angular/environment-variables/)
-- [ ] Create api server in cordova with [cordova plugin webserver](https://github.com/bykof/cordova-plugin-webserver) and [lockijs db](https://github.com/techfort/LokiJS)
+- [ ] Create api server in cordova with [cordova plugin local webserver](https://github.com/fullStackApp/cordova-plugin-local-webserver) and [sqlite plugin](https://github.com/litehelpers/Cordova-sqlite-storage)
 - [ ] Create ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api and ui tests in node app with a e2e framework
 - [ ] Use automatic swagger-ui in node [swagger-ui-node](https://blog.cloudboost.io/adding-swagger-to-existing-node-js-project-92a6624b855b)
