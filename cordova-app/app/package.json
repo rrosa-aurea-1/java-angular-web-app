@@ -1,0 +1,17 @@
+{
+  "name": "com.amanganiello30.angular",
+  "version": "1.0.0",
+  "displayName": "angularDashFullStack",
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    }
+  },
+  "dependencies": {
+    "cordova-android": "~7.0.0",
+    "cordova-plugin-whitelist": "1"
+  }
+}
