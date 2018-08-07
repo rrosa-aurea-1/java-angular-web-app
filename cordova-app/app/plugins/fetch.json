@@ -2,7 +2,7 @@
   "cordova-plugin-whitelist": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-whitelist@1"
+      "id": "cordova-plugin-whitelist@^1.3.3"
     },
     "is_top_level": true,
     "variables": {}
@@ -10,7 +10,7 @@
   "cordova-plugin-local-webserver": {
     "source": {
       "type": "registry",
-      "id": "https://github.com/fullStackApp/cordova-plugin-local-webserver"
+      "id": "git+https://github.com/fullStackApp/cordova-plugin-local-webserver.git"
     },
     "is_top_level": true,
     "variables": {}

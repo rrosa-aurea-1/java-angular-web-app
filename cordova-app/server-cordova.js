@@ -1,5 +1,3 @@
- < head >
- < script >
 
 // Wait for device API libraries to load
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -26,5 +24,4 @@ function onDeviceReady() {
 	// stop the server
 	webserver.stop();
 }
- <  / script >
-<  / head >
+
