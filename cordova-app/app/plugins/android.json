@@ -8,7 +8,10 @@
   },
   "installed_plugins": {
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.amanganiello30.angular"
+      "PACKAGE_NAME": "com.amanganiello90.angular"
+    },
+    "cordova-plugin-local-webserver": {
+      "PACKAGE_NAME": "com.amanganiello90.angular"
     }
   },
   "dependent_plugins": {}

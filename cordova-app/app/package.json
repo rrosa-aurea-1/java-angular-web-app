@@ -1,5 +1,5 @@
 {
-  "name": "com.amanganiello30.angular",
+  "name": "com.amanganiello90.angular",
   "version": "1.0.0",
   "displayName": "angularDashFullStack",
   "cordova": {
@@ -7,11 +7,13 @@
       "android"
     ],
     "plugins": {
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-local-webserver": {}
     }
   },
   "dependencies": {
-    "cordova-android": "~7.0.0",
-    "cordova-plugin-whitelist": "1"
+    "cordova-android": "^7.0.0",
+    "cordova-plugin-local-webserver": "git+https://github.com/fullStackApp/cordova-plugin-local-webserver.git",
+    "cordova-plugin-whitelist": "^1.3.3"
   }
 }
