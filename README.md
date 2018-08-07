@@ -44,10 +44,11 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 
 ## NEXT DEVELOPMENTS (checked in progress)
 
+- [ ] Resolve api url for electron-client and in general for file protocol. Solution is in build time [adding angular env variables](https://alligator.io/angular/environment-variables/)
 - [ ] Create api server in cordova with [cordova plugin webserver](https://github.com/bykof/cordova-plugin-webserver) and [lockijs db](https://github.com/techfort/LokiJS)
 - [ ] Create ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api and ui tests in node app with a e2e framework
-- [ ] use automatic swagger-ui in node [swagger-ui-node](https://blog.cloudboost.io/adding-swagger-to-existing-node-js-project-92a6624b855b)
+- [ ] Use automatic swagger-ui in node [swagger-ui-node](https://blog.cloudboost.io/adding-swagger-to-existing-node-js-project-92a6624b855b)
 
 ## Table of contents
 
@@ -316,6 +317,10 @@ App in electron:
 
 In this way **only your frontend**,  is running in the electron container and you can use the **electron-debug utility**.
 
+**:warning:**
+> In this mode the api calls don't work without a server part is missing. Besides the backend endpoint is a file protocol instead http.
+
+
 
 #### Electron package mode for frontend 
 
@@ -329,6 +334,9 @@ After built your front-end app with the **-Pbuild-ui** profile (or with *npm run
 After this, you will have a single **electron-app-client 1.0.0** (for windows will be an .exe) to run with a click under **electron-client\distribution** folder.
 **The file created is a standalone distributable desktop app that not require Node or JRE on your machine to be executed.**
 In this way, **only your frontend**, is run in the electron container as a package and you can use the **electron-debug utility**.
+
+**:warning:**
+> In this mode the api calls don't work without a server part is missing. Besides the backend endpoint is a file protocol instead http.
 
 
 #### Electron with express
