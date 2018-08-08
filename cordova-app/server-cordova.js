@@ -1,6 +1,5 @@
 
-// Wait for device API libraries to load
-document.addEventListener("deviceready", onDeviceReady, false);
+
 // device APIs are available
 function onDeviceReady() {
 	webserver.onRequest(
@@ -8,7 +7,7 @@ function onDeviceReady() {
 		console.log("This is the request: ", request);
 
 		webserver.sendResponse(
-			request.responseId, {
+			request.requestId, {
 			status: 200,
 			body: '<html>Hello World</html>',
 			headers: {
@@ -22,6 +21,9 @@ function onDeviceReady() {
 
 	//... after a long long time
 	// stop the server
-	webserver.stop();
+	//webserver.stop();
 }
+
+// Wait for device API libraries to load
+document.addEventListener("deviceready", onDeviceReady, false);
 

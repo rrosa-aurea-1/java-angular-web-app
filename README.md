@@ -6,7 +6,7 @@
 <img src="https://img.shields.io/github/stars/amanganiello90/java-angular-web-app.svg">&nbsp;<a href="https://github.com/amanganiello90/java-angular-web-app/issues"><img src="https://img.shields.io/github/issues/amanganiello90/java-angular-web-app.svg">
 </a>&nbsp;<img src="https://img.shields.io/github/license/amanganiello90/java-angular-web-app.svg">&nbsp;<img src="https://img.shields.io/github/downloads/amanganiello90/java-angular-web-app/total.svg">&nbsp; [![Join the chat at https://gitter.im/amanganiello90-java-angular-web-app/Lobby](https://badges.gitter.im/amanganiello90-java-angular-web-app/Lobby.svg)](https://gitter.im/amanganiello90-java-angular-web-app/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-|Please donate whether you wish support us to give more time to app's growth | [![](https://www.paypal.com/en_US/IT/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XTC895QYD28TC)  |
+|Please donate whether you wish support us to give more time to app's growth, or buy the [restaurant web app](https://github.com/amanganiello90/restaurantwebapp) | [![](https://www.paypal.com/en_US/IT/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XTC895QYD28TC)  |
 |:------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 The frontend-app is extended from the initial seed : https://github.com/creativetimofficial/material-dashboard-angular .
@@ -45,7 +45,7 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 ## NEXT DEVELOPMENTS (checked in progress)
 
 - [ ] Resolve api url for electron-client and in general for file protocol. Solution is in build time [adding angular env variables](https://alligator.io/angular/environment-variables/)
-- [ ] Create api server in cordova with [cordova plugin local webserver](https://github.com/fullStackApp/cordova-plugin-local-webserver) and [sqlite plugin](https://github.com/litehelpers/Cordova-sqlite-storage)
+- [x] Create api server in cordova with [cordova plugin local webserver](https://github.com/fullStackApp/cordova-plugin-local-webserver) and [sqlite plugin](https://github.com/litehelpers/Cordova-sqlite-storage)
 - [ ] Create ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api and ui tests in node app with a e2e framework
 - [ ] Use automatic swagger-ui in node [swagger-ui-node](https://blog.cloudboost.io/adding-swagger-to-existing-node-js-project-92a6624b855b)
