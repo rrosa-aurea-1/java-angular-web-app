@@ -7,10 +7,10 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-local-webserver": {
+  "cordova-plugin-httpd": {
     "source": {
       "type": "registry",
-      "id": "git+https://github.com/fullStackApp/cordova-plugin-local-webserver.git"
+      "id": "cordova-plugin-httpd"
     },
     "is_top_level": true,
     "variables": {}

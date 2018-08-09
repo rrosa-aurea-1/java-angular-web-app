@@ -10,7 +10,7 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.amanganiello90.angular"
     },
-    "cordova-plugin-local-webserver": {
+    "cordova-plugin-httpd": {
       "PACKAGE_NAME": "com.amanganiello90.angular"
     }
   },
