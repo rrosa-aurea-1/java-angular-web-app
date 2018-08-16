@@ -22,6 +22,8 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
 
 ## NEWS
 
+* 16/08/2018 Preview of node js app running in cordova with every step explained in [README](https://github.com/amanganiello90/java-angular-web-app/blob/master/cordova-app/README.md)
+
 * 05/08/2018 Improve electron-app with priority on .env else on electron.app.config.json file
 
 * 02/08/2018 Fix bug on reload of electron-client project with [Issue 9](https://github.com/amanganiello90/java-angular-web-app/issues/9).
@@ -45,7 +47,7 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 ## NEXT DEVELOPMENTS (checked in progress)
 
 - [ ] Resolve api url for electron-client and in general for file protocol. Solution is in build time [adding angular env variables](https://alligator.io/angular/environment-variables/)
-- [x] Create api server in cordova with [cordova nodejs mobile](https://github.com/janeasystems/nodejs-mobile-cordova/tree/staging-babel-UI-runtime) and [issue run plugin](https://github.com/janeasystems/nodejs-mobile/issues/105#issuecomment-412793654)
+- [x] Automatize with a generator the node app running in cordova. [See issue on node plugin](https://github.com/janeasystems/nodejs-mobile/issues/105#issuecomment-412793654)
 - [ ] Create ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api and ui tests in node app with a e2e framework
 - [ ] Use automatic swagger-ui in node [swagger-ui-node](https://blog.cloudboost.io/adding-swagger-to-existing-node-js-project-92a6624b855b)
@@ -71,6 +73,7 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 			* [Electron with express server package mode](#electron-with-express-server-package-mode)
 		* [Spring boot jar electron live mode](#spring-boot-jar-electron-live-mode)
 		* [Spring boot jar electron package mode](#spring-boot-jar-electron-package-mode)
+      * [Cordova](#cordova)
    * [Deploy jar on heroku from your machine](#deploy-jar-on-heroku-from-your-machine)
    * [Automatic build and deploy with travis](#automatic-build-and-deploy-with-travis)
    * [Live demo heroku deployed jar](#live-demo-heroku-deployed-jar)
@@ -425,6 +428,14 @@ In this way the spring boot jar is packaged and it run in the electron container
 > The jar is a child spawn localhost process that is in listening in the port declared in the _process.env.PORT_ variable, else it uses the port declared in the **electron-app/electron.app.config.json** file.
 So you can also open the browser on _localhost:8081_ (default port) to inspect page. 
 
+
+
+### Cordova
+
+You can run the full nodejs app with the express backend and angular frontend in cordova.
+Every step is documented [here](https://github.com/amanganiello90/java-angular-web-app/blob/master/cordova-app/README.md).
+
+![cordova-app](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/cordova-app.gif)
 
 ## Deploy jar on heroku from your machine
 

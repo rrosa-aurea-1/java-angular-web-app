@@ -1,4 +1,3 @@
-var expectToFail=false;
 
 var app = {
     // Application Constructor
@@ -16,31 +15,19 @@ var app = {
     }
 };
 
+function visualizeButton(){
+    document.getElementById('ready').setAttribute('style','display:block;');
+    document.getElementById('loading').setAttribute('style','display:none;');
+}
 
 function startNodeProject(startFile) {
     nodejs.start(startFile, function (err)  {
         if(err) {
-            if (err === 'Engine already started') {
-                // Engine already started. Let the user go to the tests.
-                alert('The nodejs-mobile engine is already started.<br/>Proceed to the tests.');
-
-            } else {
-                var msg = 'Engine start failed with this error:<br/>' + err;
-                if (err === 'File not found' && expectToFail) {
-                    msg += '<br/>This error was expected. TEST PASS';
-                } else {
-                    msg += '<br/>This error was not expected. TEST FAIL';
-                }
-                alert(msg);
-            }
+                console.log('The nodejs-mobile engine not started for error: '+err);
         } else {
-            var msg = 'The nodejs-mobile engine started successfully.';
-            if(expectToFail) {
-                msg += '<br/>This was not expected. TEST FAIL';
-            } else {
-                msg += '<br/>This was expected. TEST PASS<br/>Proceed to the tests.';
-            }
-            alert(msg);
+            console.log('The nodejs-mobile engine started successfully.')
+            setTimeout(visualizeButton(), 2000);
+
         }
     });
 };
