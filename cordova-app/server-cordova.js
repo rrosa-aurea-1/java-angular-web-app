@@ -20,6 +20,10 @@ function visualizeButton(){
     document.getElementById('loading').setAttribute('style','display:none;');
 }
 
+function clickButton(){
+     var ref = window.open('http://localhost:8081', '_self');
+}
+
 function startNodeProject(startFile) {
     nodejs.start(startFile, function (err)  {
         if(err) {
