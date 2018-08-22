@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.amanganiello90.angular"
+        },
+        "nodejs-cordova-plugin": {
+            "PACKAGE_NAME": "com.amanganiello90.angular"
         }
     },
     "dependent_plugins": {}

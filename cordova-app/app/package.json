@@ -1,34 +1,34 @@
 {
-  "name": "com.amanganiello90.angular",
-  "displayName": "angularDashFullStack",
-  "version": "1.0.0",
-  "description": "A sample Apache Cordova application to integrate nodejs full app.",
-  "main": "index.js",
-  "scripts": {
-    "build": "cordova prepare android && cordova build android",
-    "start": "cordova prepare android && cordova run android"
-  },
-  "author": {
-    "name": "Angelo Manganiello",
-    "email": "angelo.mang@libero.it"
-  },
-  "license": "Apache-2.0",
-  "devDependencies": {
-    "cpx": "1.5.0",
-    "cordova": "7.0.0"
-  },
-  "dependencies": {
-    "cordova-android": "6.3.0",
-    "cordova-plugin-whitelist": "1.3.3",
-    "nodejs-cordova-plugin": "1.0.0"
-  },
-  "cordova": {
-    "plugins": {
-      "cordova-plugin-whitelist": {},
-      "nodejs-cordova-plugin": {}
+    "name": "com.amanganiello90.angular",
+    "displayName": "angularDashFullStack",
+    "version": "1.0.0",
+    "description": "A sample Apache Cordova application to integrate nodejs full app.",
+    "main": "index.js",
+    "scripts": {
+        "build": "cordova prepare android && cordova build android",
+        "start": "cordova prepare android && cordova run android"
     },
-    "platforms": [
-      "android"
-    ]
-  }
+    "author": {
+        "name": "Angelo Manganiello",
+        "email": "angelo.mang@libero.it"
+    },
+    "license": "Apache-2.0",
+    "devDependencies": {
+        "cpx": "1.5.0",
+        "cordova": "7.0.0"
+    },
+    "dependencies": {
+        "cordova-android": "6.3.0",
+        "cordova-plugin-whitelist": "1.3.3",
+        "nodejs-cordova-plugin": "1.0.1"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-whitelist": {},
+            "nodejs-cordova-plugin": {}
+        },
+        "platforms": [
+            "android"
+        ]
+    }
 }
