@@ -1,0 +1,5 @@
+{
+"PORT": "8081",
+"MONGO_EMBEDDED": "true",
+"MONGO_DB_URI": "mongodb://localhost:27017/example"
+}

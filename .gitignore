@@ -19,7 +19,6 @@ target/
 nbproject/private/
 build/
 nbbuild/
-dist/
 nbdist/
 .nb-gradle/
 
@@ -46,8 +45,11 @@ cordova-app/node_modules
 cordova-app/package-lock.json
 cordova-app/app/package-lock.json
 cordova-app/app/node_modules
-cordova-app/app/**/www/*
-!cordova-app/app/**/www/.gitkeep
+cordova-app/app/www/nodejs-project/node_modules
+cordova-app/app/www/nodejs-project/package-lock.json
+cordova-app/app/www/nodejs-project/yarn.lock
+#cordova-app/app/**/www/*
+#!cordova-app/app/**/www/.gitkeep
 cordova-app/app/**/build
 cordova-app/app/platforms/*
 !cordova-app/app/platforms/*.json

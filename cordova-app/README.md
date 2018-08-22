@@ -23,6 +23,10 @@ Future Needs:
 - rename frontend-app with client.
 - update my generator with electron app and cordova app
 
-All folders are in the same level... 
+All folders are in the same level... SOME FEATURES ARE BEEN ALREADY DEVELOPED IN WWW/NODEJS-PROJECT FOLDER:
+
+1) Run ```npm install``` under www/nodejs-project
+2) Run ```npm start``` app folder to run emulator with apk built
+3) Run ```npm run build``` under app folder to build apk
 
 N.B automatize process maybe with a generator. Then the cordova app run after a minute (or more). Maybe a module for jhipster
