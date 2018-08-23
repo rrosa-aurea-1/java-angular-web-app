@@ -73,10 +73,13 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 			* [Electron with express server package mode](#electron-with-express-server-package-mode)
 		* [Spring boot jar electron live mode](#spring-boot-jar-electron-live-mode)
 		* [Spring boot jar electron package mode](#spring-boot-jar-electron-package-mode)
-      * [Cordova](#cordova)
+      * [Cordova android](#cordova-android)
    * [Deploy jar on heroku from your machine](#deploy-jar-on-heroku-from-your-machine)
+   * [Deploy apk on appetize from your machine](#deploy-apk-on-appetize-from-your-machine)
    * [Automatic build and deploy with travis](#automatic-build-and-deploy-with-travis)
    * [Live demo heroku deployed jar](#live-demo-heroku-deployed-jar)
+   * [Live demo appetize deployed apk](#live-demo-appetize-deployed-apk)
+   
    
    
 ## Description
@@ -430,10 +433,19 @@ So you can also open the browser on _localhost:8081_ (default port) to inspect p
 
 
 
-### Cordova
+### Cordova android
 
-You can run the full nodejs app with the express backend and angular frontend in cordova.
+[Apache Cordova](https://cordova.apache.org/) is a mobile application development framework.
+
+It allows you to package your web app (html, css and js) in every mobile platform (android, ios, windows). 
+
+Besides there are a lot of plugin that work as bridge from javascript to device.
+
+With the [nodejs-cordova-plugin](https://github.com/fullStackApp/nodejs-cordova-plugin) you can run the full nodejs app with the express backend and angular frontend in cordova.
+
 Every step is documented [here](https://github.com/amanganiello90/java-angular-web-app/blob/master/cordova-app/README.md).
+
+In this project we generate an **android apk file**.
 
 ![cordova-app](https://github.com/amanganiello90/java-angular-web-app/raw/branch-screen/cordova-app.gif)
 
@@ -465,6 +477,15 @@ heroku deploy:jar target/app.jar --app spring-boot-angular-app2
 
 View [app](https://spring-boot-angular-app2.herokuapp.com/)
 
+
+## Deploy apk on appetize from your machine
+
+You can register on [Appetize](https://appetize.io/). This is a cloud service to run your mobile app and view online emulating a lot of devices.
+
+After login, you can [upload app](https://appetize.io/upload) adding the apk file from ```cordova-app/app/platforms/android/build/outputs/apk/android-debug.apk```.
+
+So in the [dashboard](https://appetize.io/dashboard) click on view button to visualize your android app.
+
 ## Automatic build and deploy with travis
 
 You can configure your git repo for continuous integration with [travis](https://travis-ci.org/) .
@@ -490,7 +511,19 @@ heroku auth:token
 The last display the token that you will set in the HEROKU_API_KEY variable. 
 It allows travis to have permission to deploy on heroku.
 
+To deploy on Appetize your android app you have to set the APPETIZE_TOKEN variable on travis. To get it read [here](https://appetize.io/docs).
+Then use this curl in your ```SCRIPT``` travis.yml section file:
+
+```
+curl https://$APPETIZE_TOKEN@api.appetize.io/v1/apps -F "file=cordova-app/app/platforms/android/build/outputs/apk/android-debug.apk" -F "platform=android"
+```
+
 ## Live demo heroku deployed jar
 
 A demo with default mongo embedded db [app](https://spring-boot-angular-app.herokuapp.com/)
+
+## Live demo appetize deployed apk
+
+A demo with default mongo embedded db [cordova android app](https://appetize.io/app/2h2788g3rd1bhu4qd5fch1hkzw/)
+
 

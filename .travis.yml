@@ -1,12 +1,35 @@
 sudo: true
-language: node_js
-node_js:
-  - "8.9.4"
-before_install:
-- chmod +x mvnw && chmod +x .travis-deploy-heroku.sh
-install:
-- ./mvnw clean package -Pbuild-ui
-services:
-- docker
+matrix:
+  include:
+    - language: node_js
+      node_js: "8.9.4"
+      env: 
+        - JOB="JAVA"
+      before_install:
+        - chmod +x mvnw && chmod +x .travis-deploy-heroku.sh
+      install:
+        - ./mvnw clean package -Pbuild-ui
+      script: ./.travis-deploy-heroku.sh 
+    - language: android
+      node_js: "8.x"
+      env: 
+        - JOB="ANDROID"
+      android:
+          components:
+            - build-tools-26.0.2
+            - tools
+            - platform-tools
+            - android-23
+            - extra-android-m2repository
+            - extra-google-m2repository
+      before_install:
+          - echo yes | sdkmanager 'ndk-bundle'
+          - export ANDROID_NDK_HOME=$HOME/ndk-bundle
+          - mkdir "$ANDROID_HOME/licenses" || true		
+          - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"		
+          - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
+          - curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && sudo apt-get install -y nodejs
+      install:
+          - cd ./cordova-app/app && npm install && npm run preconfig && npm run build
+      script: curl https://$APPETIZE_TOKEN@api.appetize.io/v1/apps -F "file=cordova-app/app/platforms/android/build/outputs/apk/android-debug.apk" -F "platform=android"
 
-script: ./.travis-deploy-heroku.sh

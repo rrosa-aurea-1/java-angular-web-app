@@ -6,7 +6,8 @@
     "main": "index.js",
     "scripts": {
         "build": "cordova prepare android && cordova build android",
-        "start": "cordova prepare android && cordova run android"
+        "start": "cordova prepare android && cordova run android",
+		"preconfig": "cd ./www/nodejs-project && npm install"
     },
     "author": {
         "name": "Angelo Manganiello",
