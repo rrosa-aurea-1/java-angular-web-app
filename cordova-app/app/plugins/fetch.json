@@ -10,7 +10,7 @@
     "nodejs-cordova-plugin": {
         "source": {
             "type": "registry",
-            "id": "nodejs-cordova-plugin@1.0.1"
+            "id": "https://github.com/fullStackApp/nodejs-cordova-plugin.git"
         },
         "is_top_level": true,
         "variables": {}
