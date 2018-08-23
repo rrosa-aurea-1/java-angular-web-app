@@ -19,7 +19,10 @@ Future Needs:
 - rename frontend-app with angular-project.
 - update my full-stack-generator with electron app and cordova app
 
-All folders are in the same level.
+All folders are in the same level... SOME FEATURES ARE BEEN ALREADY DEVELOPED IN WWW/NODEJS-PROJECT FOLDER.
+I Have before added a ```www/NODEJS_MOBILE_BUILD_NATIVE_MODULES_VALUE.txt``` with ```0``` value to avoid rebuild native modules. 
+Now you can run:
+
 
 To run cordova project before execute:
 - Run ```npm install``` under www/nodejs-project
