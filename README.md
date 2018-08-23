@@ -1,4 +1,4 @@
-## Spring boot app with Angular 4 client embedded
+## Spring boot app with Angular 5 client embedded
 
 <img src="https://img.shields.io/github/forks/amanganiello90/java-angular-web-app.svg">&nbsp;
 <img src="https://img.shields.io/github/stars/amanganiello90/java-angular-web-app.svg">&nbsp;<a href="https://github.com/amanganiello90/java-angular-web-app/issues"><img src="https://img.shields.io/github/issues/amanganiello90/java-angular-web-app.svg">
