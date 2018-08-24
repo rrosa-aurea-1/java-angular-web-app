@@ -518,6 +518,14 @@ Then use this curl in your ```SCRIPT``` travis.yml section file:
 curl https://$APPETIZE_TOKEN@api.appetize.io/v1/apps -F "file=cordova-app/app/platforms/android/build/outputs/apk/android-debug.apk" -F "platform=android"
 ```
 
+After the first upload, you can update the same app adding the APPETIZE_PUBLIC_KEY in travis, exposed from appetize for your apk:
+
+```
+curl https://$APPETIZE_TOKEN@api.appetize.io/v1/apps/$APPETIZE_PUBLIC_KEY -F "file=cordova-app/app/platforms/android/build/outputs/apk/android-debug.apk" -F "platform=android"
+```
+
+> In this example the $APPETIZE_TOKEN and $APPETIZE_PUBLIC_KEY are environment variables defined in travis machine that are respectively the appetize **APITOKEN and PUBLICKEY**
+
 ## Live demo heroku deployed jar
 
 A demo with default mongo embedded db [app](https://spring-boot-angular-app.herokuapp.com/)
