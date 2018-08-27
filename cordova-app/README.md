@@ -7,6 +7,8 @@ I have run:
 - add GRADLE_HOME system environment variable with final /bin and insert into PATH
 - Add in the PATH ANDROID_HOME/tools and ANDROID_HOME/platform-tools
 - I copied the server-cordova.js, index.js file and nodejs app (rename folder in nodejs-project) with node_modules and dist under electron-app into www folder
+- Added DevDependencies manually in the cordova-app/app/package.json
+- Deleted platforms and plugins folders
 - cordova prepare and import project into Android studio to install NDK
 - export ANDROID_NDK_HOME=/Users/username/Library/Android/sdk/ndk-bundle
 - cordova run android on android 6.0.0 device
