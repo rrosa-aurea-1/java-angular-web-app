@@ -16,23 +16,16 @@ The project produces **an only jar** using maven spring-boot, that is you can im
 
 > This is a showcase project to integrate many features listed below, but you can use this as a seed to develop your app. 
 So download the zip of this branch or clone the git repo and replace **src** folder with your spring boot java code and **frontend-app** your angular 5 code.
-Moreover, to use the automatic Travis deploy integration, you have only to replace the app name with your and define the HEROKU_API_KEY variable as explained in the related paragraph.
+Moreover, to use the automatic Travis deploy integration, you have only to replace the app name with your and define the HEROKU_API_KEY variable as explained in the related paragraph. Instead for Cordova apk, you have to define the APPETIZE related variables.
 
 
 
 ## NEWS
 
-* 16/08/2018 Preview of node js app running in cordova with every step explained in [README](https://github.com/amanganiello90/java-angular-web-app/blob/master/cordova-app/README.md)
+* Release 1.1 [CHANGELOG](https://github.com/amanganiello90/java-angular-web-app/blob/master/CHANGELOG.md)
 
-* 05/08/2018 Improve electron-app with priority on .env else on electron.app.config.json file
-
-* 02/08/2018 Fix bug on reload of electron-client project with [Issue 9](https://github.com/amanganiello90/java-angular-web-app/issues/9).
-
-* 04/07/2018 Added spring boot **swagger-ui** enabled on _/swagger-ui.html_ endpoint
-
-* 27/06/2018 Updated JUnit api tests with **java cucumber** with [Issue 8](https://github.com/amanganiello90/java-angular-web-app/issues/8).
-
-* 13/06/2018 Created mongodb webservice node express server app using my fork [generator-full-stack-api](https://github.com/fullStackApp/generator-full-stack-api/releases/tag/v2.0.0) in **electron-app** project [Issue 7](https://github.com/amanganiello90/java-angular-web-app/issues/6).
+May 29,2018  | **Release 1.1** | available from [GitHub](https://github.com/amanganiello90/java-angular-web-app/archive/1.1.zip)  |
+---- | ---- | ---- |
 
 * First Release 1.0
 
@@ -47,7 +40,7 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 ## NEXT DEVELOPMENTS (checked in progress)
 
 - [ ] Resolve api url for electron-client and in general for file protocol. Solution is in build time [adding angular env variables](https://alligator.io/angular/environment-variables/)
-- [x] Automatize with a generator the node app running in cordova. [See issue on node plugin](https://github.com/janeasystems/nodejs-mobile/issues/105#issuecomment-412793654) and [my plugin fork](https://github.com/fullStackApp/nodejs-cordova-plugin).
+- [ ] Automatize with a generator the node app and cordova. Remember [nodejs-cordova-plugin](https://github.com/fullStackApp/nodejs-cordova-plugin) and [CORDOVA README](https://github.com/amanganiello90/java-angular-web-app/blob/master/cordova-app/README.md)
 - [ ] Create ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api and ui tests in node app with a e2e framework
 - [ ] Use automatic swagger-ui in node [swagger-ui-node](https://blog.cloudboost.io/adding-swagger-to-existing-node-js-project-92a6624b855b)
@@ -393,7 +386,7 @@ After this, you will have a single **electron-app 1.0.0** (for windows will be a
 In this way **your frontend app with the express server side**,  is running in the electron container. You can read log in its window with **F1 keyword**.
 
 > The express server is a child spawn localhost process that is in listening in the port declared in the _process.env.PORT_ variable, else it uses the port declared in the **electron-app/electron.app.config.json** file. Every variable of .env file overwrites the electron.app.config.json definitions.
-So you can also open the browser on _localhost:8081_ (default port) to inspect page.  
+So you can also open the browser on _localhost:8081_ (default port) to inspect page. 
 
 
 #### Spring boot jar electron live mode 
@@ -515,13 +508,13 @@ To deploy on Appetize your android app you have to set the APPETIZE_TOKEN variab
 Then use this curl in your ```SCRIPT``` travis.yml section file:
 
 ```
-curl https://$APPETIZE_TOKEN@api.appetize.io/v1/apps -F "file=cordova-app/app/platforms/android/build/outputs/apk/android-debug.apk" -F "platform=android"
+curl https://$APPETIZE_TOKEN@api.appetize.io/v1/apps -F "file=@platforms/android/build/outputs/apk/android-debug.apk" -F "platform=android"
 ```
 
 After the first upload, you can update the same app adding the APPETIZE_PUBLIC_KEY in travis, exposed from appetize for your apk:
 
 ```
-curl https://$APPETIZE_TOKEN@api.appetize.io/v1/apps/$APPETIZE_PUBLIC_KEY -F "file=cordova-app/app/platforms/android/build/outputs/apk/android-debug.apk" -F "platform=android"
+curl https://$APPETIZE_TOKEN@api.appetize.io/v1/apps/$APPETIZE_PUBLIC_KEY -F "file=@platforms/android/build/outputs/apk/android-debug.apk" -F "platform=android"
 ```
 
 > In this example the $APPETIZE_TOKEN and $APPETIZE_PUBLIC_KEY are environment variables defined in travis machine that are respectively the appetize **APITOKEN and PUBLICKEY**

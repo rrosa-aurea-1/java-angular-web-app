@@ -52,7 +52,7 @@ cordova-app/app/www/nodejs-project/yarn.lock
 #!cordova-app/app/**/www/.gitkeep
 cordova-app/app/**/build
 cordova-app/app/platforms/*
-!cordova-app/app/platforms/*.json
+#!cordova-app/app/platforms/*.json
 !cordova-app/app/platforms/.gitkeep
 cordova-app/app/plugins/*
-!cordova-app/app/plugins/*.json
+#!cordova-app/app/plugins/*.json

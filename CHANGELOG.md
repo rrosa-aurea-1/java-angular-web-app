@@ -1,6 +1,20 @@
 # java-angular-web-app
 
-## [1.0.0] First release - 30-05-2018
+## [1.1] release - 29-08-2018
+
+### Added
+
+- 29/08/2018 Released my fork [nodejs-cordova-plugin](https://www.npmjs.com/package/nodejs-cordova-plugin/v/1.0.1) and added to cordova project in order to run nodejs-project
+- 28/08/2018 Tested automatic build and deploy on travis for cordova apk on [Appetize](https://appetize.io/) 
+- 16/08/2018 Preview of node js app running in cordova with every step explained in [README](https://github.com/amanganiello90/java-angular-web-app/blob/master/cordova-app/README.md)
+- 05/08/2018 Improve electron-app with priority on .env else on electron.app.config.json file
+- 02/08/2018 Fix bug on reload of electron-client project with [Issue 9](https://github.com/amanganiello90/java-angular-web-app/issues/9)
+- 04/07/2018 Added spring boot **swagger-ui** enabled on _/swagger-ui.html_ endpoint
+- 27/06/2018 Updated JUnit api tests with **java cucumber** with [Issue 8](https://github.com/amanganiello90/java-angular-web-app/issues/8)
+- 13/06/2018 Created mongodb webservice node express server app using my fork [generator-full-stack-api](https://github.com/fullStackApp/generator-full-stack-api/releases/tag/v2.0.0) in **electron-app** project [Issue 7](https://github.com/amanganiello90/java-angular-web-app/issues/6)
+
+
+## [1.0] First release - 30-05-2018
 
 ### Added
 - 30/05/2018 updating electron projects with [electron-builder](https://github.com/electron-userland/electron-builder) instead [electron-packager](https://github.com/electron-userland/electron-packager)
