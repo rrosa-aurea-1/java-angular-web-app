@@ -4,7 +4,7 @@
 
 ### Added
 
-- 29/08/2018 Released my fork [nodejs-cordova-plugin](https://www.npmjs.com/package/nodejs-cordova-plugin/v/2.0.0) and added to cordova project in order to run nodejs-project
+- 29/08/2018 Released and tested my fork [nodejs-cordova-plugin](https://www.npmjs.com/package/nodejs-cordova-plugin/v/2.0.0) and added to cordova project in order to run nodejs-project
 - 28/08/2018 Tested automatic build and deploy on travis for cordova apk on [Appetize](https://appetize.io/) 
 - 16/08/2018 Preview of node js app running in cordova with every step explained in [README](https://github.com/amanganiello90/java-angular-web-app/blob/master/cordova-app/README.md)
 - 05/08/2018 Improve electron-app with priority on .env else on electron.app.config.json file
