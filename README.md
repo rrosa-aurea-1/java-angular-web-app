@@ -40,7 +40,7 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 ## NEXT DEVELOPMENTS (checked in progress)
 
 - [ ] Resolve api url for electron-client and in general for file protocol. Solution is in build time [adding angular env variables](https://alligator.io/angular/environment-variables/)
-- [ ] Automatize with a generator the node app and cordova. Remember [nodejs-cordova-plugin](https://github.com/fullStackApp/nodejs-cordova-plugin) and [CORDOVA README](https://github.com/amanganiello90/java-angular-web-app/blob/master/cordova-app/README.md)
+- [x] Automatize with a generator the node app and cordova. Remember [generator-full-stack-api](https://github.com/fullStackApp/generator-full-stack-api) and [CORDOVA README](https://github.com/amanganiello90/java-angular-web-app/blob/master/cordova-app/README.md)
 - [ ] Create ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api and ui tests in node app with a e2e framework
 - [ ] Use automatic swagger-ui in node [swagger-ui-node](https://blog.cloudboost.io/adding-swagger-to-existing-node-js-project-92a6624b855b)
