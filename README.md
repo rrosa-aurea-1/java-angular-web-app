@@ -24,7 +24,7 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
 
 * Release 1.1 [CHANGELOG](https://github.com/amanganiello90/java-angular-web-app/blob/master/CHANGELOG.md)
 
-May 29,2018  | **Release 1.1** | available from [GitHub](https://github.com/amanganiello90/java-angular-web-app/archive/1.1.zip)  |
+August 29,2018  | **Release 1.1** | available from [GitHub](https://github.com/amanganiello90/java-angular-web-app/archive/1.1.zip)  |
 ---- | ---- | ---- |
 
 * First Release 1.0
