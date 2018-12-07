@@ -47,6 +47,7 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 
 ## Table of contents
 
+   * [Technical Scientific Article](#technical-scientific-article) 
    * [Description](#description)
       * [Functional informations](#functional-informations)
       * [Prerequisites](#prerequisites)
@@ -56,7 +57,7 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 		* [Rest Api JSON request exposed](#rest-api-json-request-exposed)
 		* [Call Rest Api JSON request with spring boot swagger ui](#call-rest-api-json-request-with-spring-boot-swagger-ui)
 		* [UI api call](#ui-api-call)
-      	* [Using Dev Mode](#using-dev-mode)
+      	        * [Using Dev Mode](#using-dev-mode)
 		* [Write automatic integration api tests with rest assured and cucumber](#write-automatic-integration-api-tests-with-rest-assured-and-cucumber)
       * [Electron](#electron) 
 		* [Electron live mode for frontend](#electron-live-mode-for-frontend)
@@ -74,7 +75,11 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
    * [Live demo appetize deployed apk](#live-demo-appetize-deployed-apk)
    
    
-   
+## Technical Scientific Article
+
+This project is been a source of inspiration for a my technical article, concerning the development and automatic release of web apps on mobile. So, to read a clear explanation about this, go to [hybrid mobile development article](https://opensource.com/article/18/12/hybrid-mobile-app-development)
+
+
 ## Description
 
 The project is used to develop the client in the **frontend-app** folder with the __angular-cli__, and the **java backend** with the __maven spring boot project configured__.
