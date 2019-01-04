@@ -57,7 +57,7 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 		* [Rest Api JSON request exposed](#rest-api-json-request-exposed)
 		* [Call Rest Api JSON request with spring boot swagger ui](#call-rest-api-json-request-with-spring-boot-swagger-ui)
 		* [UI api call](#ui-api-call)
-      	        * [Using Dev Mode](#using-dev-mode)
+      	* [Using Dev Mode](#using-dev-mode)
 		* [Write automatic integration api tests with rest assured and cucumber](#write-automatic-integration-api-tests-with-rest-assured-and-cucumber)
       * [Electron](#electron) 
 		* [Electron live mode for frontend](#electron-live-mode-for-frontend)
