@@ -44,6 +44,7 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 - [ ] Create ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api and ui tests in node app with a e2e framework
 - [ ] Use automatic swagger-ui in node [swagger-ui-node](https://blog.cloudboost.io/adding-swagger-to-existing-node-js-project-92a6624b855b)
+- [ ] Need migration from cordova 7 to 8 in order to fix build error
 
 ## Table of contents
 
