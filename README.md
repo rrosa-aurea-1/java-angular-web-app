@@ -45,7 +45,8 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 - [ ] Create api and ui tests in node app with a e2e framework
 - [ ] Use automatic swagger-ui in node [swagger-ui-node](https://blog.cloudboost.io/adding-swagger-to-existing-node-js-project-92a6624b855b)
 - [ ] Need migration from cordova 7 to 8 in order to fix build error
-- [ ] Maybe it's possible to remove express server and call directly in electron the api with **IPC**. Read [here](https://malcoded.com/posts/angular-desktop-electron)
+- [ ] Maybe it's possible to remove express server and call directly in electron the api with **IPC**. Read [here](https://malcoded.com/posts/angular-desktop-electron) and [ngx-electron](https://github.com/ThorstenHans/ngx-electron) 
+- [ ] A way to reduce the opening of exe produced by electron-builder. Check the official [electron-demo-app](https://github.com/electron/electron-api-demos), maybe use **electron-winstaller** with gif loading
 
 ## Table of contents
 
