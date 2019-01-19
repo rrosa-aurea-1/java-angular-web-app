@@ -20,6 +20,7 @@ matrix:
             - tools
             - platform-tools
             - android-26
+            - android-27
             - extra-android-m2repository
             - extra-google-m2repository
       before_install:
