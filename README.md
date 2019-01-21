@@ -22,6 +22,10 @@ Moreover, to use the automatic Travis deploy integration, you have only to repla
 
 ## NEWS
 
+* Fixed cordova build error specifying ndk version in .travis file. A migration of nodejs cordova plugin to cordova 8 is in testing [commit](https://github.com/amanganiello90/java-angular-web-app/commit/d5c8bc6290ae0e6151425028622fb7dc1fe17391)
+
+* Maybe it's possible to remove express server and call directly in electron the api with **IPC** but it's better mantains this. Read [here](https://malcoded.com/posts/angular-desktop-electron) and [ngx-electron](https://github.com/ThorstenHans/ngx-electron) 
+
 * Release 1.1 [CHANGELOG](https://github.com/amanganiello90/java-angular-web-app/blob/master/CHANGELOG.md)
 
 August 29,2018  | **Release 1.1** | available from [GitHub](https://github.com/amanganiello90/java-angular-web-app/archive/1.1.zip)  |
@@ -44,9 +48,8 @@ May 30,2018  | **Release 1.0** | available from [GitHub](https://github.com/aman
 - [ ] Create ui tests with [java cucumber](https://examples.javacodegeeks.com/core-java/junit/junit-cucumber-example/)
 - [ ] Create api and ui tests in node app with a e2e framework
 - [ ] Use automatic swagger-ui in node [swagger-ui-node](https://blog.cloudboost.io/adding-swagger-to-existing-node-js-project-92a6624b855b)
-- [ ] Need migration from cordova 7 to 8 in order to fix build error
-- [ ] Maybe it's possible to remove express server and call directly in electron the api with **IPC**. Read [here](https://malcoded.com/posts/angular-desktop-electron) and [ngx-electron](https://github.com/ThorstenHans/ngx-electron) 
 - [ ] A way to reduce the opening of exe produced by electron-builder. Check the official [electron-demo-app](https://github.com/electron/electron-api-demos), maybe use **electron-winstaller** with gif loading
+- [ ] A docker compose env for cordova-android [example here](https://github.com/novnc/noVNC/issues/169#issuecomment-443250680) 
 
 ## Table of contents
 
