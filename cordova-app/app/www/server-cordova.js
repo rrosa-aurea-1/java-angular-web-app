@@ -15,13 +15,10 @@ var app = {
     }
 };
 
-function visualizeButton(){
-    document.getElementById('ready').setAttribute('style','display:block;');
-    document.getElementById('loading').setAttribute('style','display:none;');
-}
 
-function clickButton(){
+function visualize(){
      var ref = window.open('http://localhost:8081', '_self');
+	 document.getElementById('loading').setAttribute('style','display:none;');
 }
 
 function startNodeProject(startFile) {
@@ -30,7 +27,7 @@ function startNodeProject(startFile) {
                 console.log('The nodejs-mobile engine not started for error: '+err);
         } else {
             console.log('The nodejs-mobile engine started successfully.')
-            setTimeout(visualizeButton(), 2000);
+            setTimeout(visualize(), 2000);
 
         }
     });

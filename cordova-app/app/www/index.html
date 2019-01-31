@@ -1,24 +1,33 @@
 <!doctype html><html>
 <head><base href="./">
-    <style>
-div {
-    height: 200px;
-    width: 400px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -50px;
-}
-</style>
+
+<link rel="stylesheet" href="font-awesome.min.css">
+
+<style>
+    body {
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      font-family: 'VT323', sans-serif;
+    }
+
+    #loading {
+      position: absolute;
+      width: 100%;
+      top: 45%;
+      text-align: center;
+    }
+  </style>
 
 </head>
 <body>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="server-cordova.js"></script>
 
-<div >
-    <p id="loading" style="display:block;" > LOADING...</p>
-    <input  id="ready" style="display:none;" type="button" onclick="clickButton();" value="Go to your app" />
-</div>
+<div id="loading">
+    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+  </div>
 </body></html>
