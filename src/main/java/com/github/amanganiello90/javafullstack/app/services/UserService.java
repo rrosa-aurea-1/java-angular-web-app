@@ -42,8 +42,10 @@ public class UserService {
             System.out.println("Teste" + i);
             System.out.println("Teste1" + i);
         }
+        this.printText();
+        printText();
 
-		user.setId(id);
+        user.setId(id);
 
 		this.save(user);
 		return user;
