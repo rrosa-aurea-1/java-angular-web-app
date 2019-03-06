@@ -1,7 +1,10 @@
 package com.github.amanganiello90.javafullstack.app.services;
 
+import java.util.ArrayList;
+import java.util.ArrayDeque;
 import java.util.List;
 
+import java.util.Random;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -64,5 +67,38 @@ public class UserService {
             System.out.println("Teste" + i);
             System.out.println("Teste1" + i);
         }
+    }
+
+
+    public void  listTest()
+    {
+        List<String> l = new ArrayList<String>();
+        List<String> l1 = new ArrayList<>();
+
+        if (new Random().nextInt( 2) == 0)
+        {
+            l.add("Test");
+        }
+
+        int i = 5;
+        int j = 6;
+        i = new Random().nextInt(10);
+        if (i == 6)
+        {
+        System.out.println("wrong alignment");
+        }
+
+        if (new Random().nextInt(3) == 0) {
+            this.listTest();
+            listTest();
+        }
+
+        if (new Random().nextInt(2) == 0)
+        {
+            if (i==j) {System.out.printf("nestedf If");}
+        }
+
+        if (i == j)
+            System.out.printf("nestedf If");
     }
 }
