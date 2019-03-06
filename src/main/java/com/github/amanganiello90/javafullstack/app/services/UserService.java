@@ -43,9 +43,9 @@ public class UserService {
 		return user;
 	}
 
-	public String delete(String id) {
-		User user = this.findById(id);
-		userRepository.delete(user);
-		return "user deleted with id: " + id;
+	public String delete ( String id ){
+    User user = this.findById(id);
+    userRepository.delete( user );
+    return "user deleted with id: " + id;
 	}
 }
