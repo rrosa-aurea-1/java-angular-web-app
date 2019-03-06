@@ -37,4 +37,13 @@ public class SimpleTimeService {
 		return simpleT;
 
 	}
+
+    public void printText()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            System.out.println("Teste" + i);
+            System.out.println("Teste1" + i);
+        }
+    }
 }

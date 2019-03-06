@@ -37,6 +37,12 @@ public class UserService {
 
 	public User update(String id, User user) {
 
+        for (int i = 0; i < 10; i++)
+        {
+            System.out.println("Teste" + i);
+            System.out.println("Teste1" + i);
+        }
+
 		user.setId(id);
 
 		this.save(user);
@@ -48,4 +54,13 @@ public class UserService {
     userRepository.delete( user );
     return "user deleted with id: " + id;
 	}
+
+    public void printText()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            System.out.println("Teste" + i);
+            System.out.println("Teste1" + i);
+        }
+    }
 }
