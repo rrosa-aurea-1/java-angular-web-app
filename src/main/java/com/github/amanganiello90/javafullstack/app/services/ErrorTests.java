@@ -77,5 +77,13 @@ public class ErrorTests {
                 e.printStackTrace();
             }
         }
+
+
+        System.out.println(str);
+        if (str.startsWith("test") == true) {
+            if(testInt == 0) {
+                System.out.println(testInt + str);
+            }
+        }
     }
 }
