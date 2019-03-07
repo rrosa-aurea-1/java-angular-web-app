@@ -38,8 +38,8 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
  */
 @Configuration
 @EnableSwagger2
-@ComponentScan(basePackages = { "com.github.amanganiello90.javafullstack.db.mongo" })
-@EnableMongoRepositories(basePackages = { "com.github.amanganiello90.javafullstack.db.mongo" })
+@ComponentScan(basePackages = { "${db.package}" })
+@EnableMongoRepositories(basePackages = { "${db.package}" })
 public class Config {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(JavaFullStackRunner.class);
