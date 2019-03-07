@@ -2,6 +2,7 @@ package com.github.amanganiello90.javafullstack.app.services;
 
 import java.util.List;
 
+import java.util.Random;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -48,4 +49,16 @@ public class UserService {
 		userRepository.delete(user);
 		return "user deleted with id: " + id;
 	}
+
+    public void testMethod1(){
+	    String str = "a";
+	    int testInt = new Random().nextInt(2);
+
+        System.out.println(str);
+        if (str.startsWith("test") == true) {
+            if(testInt == 0) {
+                System.out.println(testInt + str);
+            }
+        }
+    }
 }
